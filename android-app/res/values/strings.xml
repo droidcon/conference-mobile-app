@@ -31,13 +31,13 @@
     <string name="title_sessions">Sessions</string>
     <string name="title_starred">Starred</string>
     <string name="title_tracks">Tracks</string>
-    <string name="title_vendors">Sandbox</string>
+    <string name="title_vendors">Displays</string>
     <string name="title_map">Map</string>
     <string name="title_notes">Notes</string>
     <string name="title_note_edit">Edit note</string>
 
     <string name="title_session_tracks">Session tracks</string>
-    <string name="title_vendor_tracks">Sandbox tracks</string>
+    <string name="title_vendor_tracks">Vendor Displays</string>
 
     <string name="title_share">Share using</string>
 
@@ -48,7 +48,7 @@
     <string name="btn_map">Map</string>
     <string name="btn_sessions">Sessions</string>
     <string name="btn_starred">Starred</string>
-    <string name="btn_vendors">Sandbox</string>
+    <string name="btn_vendors">Displays</string>
     <string name="btn_notes">My Notes</string>
 
     <string name="toast_sync_error">Sync error: <xliff:g id="error">%1$s</xliff:g></string>
@@ -71,10 +71,10 @@
 
     <string name="track_summary">Summary</string>
     <string name="track_sessions">Sessions</string>
-    <string name="track_vendors">Sandbox</string>
+    <string name="track_vendors">Displays</string>
 
     <string name="search_sessions">Sessions</string>
-    <string name="search_vendors">Sandbox</string>
+    <string name="search_vendors">Displays</string>
 
     <string name="starred_sessions">Sessions</string>
     <string name="starred_vendors">Sandbox</string>
