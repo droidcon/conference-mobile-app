@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright 2010 Google Inc.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<tracks>
+    
+    <track>
+        <name>Developer</name>
+        <color>#2A5699</color>
+        <abstract>Talks focused on developing solutions for Android</abstract>
+    </track>
+    
+    <track>
+        <name>Design</name>
+        <color>#BF0000</color>
+        <abstract>Talks focused on designing applications to be as user friendly as possible</abstract>
+    </track>
+    
+    <track>
+        <name>Business</name>
+        <color>#007A3F</color>
+        <abstract>Talks focused on making a business around the Android platform</abstract>
+    </track>
+    
+<!--
+0066CC  Blue
+F47CBE  Light Red
+FF0000  Red
+BF0000  Dark Red
+FFCC00  Yellow
+EEB211  Dark Yellow
+0FABFF  Light Blue
+0066CC  Blue
+2A5699  Dark Blue
+007A3F  Dark Green
+009939  Green 
+A0CE67  Light Green
+-->
+        
+</tracks>
