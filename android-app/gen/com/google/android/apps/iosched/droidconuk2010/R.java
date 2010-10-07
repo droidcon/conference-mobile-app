@@ -437,11 +437,11 @@ containing a value of this type.
     public static final class styleable {
         /** Attributes that can be used with a BlocksLayout.
            <p>Includes the following attributes:</p>
-           <table border="2" width="85%" align="center" frame="hsides" rules="all" cellpadding="5">
+           <table>
            <colgroup align="left" />
            <colgroup align="left" />
-           <tr><th>Attribute<th>Summary</tr>
-           <tr><th><code>{@link #BlocksLayout_columns com.google.android.apps.iosched.droidconuk2010:columns}</code><td></tr>
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #BlocksLayout_columns com.google.android.apps.iosched.droidconuk2010:columns}</code></td><td></td></tr>
            </table>
            @see #BlocksLayout_columns
          */
@@ -464,19 +464,19 @@ containing a value of this type.
         public static final int BlocksLayout_columns = 0;
         /** Attributes that can be used with a TimeRulerView.
            <p>Includes the following attributes:</p>
-           <table border="2" width="85%" align="center" frame="hsides" rules="all" cellpadding="5">
+           <table>
            <colgroup align="left" />
            <colgroup align="left" />
-           <tr><th>Attribute<th>Summary</tr>
-           <tr><th><code>{@link #TimeRulerView_dividerColor com.google.android.apps.iosched.droidconuk2010:dividerColor}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_endHour com.google.android.apps.iosched.droidconuk2010:endHour}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_headerWidth com.google.android.apps.iosched.droidconuk2010:headerWidth}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_horizontalDivider com.google.android.apps.iosched.droidconuk2010:horizontalDivider}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_hourHeight com.google.android.apps.iosched.droidconuk2010:hourHeight}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_labelColor com.google.android.apps.iosched.droidconuk2010:labelColor}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_labelPaddingLeft com.google.android.apps.iosched.droidconuk2010:labelPaddingLeft}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_labelTextSize com.google.android.apps.iosched.droidconuk2010:labelTextSize}</code><td></tr>
-           <tr><th><code>{@link #TimeRulerView_startHour com.google.android.apps.iosched.droidconuk2010:startHour}</code><td></tr>
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #TimeRulerView_dividerColor com.google.android.apps.iosched.droidconuk2010:dividerColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_endHour com.google.android.apps.iosched.droidconuk2010:endHour}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_headerWidth com.google.android.apps.iosched.droidconuk2010:headerWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_horizontalDivider com.google.android.apps.iosched.droidconuk2010:horizontalDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_hourHeight com.google.android.apps.iosched.droidconuk2010:hourHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_labelColor com.google.android.apps.iosched.droidconuk2010:labelColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_labelPaddingLeft com.google.android.apps.iosched.droidconuk2010:labelPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_labelTextSize com.google.android.apps.iosched.droidconuk2010:labelTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #TimeRulerView_startHour com.google.android.apps.iosched.droidconuk2010:startHour}</code></td><td></td></tr>
            </table>
            @see #TimeRulerView_dividerColor
            @see #TimeRulerView_endHour
