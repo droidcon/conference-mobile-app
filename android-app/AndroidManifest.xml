@@ -165,6 +165,12 @@
             android:configChanges="orientation|keyboardHidden" />
 
         <activity
+            android:name="com.google.android.apps.iosched.ui.AmiandoActivity"
+            android:theme="@style/Theme.IOSched"
+            android:label="@string/title_tickets"
+            android:configChanges="orientation|keyboardHidden" />
+
+        <activity
             android:name="com.google.android.apps.iosched.ui.StarredActivity"
             android:theme="@style/Theme.IOSched"
             android:label="@string/title_starred" />
