@@ -131,7 +131,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
     /** Handle "map" action. */
     public void onMapClick(View v) {
         // Launch map of conference venue
-        startActivity(new Intent(this, MapActivity.class));
+        startActivity(new Intent(this, AmiandoActivity.class));
     }
 
     /** Handle "sessions" action. */

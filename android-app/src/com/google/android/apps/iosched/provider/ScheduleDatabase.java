@@ -163,7 +163,6 @@ public class ScheduleDatabase extends SQLiteOpenHelper {
          * used for indexing {@link Sessions} content.
          */
         String SESSIONS_BODY = "(new." + Sessions.TITLE + "||'; '||new." + Sessions.ABSTRACT
-                + "||'; '||new." + Sessions.REQUIREMENTS + "||'; '||" + "new." + Sessions.KEYWORDS
                 + ")";
 
         /**

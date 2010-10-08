@@ -6,6 +6,7 @@ import java.io.InputStream;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -49,8 +50,12 @@ public class AmiandoActivity extends Activity {
 						.setJavaScriptCanOpenWindowsAutomatically(false);
 				mWebView.setWebChromeClient(new MapWebChromeClient());
 				mWebView.setWebViewClient(new MapWebViewClient());
-
-				mWebView.loadData(readTxt(), "text/html", "utf-8");
+				
+				DisplayMetrics metrics = new DisplayMetrics();
+				getWindowManager().getDefaultDisplay().getMetrics(metrics);
+				
+				Log.v(TAG, String.format(readTxt(), metrics.widthPixels, metrics.heightPixels - getResources().getDimensionPixelSize(R.dimen.title_height)));
+				mWebView.loadData(String.format(readTxt(), metrics.widthPixels, metrics.heightPixels - getResources().getDimensionPixelSize(R.dimen.title_height)), "text/html", "utf-8");
 			}
 		});
 	}
