@@ -87,14 +87,6 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
 
         // Set up handler for now playing session query.
         mQueryHandler = new NotifyingAsyncQueryHandler(getContentResolver(), this);
-        
-        if(findViewById(R.id.now_playing_buy_button) != null) {
-            (findViewById(R.id.now_playing)).setOnClickListener(new OnClickListener() {
-    			public void onClick(View v) {
-    		        startActivity(new Intent(HomeActivity.this, AmiandoActivity.class));
-    			}        	
-            });        	
-        }
     }
 
     @Override
@@ -114,7 +106,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
             reloadNowPlaying(false);
         } else if (mState.mNoResults) {
             showNowPlayingNoResults();
-        }
+        }        
     }
 
     /** Handle "refresh" title-bar action. */
@@ -242,6 +234,8 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
         mMessageHandler.post(mCountdownRunnable);
         mNowPlayingLoadingView.setVisibility(View.GONE);
         nowPlaying.setVisibility(View.VISIBLE);
+        nowPlaying.setOnClickListener(BuyButtonOnClickListenerHolder.INSTANCE);        	
+        
         return nowPlaying;
     }
 
@@ -405,5 +399,13 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
         int SESSION_ID = 2;
         int TITLE = 3;
         int ROOM_NAME = 4;
+    }
+    
+    private static final class BuyButtonOnClickListenerHolder {
+    	private static final OnClickListener INSTANCE = new OnClickListener() {
+    			public void onClick(View v) {
+    				v.getContext().startActivity(new Intent(v.getContext(), AmiandoActivity.class));
+    			}        	
+            };
     }
 }

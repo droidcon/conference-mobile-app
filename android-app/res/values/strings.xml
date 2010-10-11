@@ -126,10 +126,12 @@
         <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g></item>
     </plurals>
 
-    <string name="now_playing_before_subtitle">Countdown to droidcon London!</string>
+    <string name="now_playing_before_subtitle">Countdown to droidcon London</string>
     <string name="now_playing_after_title">See you next year!</string>
     <string name="now_playing_after_subtitle">Thanks for tuning in.</string>
 
     <string name="permission_write">Modify droidcon London 2010 schedule data</string>
+    
+    <string name="sponsored_by">Sponsored by</string>
 
 </resources>
