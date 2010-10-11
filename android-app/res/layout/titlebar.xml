@@ -25,6 +25,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:paddingTop="2dip"
+        android:paddingBottom="2dip"
         android:clickable="true"
         android:src="@drawable/title_logo"
         android:visibility="gone"/>
