@@ -40,7 +40,9 @@ import android.provider.Settings;
 import android.text.format.DateUtils;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -85,6 +87,14 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
 
         // Set up handler for now playing session query.
         mQueryHandler = new NotifyingAsyncQueryHandler(getContentResolver(), this);
+        
+        if(findViewById(R.id.now_playing_buy_button) != null) {
+            (findViewById(R.id.now_playing)).setOnClickListener(new OnClickListener() {
+    			public void onClick(View v) {
+    		        startActivity(new Intent(HomeActivity.this, AmiandoActivity.class));
+    			}        	
+            });        	
+        }
     }
 
     @Override
@@ -131,7 +141,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
     /** Handle "map" action. */
     public void onMapClick(View v) {
         // Launch map of conference venue
-        startActivity(new Intent(this, AmiandoActivity.class));
+        startActivity(new Intent(this, MapActivity.class));
     }
 
     /** Handle "sessions" action. */

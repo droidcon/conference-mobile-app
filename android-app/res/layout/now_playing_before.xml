@@ -46,13 +46,27 @@
             android:duplicateParentState="true"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="3dip"
-            android:paddingBottom="3dip"
+            android:paddingTop="1dip"
+            android:paddingBottom="1dip"
             android:gravity="center"
             android:textColor="@color/foreground2"
             android:textSize="@dimen/text_size_small"
             android:text="@string/now_playing_before_subtitle"
             android:singleLine="true"
             android:ellipsize="end" />
+   		<TextView
+   			android:id="@+id/now_playing_buy_button"
+           	android:duplicateParentState="true"
+           	android:layout_width="fill_parent"
+           	android:layout_height="wrap_content"
+           	android:paddingTop="1dip"
+           	android:paddingBottom="1dip"
+           	android:gravity="center"
+           	android:background="@android:color/transparent"
+           	android:textColor="@color/foreground2"
+           	android:textSize="@dimen/text_size_small"
+           	android:text="@string/now_playing_before_buy"
+           	android:singleLine="true"
+           	android:ellipsize="end" />       		
     </LinearLayout>
 </LinearLayout>

@@ -118,6 +118,7 @@
     <string name="now_playing_loading">Looking up nearby sessions\u2026</string>
     <string name="now_playing_no_results">No sessions nearby.</string>
     <string name="now_playing_enable_wifi">Tap here to enable Wi-Fi for indoor location.</string>
+    <string name="now_playing_before_buy">Tap here to buy tickets.</string>
 
     <plurals name="now_playing_countdown">
         <item quantity="zero"><xliff:g id="remaining_time">%2$s</xliff:g></item>
