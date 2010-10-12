@@ -31,6 +31,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.LevelListDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.BaseColumns;
 import android.text.Html;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -46,6 +47,7 @@ import com.google.android.apps.iosched.droidconuk2010.R;
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
 import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
+import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
 import com.google.android.apps.iosched.provider.ScheduleContract.Tracks;
 import com.google.android.apps.iosched.ui.HomeActivity;
 
@@ -198,12 +200,12 @@ public class UIUtils {
 		Integer color = null;
 		Uri trackUri = ScheduleContract.Sessions.buildTracksDirUri(sessionId);
 		Cursor c = cr.query(trackUri,
-				new String[] { Tracks._ID, Tracks.TRACK_COLOR }, null,
+				TrackQuery.PROJECTION, null,
 				null, null);
 		
 		if (c != null && c.getCount() > 0) {
 			c.moveToFirst();
-			color = c.getInt(1);
+			color = c.getInt(TrackQuery.TRACK_COLOR);
 		}  
 		if (c != null) {
 			c.close();
@@ -211,6 +213,14 @@ public class UIUtils {
 		return color;
 	}
 
+	/** {@link Sessions} search query parameters. */
+	private interface TrackQuery {
+		String[] PROJECTION = { BaseColumns._ID, Tracks.TRACK_COLOR, };
+
+		int _ID = 0;
+		int TRACK_COLOR = 1;
+	}
+		
     /**
      * Given a snippet string with matching segments surrounded by curly
      * braces, turn those areas into bold spans, removing the curly braces.
