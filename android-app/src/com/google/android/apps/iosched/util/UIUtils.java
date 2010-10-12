@@ -16,15 +16,16 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.google.android.apps.iosched.droidconuk2010.R;
-import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
-import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
-import com.google.android.apps.iosched.ui.HomeActivity;
+import java.util.Formatter;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.LevelListDrawable;
@@ -41,9 +42,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import java.util.Formatter;
-import java.util.Locale;
-import java.util.TimeZone;
+import com.google.android.apps.iosched.droidconuk2010.R;
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
+import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
+import com.google.android.apps.iosched.provider.ScheduleContract.Tracks;
+import com.google.android.apps.iosched.ui.HomeActivity;
 
 public class UIUtils {
 
@@ -158,20 +162,54 @@ public class UIUtils {
     }
 
     public static void setSessionTitleColor(long blockStart, long blockEnd, TextView title,
-            TextView subtitle) {
+            TextView subtitle, boolean trackColourizeTitle, String sessionId, ContentResolver cr) {
         long currentTimeMillis = System.currentTimeMillis();
         int colorId = android.R.color.primary_text_light;
         int subColorId = android.R.color.secondary_text_light;
+        final Resources res = title.getResources();
 
-        if (currentTimeMillis > blockEnd &&
+        Integer color = null;
+		int subColor;
+		
+		if (currentTimeMillis > blockEnd &&
                 currentTimeMillis < CONFERENCE_END_MILLIS) {
             colorId = subColorId = R.color.session_foreground_past;
+            color = res.getColor(colorId);
+            subColor = res.getColor(subColorId);
+        } else {
+        	
+			if (trackColourizeTitle) {			
+				color = getTrackColor(sessionId, cr);
+			} 
+			
+			if (color == null) {
+			    color = res.getColor(colorId);
+			}
+
+			subColor = res.getColor(subColorId);
+
         }
 
-        final Resources res = title.getResources();
-        title.setTextColor(res.getColor(colorId));
-        subtitle.setTextColor(res.getColor(subColorId));
+        title.setTextColor(color);
+        subtitle.setTextColor(subColor);
     }
+
+	private static Integer getTrackColor(String sessionId, ContentResolver cr) {
+		Integer color = null;
+		Uri trackUri = ScheduleContract.Sessions.buildTracksDirUri(sessionId);
+		Cursor c = cr.query(trackUri,
+				new String[] { Tracks._ID, Tracks.TRACK_COLOR }, null,
+				null, null);
+		
+		if (c != null && c.getCount() > 0) {
+			c.moveToFirst();
+			color = c.getInt(1);
+		}  
+		if (c != null) {
+			c.close();
+		}
+		return color;
+	}
 
     /**
      * Given a snippet string with matching segments surrounded by curly
