@@ -29,7 +29,7 @@
 
         <ImageView style="@style/TitleBarSeparator" />
         <ImageButton style="@style/TitleBarAction"
-            android:contentDescription="@string/description_map"
+            android:contentDescription="@string/description_about"
             android:src="@drawable/ic_title_map"
             android:onClick="onMapClick" />
 

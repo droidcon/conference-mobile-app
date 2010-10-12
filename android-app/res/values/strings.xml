@@ -20,7 +20,7 @@
     <string name="description_logo">droidcon London 2010</string>
     <string name="description_home">Home</string>
     <string name="description_search">Search</string>
-    <string name="description_map">Map</string>
+    <string name="description_about">About</string>
     <string name="description_refresh">Refresh</string>
     <string name="description_share">Share</string>
     <string name="description_export">Export</string>
@@ -32,7 +32,7 @@
     <string name="title_starred">Starred</string>
     <string name="title_tracks">Tracks</string>
     <string name="title_vendors">Displays</string>
-    <string name="title_map">Map</string>
+    <string name="title_about">About</string>
     <string name="title_tickets">Tickets</string>
     <string name="title_notes">Notes</string>
     <string name="title_note_edit">Edit note</string>
@@ -46,7 +46,7 @@
     <string name="title_search_query">Search for \'<xliff:g id="query">%1$s</xliff:g>\'</string>
 
     <string name="btn_schedule">Schedule</string>
-    <string name="btn_map">Map</string>
+    <string name="btn_about">About</string>
     <string name="btn_sessions">Sessions</string>
     <string name="btn_starred">Starred</string>
     <string name="btn_vendors">Displays</string>

@@ -159,9 +159,9 @@
         </activity>
 
         <activity
-            android:name="com.google.android.apps.iosched.ui.MapActivity"
+            android:name="com.google.android.apps.iosched.ui.AboutActivity"
             android:theme="@style/Theme.IOSched"
-            android:label="@string/title_map"
+            android:label="@string/title_about"
             android:configChanges="orientation|keyboardHidden" />
 
         <activity

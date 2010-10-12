@@ -146,5 +146,33 @@
         <item name="android:lineSpacingMultiplier">1.1</item>
         <item name="android:textColor">@android:color/secondary_text_light</item>
     </style>
+    
+    <style name="TextTimer">
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">120dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textStyle">bold</item>
+		<item name="android:textSize">@dimen/text_size_timer</item>
+        <item name="android:textColor">@color/foreground1</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingTop">6dip</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+        
+    <style name="TextTimerSubtitle">
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:layout_width">120dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">1dip</item>
+        <item name="android:paddingBottom">1dip</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/foreground2</item>
+        <item name="android:textSize">@dimen/text_size_timer_subtitle</item>
+        <item name="android:text">@string/now_playing_before_subtitle</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>    
 
 </resources>

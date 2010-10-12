@@ -130,10 +130,10 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
         startActivity(new Intent(this, ScheduleActivity.class));
     }
 
-    /** Handle "map" action. */
-    public void onMapClick(View v) {
+    /** Handle "about" action. */
+    public void onAboutClick(View v) {
         // Launch map of conference venue
-        startActivity(new Intent(this, MapActivity.class));
+        startActivity(new Intent(this, AboutActivity.class));
     }
 
     /** Handle "sessions" action. */

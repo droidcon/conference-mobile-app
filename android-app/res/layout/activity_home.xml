@@ -19,6 +19,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+
     <LinearLayout style="@style/TitleBar">
         <ImageView style="@style/TitleBarLogo"
             android:contentDescription="@string/description_logo"
@@ -59,28 +60,11 @@
                 android:onClick="onScheduleClick"
                 android:text="@string/btn_schedule"
                 android:drawableTop="@drawable/home_btn_schedule"/>
-            <Button android:id="@+id/home_btn_map"
-                style="@style/HomeButton"
-                android:onClick="onMapClick"
-                android:text="@string/btn_map"
-                android:drawableTop="@drawable/home_btn_map"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
             <Button android:id="@+id/home_btn_sessions"
                 style="@style/HomeButton"
                 android:onClick="onSessionsClick"
                 android:text="@string/btn_sessions"
                 android:drawableTop="@drawable/home_btn_sessions"/>
-            <Button android:id="@+id/home_btn_starred"
-                style="@style/HomeButton"
-                android:onClick="onStarredClick"
-                android:text="@string/btn_starred"
-                android:drawableTop="@drawable/home_btn_starred"/>
         </LinearLayout>
 
         <LinearLayout
@@ -88,11 +72,28 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1">
+            <Button android:id="@+id/home_btn_about"
+                style="@style/HomeButton"
+                android:onClick="onAboutClick"
+                android:text="@string/btn_about"
+                android:drawableTop="@drawable/home_btn_about"/>
             <Button android:id="@+id/home_btn_vendors"
                 style="@style/HomeButton"
                 android:onClick="onVendorsClick"
                 android:text="@string/btn_vendors"
                 android:drawableTop="@drawable/home_btn_sandbox"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <Button android:id="@+id/home_btn_starred"
+                style="@style/HomeButton"
+                android:onClick="onStarredClick"
+                android:text="@string/btn_starred"
+                android:drawableTop="@drawable/home_btn_starred"/>
                 <!-- TODO: refactor home_btn_sandbox drawable name -->
             <Button android:id="@+id/home_btn_notes"
                 style="@style/HomeButton"
