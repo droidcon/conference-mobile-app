@@ -529,7 +529,7 @@ public class SessionDetailActivity extends TabActivity implements
 					Sessions.DEFAULT_SORT);
 			if (c != null && c.getCount() > 0) {
 				Toast.makeText(this,
-						"Another session as this time is already starred",
+						R.string.toast_warn_duplicate_stars,
 						Toast.LENGTH_LONG).show();
 			}
 		}
