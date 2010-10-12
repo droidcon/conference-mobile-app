@@ -16,30 +16,20 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.google.android.apps.iosched.droidconuk2010.R;
+import android.content.Intent;
+import android.net.Uri;
+import android.util.Log;
+import android.webkit.WebView;
+
 import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
 import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
 import com.google.android.apps.iosched.provider.ScheduleContract.Tracks;
 import com.google.android.apps.iosched.util.ParserUtils;
-import com.google.android.apps.iosched.util.UIUtils;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
-import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Shows a {@link WebView} with a map of the conference venue. 
  */
-public class MapActivity extends Activity {
+public class MapActivity extends WebViewActivity {
     private static final String TAG = "MapActivity";
 
     /**
@@ -51,118 +41,16 @@ public class MapActivity extends Activity {
 
     private static final String MAP_JSI_NAME = "MAP_CONTAINER";
     private static final String MAP_URL = "http://maps.google.co.uk/maps/ms?ie=UTF8&hl=en&num=10&msa=0&msid=111268683924396905734.000490c793a5b883cd911&ll=51.533516,-0.105298&spn=0.001949,0.004817&output=embed";
-    private static boolean CLEAR_CACHE_ON_LOAD = false;
 
-    private WebView mWebView;
-    private boolean mLoadingVisible = false;
-    private boolean mMapInitialized = false;
+	public boolean mMapInitialized;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
 
-        ((TextView) findViewById(R.id.title_text)).setText(getTitle());
+    public void loadData(WebView webView){
+        webView.loadUrl(MAP_URL);
+        webView.addJavascriptInterface(new MapJsiImpl(), MAP_JSI_NAME);
 
-        showLoading(true);
-        mWebView = (WebView) findViewById(R.id.webview);
-        mWebView.post(new Runnable() {
-            public void run() {
-                // Initialize web view
-                if (CLEAR_CACHE_ON_LOAD) {
-                    mWebView.clearCache(true);
-                }
-
-                mWebView.getSettings().setJavaScriptEnabled(true);
-                mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
-                mWebView.setWebChromeClient(new MapWebChromeClient());
-                mWebView.setWebViewClient(new MapWebViewClient());
-                mWebView.loadUrl(MAP_URL);
-                mWebView.addJavascriptInterface(new MapJsiImpl(), MAP_JSI_NAME);
-            }
-        });
     }
 
-    public void onHomeClick(View v) {
-        UIUtils.goHome(this);
-    }
-
-    public void onRefreshClick(View v) {
-        mWebView.reload();
-    }
-
-    public void onSearchClick(View v) {
-        UIUtils.goSearch(this);
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK && mWebView.canGoBack()) {
-            mWebView.goBack();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-    private void showLoading(boolean loading) {
-        if (mLoadingVisible == loading)
-            return;
-
-        View refreshButton = findViewById(R.id.btn_title_refresh);
-        View refreshProgress = findViewById(R.id.title_refresh_progress);
-        refreshButton.setVisibility(loading ? View.GONE : View.VISIBLE);
-        refreshProgress.setVisibility(loading ? View.VISIBLE : View.GONE);
-        mLoadingVisible = loading;
-    }
-
-    private void runJs(String js) {
-        if (Log.isLoggable(TAG, Log.DEBUG)) {
-            Log.d(TAG, "Loading javascript:" + js);
-        }
-        mWebView.loadUrl("javascript:" + js);
-    }
-
-    private class MapWebChromeClient extends WebChromeClient {
-        @Override
-        public void onProgressChanged(WebView view, int newProgress) {
-            showLoading(newProgress < 100);
-            super.onProgressChanged(view, newProgress);
-        }
-
-        public void onConsoleMessage(String message, int lineNumber, String sourceID) {
-            Log.i(TAG, "JS Console message: (" + sourceID + ": " + lineNumber + ") " + message);
-        }
-    }
-
-    private class MapWebViewClient extends WebViewClient {
-        @Override
-        public void onPageFinished(WebView view, String url) {
-            super.onPageFinished(view, url);
-            if (Log.isLoggable(TAG, Log.DEBUG)) {
-                Log.d(TAG, "Page finished loading: " + url);
-            }
-        }
-
-        @Override
-        public void onReceivedError(WebView view, int errorCode, String description,
-                String failingUrl) {
-            Log.e(TAG, "Error " + errorCode + ": " + description);
-            Toast.makeText(view.getContext(), "Error " + errorCode + ": " + description,
-                    Toast.LENGTH_LONG).show();
-            super.onReceivedError(view, errorCode, description, failingUrl);
-        }
-    }
-
-    /**
-     * Helper method to escape JavaScript strings. Useful when passing strings to a WebView
-     * via "javascript:" calls.
-     */
-    private static String escapeJsString(String s) {
-        if (s == null)
-            return "";
-
-        return s.replace("'", "\\'").replace("\"", "\\\"");
-    }
 
     /**
      * I/O Conference Map JavaScript interface.
