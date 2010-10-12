@@ -221,6 +221,7 @@ containing a value of this type.
         public static final int blocks_ruler=0x7f0a0006;
         public static final int blocks_scroll=0x7f0a000a;
         public static final int btn_title_refresh=0x7f0a0008;
+        public static final int countdown_widget=0x7f0a0043;
         public static final int dialog_discard_confirm=0x7f0a0003;
         public static final int dialog_moderator=0x7f0a0004;
         public static final int dialog_wave=0x7f0a0005;
@@ -283,6 +284,8 @@ containing a value of this type.
         public static final int wave_block=0x7f0a0034;
         public static final int wave_link=0x7f0a0035;
         public static final int webview=0x7f0a0014;
+        public static final int widget_subtitle=0x7f0a0045;
+        public static final int widget_title=0x7f0a0044;
     }
     public static final class integer {
         public static final int fling_animation_duration=0x7f080000;
@@ -322,6 +325,7 @@ containing a value of this type.
         public static final int tab_session_summary=0x7f03001f;
         public static final int tab_track_summary=0x7f030020;
         public static final int titlebar=0x7f030021;
+        public static final int widget_countdown=0x7f030022;
     }
     public static final class plurals {
         public static final int now_playing_countdown=0x7f0c0000;
@@ -414,6 +418,7 @@ containing a value of this type.
         public static final int track_vendors=0x7f0b002e;
         public static final int wave_header=0x7f0b0039;
         public static final int wave_summary=0x7f0b003a;
+        public static final int widget_subtitle_text=0x7f0b0054;
     }
     public static final class style {
         public static final int HomeButton=0x7f0d0002;
@@ -449,6 +454,7 @@ containing a value of this type.
         public static final int searchable=0x7f050003;
         public static final int sessions=0x7f050004;
         public static final int tracks=0x7f050005;
+        public static final int widget_info=0x7f050006;
     }
     public static final class styleable {
         /** Attributes that can be used with a BlocksLayout.
