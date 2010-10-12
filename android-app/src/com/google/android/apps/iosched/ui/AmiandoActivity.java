@@ -4,13 +4,14 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import android.content.Context;
+import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.webkit.WebView;
 
 import com.google.android.apps.iosched.droidconuk2010.R;
 
 public class AmiandoActivity extends WebViewActivity {
-
 
 	protected void loadData(WebView webView) {
 
