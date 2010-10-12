@@ -13,6 +13,7 @@ import android.os.SystemClock;
 import android.widget.RemoteViews;
 
 import com.google.android.apps.iosched.droidconuk2010.R;
+import com.google.android.apps.iosched.ui.HomeActivity;
 import com.google.android.apps.iosched.util.UIUtils;
 
 public class CountdownWidget extends AppWidgetProvider {
@@ -59,6 +60,11 @@ public class CountdownWidget extends AppWidgetProvider {
 				R.plurals.now_playing_countdown, days, days,
 				formatRemainingTime(secs));
 		views.setTextViewText(R.id.widget_title, str);
+
+		final Intent appIntent = new Intent(context, HomeActivity.class);
+		PendingIntent appStartPI =
+			PendingIntent.getActivity( context, 0, appIntent, 0 );
+		views.setOnClickPendingIntent(R.id.countdown_widget, appStartPI);
 
 		final ComponentName widget = new ComponentName(context,
 				CountdownWidget.class);
