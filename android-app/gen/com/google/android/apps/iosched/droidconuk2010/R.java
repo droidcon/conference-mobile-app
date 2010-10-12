@@ -257,21 +257,12 @@ containing a value of this type.
         public static final int speaker_abstract=0x7f0a002e;
         public static final int speaker_header=0x7f0a002d;
         public static final int star_button=0x7f0a001f;
-<<<<<<< HEAD
         public static final int tab_label=0x7f0a002f;
-        public static final int tab_session_moderator=0x7f0a0016;
-        public static final int tab_session_summary=0x7f0a0015;
-        public static final int tab_track_summary=0x7f0a0017;
-        public static final int title_button_1=0x7f0a003e;
-        public static final int title_button_2=0x7f0a0041;
-=======
-        public static final int tab_label=0x7f0a0030;
         public static final int tab_session_moderator=0x7f0a0015;
         public static final int tab_session_summary=0x7f0a0014;
         public static final int tab_track_summary=0x7f0a0016;
-        public static final int title_button_1=0x7f0a003f;
-        public static final int title_button_2=0x7f0a0042;
->>>>>>> 9bf931d8476cea6af71d0acf796196a6ac0ddd8f
+        public static final int title_button_1=0x7f0a003e;
+        public static final int title_button_2=0x7f0a0041;
         public static final int title_container=0x7f0a0000;
         public static final int title_home_button=0x7f0a003b;
         public static final int title_home_button_sep=0x7f0a003c;
@@ -282,33 +273,18 @@ containing a value of this type.
         public static final int title_sep_1=0x7f0a003d;
         public static final int title_sep_2=0x7f0a003f;
         public static final int title_text=0x7f0a0002;
-<<<<<<< HEAD
         public static final int track_abstract=0x7f0a0039;
-        public static final int vendor_desc=0x7f0a001a;
-=======
-        public static final int track_abstract=0x7f0a003a;
         public static final int vendor_desc=0x7f0a0019;
->>>>>>> 9bf931d8476cea6af71d0acf796196a6ac0ddd8f
         public static final int vendor_location=0x7f0a0024;
         public static final int vendor_logo=0x7f0a0017;
         public static final int vendor_name=0x7f0a0023;
-<<<<<<< HEAD
-        public static final int vendor_product_desc=0x7f0a001b;
-        public static final int vendor_url=0x7f0a0019;
-        public static final int wave_block=0x7f0a0033;
-        public static final int wave_link=0x7f0a0034;
-        public static final int webview=0x7f0a0014;
-        public static final int widget_subtitle=0x7f0a0044;
-        public static final int widget_title=0x7f0a0043;
-=======
         public static final int vendor_product_desc=0x7f0a001a;
         public static final int vendor_url=0x7f0a0018;
-        public static final int wave_block=0x7f0a0034;
-        public static final int wave_link=0x7f0a0035;
+        public static final int wave_block=0x7f0a0033;
+        public static final int wave_link=0x7f0a0034;
         public static final int webview=0x7f0a001b;
-        public static final int widget_subtitle=0x7f0a0045;
-        public static final int widget_title=0x7f0a0044;
->>>>>>> 9bf931d8476cea6af71d0acf796196a6ac0ddd8f
+        public static final int widget_subtitle=0x7f0a0044;
+        public static final int widget_title=0x7f0a0043;
     }
     public static final class integer {
         public static final int fling_animation_duration=0x7f080000;
