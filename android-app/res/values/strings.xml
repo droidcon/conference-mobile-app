@@ -53,6 +53,7 @@
     <string name="btn_notes">My Notes</string>
 
     <string name="toast_sync_error">Sync error: <xliff:g id="error">%1$s</xliff:g></string>
+    <string name="toast_warn_duplicate_stars">Another session as this time is already starred.</string>
 
     <string name="session_subtitle"><xliff:g id="time">%1$s</xliff:g> in <xliff:g id="room">%2$s</xliff:g></string>
     <string name="session_moderator_status"><xliff:g id="questions">%1$s</xliff:g> questions submitted and <xliff:g id="votes">%2$s</xliff:g> votes cast.</string>

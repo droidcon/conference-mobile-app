@@ -355,7 +355,11 @@ public class ScheduleContract {
         // TODO: shortcut primary track to offer sub-sorting here
         /** Default "ORDER BY" clause. */
         public static final String DEFAULT_SORT = BlocksColumns.BLOCK_START + " ASC,"
-                + SessionsColumns.TITLE + " COLLATE NOCASE ASC";
+                + Rooms.ROOM_NAME + " COLLATE NOCASE ASC";
+        
+        /** "ORDER BY" clause for search results.*/
+        public static final String SEARCH_SORT = BlocksColumns.BLOCK_START + " ASC,"
+                + SessionsColumns.TITLE + " COLLATE NOCASE ASC";;
 
         /** Build {@link Uri} for requested {@link #SESSION_ID}. */
         public static Uri buildSessionUri(String sessionId) {
