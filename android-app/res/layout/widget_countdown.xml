@@ -3,9 +3,11 @@
     android:id="@+id/countdown_widget"
     android:layout_width="fill_parent"
     android:layout_height="@dimen/now_playing_height"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="@drawable/widget_background"
+    android:layout_marginLeft="10dip"
+    android:layout_marginRight="10dip">
     <LinearLayout
-        android:background="@color/background2"
         android:paddingLeft="14dip"
         android:paddingRight="14dip"
         android:paddingTop="10dip"
@@ -22,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textSize="@dimen/text_size_large"
-            android:textColor="@color/foreground1"
+            android:textColor="@color/widgetforeground"
             android:singleLine="true"
             android:ellipsize="end" />
         <TextView
@@ -32,14 +34,14 @@
             android:layout_height="wrap_content"
             android:paddingTop="3dip"
             android:paddingBottom="3dip"
-            android:textColor="@color/foreground2"
+            android:textColor="@color/widgetforeground"
             android:textSize="@dimen/text_size_small"
             android:text="@string/widget_subtitle_text"
             android:singleLine="true"
             android:ellipsize="end" />
     </LinearLayout>
     <LinearLayout
-        android:background="@color/background2"
+        android:layout_weight="0"
         android:paddingLeft="1dip"
         android:paddingRight="2dip"
         android:paddingTop="10dip"
@@ -48,20 +50,8 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:gravity="center_vertical">
-   		<TextView
-           	android:duplicateParentState="true"
-           	android:layout_width="fill_parent"
-           	android:layout_height="wrap_content"
-           	android:paddingTop="1dip"
-           	android:paddingBottom="1dip"
-           	android:gravity="center"
-           	android:textColor="@color/foreground2"
-           	android:textSize="@dimen/text_size_tiny"
-           	android:text="@string/sponsored_by"
-           	android:singleLine="true"
-           	android:ellipsize="end" />       		
 	    <ImageView	android:layout_width="wrap_content"
 	    			android:layout_height="fill_parent"
-	    			android:src="@drawable/sponsor"/>
+	    			android:src="@drawable/widget_logo"/>
 	 </LinearLayout>
 </LinearLayout>

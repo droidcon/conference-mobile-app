@@ -20,6 +20,7 @@
     <color name="title_text_alt">#ffA4C639</color>
     <color name="foreground1">#ff355689</color>
     <color name="foreground2">#ff7081a3</color>
+    <color name="widgetforeground">#ff92a3c5</color>
     <color name="background1">#ffffffff</color>
     <color name="background2">#ffd5ddeb</color>
     <color name="background3">#ffe3e8f1</color>
