@@ -135,5 +135,16 @@
     <string name="sponsored_by">Sponsored by</string>
 
     <string name="widget_subtitle_text">until droidcon London</string>
+    
+    
+    <!-- About -->
+    <string name="about_maintxt_title">Droidcon London</string>
+    <string name="about_maintxt_subtitle">28th and 28th October 2010</string>
+    <string name="about_maintxt_txt">Join a collection of the mobile industries leading practitioners in discussing the future of design, development and business on the Android platform.</string>
+    <string name="about_address_title">Address:</string>
+    <string name="about_address_txt">52 Upper Street, Islington, London, N1 0QH</string>
+	<string name="about_twitter">droidconuk</string>
+	<string name="about_twitter_hashtag">#droidcon</string>
+	<string name="about_conference_link">http://www.droidcon.co.uk</string>
 
 </resources>

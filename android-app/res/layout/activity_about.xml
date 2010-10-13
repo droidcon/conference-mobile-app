@@ -46,5 +46,39 @@
             android:onClick="onSearchClick" />
     </LinearLayout>
 
-
+	
+	<RelativeLayout style="@style/about_top_div">
+	
+	    <LinearLayout style="@style/about_maintxt_div">
+		    <TextView style="@style/about_maintxt_title" />
+		    <TextView style="@style/about_maintxt_subtitle" />
+		    <TextView style="@style/about_maintxt_txt" />
+	    </LinearLayout>
+	    
+	    <LinearLayout style="@style/about_mainImgs_div">
+	        <ImageView style="@style/about_mainImgs_img1" />
+	    	<ImageView style="@style/about_mainImgs_img2" />
+	    	<ImageView style="@style/about_mainImgs_img3" />
+	    </LinearLayout>    	
+	 
+	 </RelativeLayout> 
+	    
+	 <ImageButton style="@style/about_btn_buynow" />
+	    
+	<RelativeLayout style="@style/about_bottom_div">
+	    <LinearLayout style="@style/about_details_div">
+	    	<TextView style="@style/about_address_title" />
+	    	<TextView style="@style/about_address_txt" />    	    	    	
+	    	<TextView style="@style/about_twitter" />
+	    	<TextView style="@style/about_twitter_hashtag" />    	    	    	
+	    </LinearLayout>
+	       
+	    <LinearLayout style="@style/about_sponsors_div">
+	    	<TextView style="@style/about_sponsors_img" />
+	    	<TextView style="@style/about_sponsors_img3" />
+	    	<TextView style="@style/about_sponsors_img4" />    	    	    	    	    	
+	    </LinearLayout>
+	    
+	    <TextView style="@style/about_conference_link" />   
+ 	</RelativeLayout>   
 </LinearLayout>

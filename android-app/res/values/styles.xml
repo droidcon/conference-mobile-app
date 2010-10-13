@@ -173,6 +173,80 @@
         <item name="android:text">@string/now_playing_before_subtitle</item>
         <item name="android:singleLine">true</item>
         <item name="android:background">@android:color/transparent</item>
-    </style>    
+    </style>   
+
+	<!-- About -->
+	<style name="base">
+		<item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	   	<item name="android:orientation">vertical</item>
+	</style>
+	
+	<style name="about_top_div" parent="base">
+		<item name="android:id">@id/about_top_div</item>
+		<item name="android:layout_width">fill_parent</item>
+	</style>
+	<style name="about_bottom_div" parent="base">
+		<item name="android:id">@id/about_bottom_div</item>
+	</style>
+	
+    <style name="about_maintxt_div" parent="base">
+		<item name="android:id">@id/about_maintxt_div</item>				     	
+    </style>
+    
+    <style name="about_mainImgs_div" parent="base">
+    	<item name="android:layout_width">150dip</item>
+    	<item name="android:layout_alignParentRight">true</item>    	
+    </style>
+    
+    <style name="about_maintxt_title" parent="base">
+    	<item name="android:text">@string/about_maintxt_title</item>
+    </style>
+    <style name="about_maintxt_subtitle" parent="base">
+    	<item name="android:text">@string/about_maintxt_subtitle</item>
+    </style>
+    <style name="about_maintxt_txt" parent="base">
+    	<item name="android:text">@string/about_maintxt_txt</item>
+    	<item name="android:layout_width">150dip</item>
+    </style>
+    
+    <style name="about_mainImgs_img1" parent="base">
+    	<item name="android:src">@drawable/about_img1</item>
+    </style>
+    <style name="about_mainImgs_img2" parent="base">
+    	<item name="android:src">@drawable/about_img2</item>
+    </style>
+    <style name="about_mainImgs_img3" parent="base">
+    	<item name="android:src">@drawable/about_img3</item>
+    </style>
+    
+    <style name="about_btn_buynow" parent="base">
+		<item name="android:id">@id/about_btn_buynow</item>
+    </style>
+    
+    <style name="about_details_div">
+    </style>
+    
+    <style name="about_address_title" parent="base">
+    	<item name="android:text">@string/about_address_title</item>    	
+    </style>
+    <style name="about_address_txt" parent="base">
+    	<item name="android:text">@string/about_address_txt</item>
+    </style>
+    <style name="about_twitter" parent="base">
+	   	<item name="android:text">@string/about_twitter</item>
+    </style>
+    <style name="about_twitter_hashtag" parent="base">
+	   	<item name="android:text">@string/about_twitter_hashtag</item>
+    </style>
+    
+    <style name="about_sponsors_div" parent="base"></style>
+    <style name="about_sponsors_img" parent="base"></style>
+    <style name="about_sponsors_img3" parent="base"></style>
+    <style name="about_sponsors_img4" parent="base"></style>
+    
+    <style name="about_conference_link" parent="base">
+	   	<item name="android:text">@string/about_conference_link</item>
+    </style>
 
 </resources>

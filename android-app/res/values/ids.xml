@@ -26,5 +26,12 @@
 
     <item type="id" name="blocks_ruler" />
     <item type="id" name="blocks_now" />
-
+    
+    
+    <!-- About -->
+    <item type="id" name="about_top_div" />
+    <item type="id" name="about_bottom_div" />
+    <item type="id" name="about_btn_buynow" />
+    <item type="id" name="about_maintxt_div" />
+    
 </resources>
