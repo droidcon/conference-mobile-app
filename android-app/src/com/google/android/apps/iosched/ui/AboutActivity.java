@@ -46,7 +46,11 @@ public class AboutActivity extends Activity {
     				break;
 				case R.id.about_address_txt: 
 				case R.id.about_address_icon: 
-					v.getContext().startActivity(new Intent(v.getContext(), MapActivity.class));					
+					v.getContext().startActivity(new Intent(v.getContext(), MapActivity.class));
+					 String uri = "geo:0,0?q=52+Upper+Street,+Islington,+London,+N1+0QH&sll=53.800651,-4.064941&sspn=24.07088,27.246094&ie=UTF8&hq=&hnear=52+Upper+St,+London+N1+0QH,+United+Kingdom&z=16";        
+					    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+					    startActivity(i); 
+					
 					break;
 				case R.id.about_twitter: 
 					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://mobile.twitter.com/droidconuk" )));
