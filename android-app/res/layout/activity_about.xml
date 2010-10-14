@@ -46,39 +46,46 @@
             android:onClick="onSearchClick" />
     </LinearLayout>
 
-	
-	<RelativeLayout style="@style/about_top_div">
-	
-	    <LinearLayout style="@style/about_maintxt_div">
-		    <TextView style="@style/about_maintxt_title" />
-		    <TextView style="@style/about_maintxt_subtitle" />
-		    <TextView style="@style/about_maintxt_txt" />
-	    </LinearLayout>
-	    
-	    <LinearLayout style="@style/about_mainImgs_div">
-	        <ImageView style="@style/about_mainImgs_img1" />
-	    	<ImageView style="@style/about_mainImgs_img2" />
-	    	<ImageView style="@style/about_mainImgs_img3" />
-	    </LinearLayout>    	
-	 
-	 </RelativeLayout> 
-	    
-	 <ImageButton style="@style/about_btn_buynow" />
-	    
-	<RelativeLayout style="@style/about_bottom_div">
-	    <LinearLayout style="@style/about_details_div">
-	    	<TextView style="@style/about_address_title" />
-	    	<TextView style="@style/about_address_txt" />    	    	    	
-	    	<TextView style="@style/about_twitter" />
-	    	<TextView style="@style/about_twitter_hashtag" />    	    	    	
-	    </LinearLayout>
-	       
-	    <LinearLayout style="@style/about_sponsors_div">
-	    	<TextView style="@style/about_sponsors_img" />
-	    	<TextView style="@style/about_sponsors_img3" />
-	    	<TextView style="@style/about_sponsors_img4" />    	    	    	    	    	
-	    </LinearLayout>
-	    
-	    <TextView style="@style/about_conference_link" />   
- 	</RelativeLayout>   
+	<ScrollView style="@style/base_fill">
+		<LinearLayout style="@style/base_fill">
+			<RelativeLayout style="@style/about_top_div">
+			
+			    <RelativeLayout style="@style/about_maintxt_div">
+				    <TextView style="@style/about_maintxt_title" />
+				    <TextView style="@style/about_maintxt_subtitle" />
+				    <TextView style="@style/about_maintxt_txt" />
+			    </RelativeLayout>
+			    
+			    <RelativeLayout style="@style/about_mainImgs_div">
+			        <ImageView style="@style/about_mainImgs_img1" />
+			    	<ImageView style="@style/about_mainImgs_img2" />
+			    	<ImageView style="@style/about_mainImgs_img3" />
+			    </RelativeLayout>    	
+			 
+			 </RelativeLayout> 
+			    
+			 <ImageButton style="@style/about_btn_buynow" />
+			    
+			<RelativeLayout style="@style/about_bottom_div">
+			    <RelativeLayout style="@style/about_details_div">
+			    	<TextView style="@style/about_address_title" />
+			    	<RelativeLayout style="@style/about_address">
+			    		<ImageButton style="@style/about_address_icon" />
+			    		<TextView style="@style/about_address_txt" />
+			    	</RelativeLayout>
+			    	<TextView style="@style/about_conference_link" />   			    	    	    	    	
+			    	<TextView style="@style/about_twitter" />
+			    	<TextView style="@style/about_twitter_hashtag" />    	    	    	
+			    </RelativeLayout>
+			       
+			    <RelativeLayout style="@style/about_sponsors_div">
+			    	<TextView style="@style/about_sponsors_orange_title" android:text="@string/about_sponsors_title_orange"/>
+			    	<ImageView style="@style/about_sponsors_orange" />
+			    	<TextView style="@style/about_sponsors_sonyericsson_title" android:text="@string/about_sponsors_title_sonyericsson"/>
+			    	<ImageView style="@style/about_sponsors_sonyericsson" />    	    	    	    	    	
+			    </RelativeLayout>
+			    
+		 	</RelativeLayout>
+		</LinearLayout>		 	
+	 </ScrollView>
 </LinearLayout>
