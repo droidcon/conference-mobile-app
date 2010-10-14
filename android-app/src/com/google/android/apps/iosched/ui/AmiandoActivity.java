@@ -37,7 +37,7 @@ public class AmiandoActivity extends WebViewActivity {
 		String html = byteArrayOutputStream.toString();
 
 		
-		html = String.format(html, metrics.widthPixels, metrics.heightPixels - getResources().getDimensionPixelSize(R.dimen.title_height));
+		html = String.format(html,  metrics.heightPixels - getResources().getDimensionPixelSize(R.dimen.title_height));
 		webView.loadDataWithBaseURL( "file:///android-asset/", html, "text/html", "utf-8", null );
 		
 	}
