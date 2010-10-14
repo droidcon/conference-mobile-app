@@ -17,8 +17,8 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.google.android.apps.iosched.droidconuk2010"
-    android:versionCode="12"
-    android:versionName="0.12">
+    android:versionCode="13"
+    android:versionName="0.14">
 
     <uses-sdk
         android:minSdkVersion="5"
