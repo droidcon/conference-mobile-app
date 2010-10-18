@@ -16,18 +16,18 @@
 -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:iosched="http://schemas.android.com/apk/res/com.google.android.apps.iosched.droidconuk2010"
+    xmlns:iosched="http://schemas.android.com/apk/res/novoda.droidconuk2010"
     android:id="@+id/blocks_scroll"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <view
-        class="com.google.android.apps.iosched.ui.widget.BlocksLayout"
+        class="novoda.droidcon2010uk.ui.widget.BlocksLayout"
         android:id="@+id/blocks"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         iosched:columns="3">
         <view
-            class="com.google.android.apps.iosched.ui.widget.TimeRulerView"
+            class="novoda.droidcon2010uk.ui.widget.TimeRulerView"
             android:id="@id/blocks_ruler"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

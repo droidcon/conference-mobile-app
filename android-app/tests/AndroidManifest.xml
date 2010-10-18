@@ -15,7 +15,7 @@
     limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.android.apps.iosched.tests"
+    package="novoda.droidcon2010uk.tests"
     android:versionCode="10"
     android:versionName="0.10">
 
@@ -25,6 +25,6 @@
 
     <instrumentation
         android:name="android.test.InstrumentationTestRunner"
-        android:targetPackage="com.google.android.apps.iosched" />
+        android:targetPackage="novoda.droidcon2010uk" />
 
 </manifest>

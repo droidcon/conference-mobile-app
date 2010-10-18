@@ -61,7 +61,7 @@
 
     <string name="empty_sessions">No sessions found</string>
     <string name="empty_session_detail">No session details found</string>
-    <string name="empty_vendors">No sandbox results found</string>
+    <string name="empty_vendors">No display results found</string>
     <string name="empty_notes">No notes found</string>
     <string name="empty_search">No search results found</string>
 

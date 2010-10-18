@@ -35,7 +35,7 @@
     </LinearLayout>
 
     <view
-        class="com.google.android.apps.iosched.ui.ScheduleActivity$FlingableTabHost"
+        class="novoda.droidcon2010uk.ui.ScheduleActivity$FlingableTabHost"
         android:id="@android:id/tabhost"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
