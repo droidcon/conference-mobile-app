@@ -71,7 +71,7 @@
         <start>2010-10-29T15:30:00.000+01:00</start>
           <end>2010-10-29T16:30:00.000+01:00</end>
         <title>Afternoon Tea</title>
-		<type>session</type>
+		<type>food</type>
     </block>
     <block>
         <start>2010-10-29T17:05:00.000+01:00</start>
