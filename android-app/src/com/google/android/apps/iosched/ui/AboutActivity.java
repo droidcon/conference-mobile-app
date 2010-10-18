@@ -1,6 +1,7 @@
 package com.google.android.apps.iosched.ui;
 
 import com.google.android.apps.iosched.droidconuk2010.R;
+import com.google.android.apps.iosched.util.UIUtils;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -50,7 +51,6 @@ public class AboutActivity extends Activity {
 					 String uri = "geo:0,0?q=52+Upper+Street,+Islington,+London,+N1+0QH&sll=53.800651,-4.064941&sspn=24.07088,27.246094&ie=UTF8&hq=&hnear=52+Upper+St,+London+N1+0QH,+United+Kingdom&z=16";        
 					    Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
 					    startActivity(i); 
-					
 					break;
 				case R.id.about_twitter: 
 					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://mobile.twitter.com/droidconuk" )));
@@ -67,5 +67,22 @@ public class AboutActivity extends Activity {
 			}
 		}
 	};
+	
+	/** Handle "share" title-bar action. */
+	public void onShareClick(View v) {
+		final String shareString = getString(R.string.share_template, "the where abouts", "in the app");
+
+		final Intent intent = new Intent(Intent.ACTION_SEND);
+		intent.setType("text/plain");
+		intent.putExtra(Intent.EXTRA_TEXT, shareString);
+
+		startActivity(Intent.createChooser(intent,
+				getText(R.string.title_share)));
+	}
+	
+	/** Handle "search" title-bar action. */
+	public void onSearchClick(View v) {
+		UIUtils.goSearch(this);
+	}
 
 }

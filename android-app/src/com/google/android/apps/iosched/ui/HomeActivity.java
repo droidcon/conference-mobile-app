@@ -359,9 +359,9 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
                 // Error happened down in SyncService, show as toast.
                 mState.mSyncing = false;
                 updateRefreshStatus();
-                final String errorText = getString(R.string.toast_sync_error, resultData
-                        .getString(Intent.EXTRA_TEXT));
-                Toast.makeText(HomeActivity.this, errorText, Toast.LENGTH_LONG).show();
+//TODO: I've quieted this because it was confusing to users to be seeing
+                final String errorText = getString(R.string.toast_sync_error, resultData.getString(Intent.EXTRA_TEXT));
+                Toast.makeText(HomeActivity.this, "Network connection failed while refreshing content.", Toast.LENGTH_SHORT).show();
                 break;
             }
         }

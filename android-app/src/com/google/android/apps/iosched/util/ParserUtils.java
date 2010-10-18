@@ -45,7 +45,7 @@ public class ParserUtils {
     // TODO: consider refactor to HandlerUtils?
 
     // TODO: localize this string at some point
-    public static final String BLOCK_TITLE_BREAKOUT_SESSIONS = "Breakout sessions";
+    public static final String BLOCK_TITLE_BREAKOUT_SESSIONS = "Sessions";
 
     public static final String BLOCK_TYPE_FOOD = "food";
     public static final String BLOCK_TYPE_SESSION = "session";

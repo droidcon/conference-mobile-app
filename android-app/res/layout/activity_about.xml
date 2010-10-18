@@ -29,15 +29,9 @@
 
         <ImageView style="@style/TitleBarSeparator" />
         <ImageButton style="@style/TitleBarAction"
-            android:id="@+id/btn_title_refresh"
-            android:contentDescription="@string/description_refresh"
-            android:src="@drawable/ic_title_refresh"
-            android:onClick="onRefreshClick" />
-        <ProgressBar style="@style/TitleBarProgressIndicator"
-            android:visibility="gone"
-            android:layout_alignLeft="@id/btn_title_refresh"
-            android:layout_alignTop="@id/btn_title_refresh"
-            android:id="@+id/title_refresh_progress" />
+            android:contentDescription="@string/description_share"
+            android:src="@drawable/ic_title_share"
+            android:onClick="onShareClick" />
 
         <ImageView style="@style/TitleBarSeparator" />
         <ImageButton style="@style/TitleBarAction"

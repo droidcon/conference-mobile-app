@@ -70,7 +70,7 @@
     <string name="session_moderator">Moderator</string>
     <string name="session_interact">Interact</string>
     <string name="session_requirements">Requirements</string>
-    <string name="session_speakers">Speakers</string>
+    <string name="session_speakers">Sessions</string>
 
     <string name="track_summary">Summary</string>
     <string name="track_sessions">Sessions</string>
@@ -85,7 +85,7 @@
     <string name="search_label">droidcon London</string>
     <string name="search_hint">Session keywords</string>
 
-    <string name="share_template">Checking out \'<xliff:g id="title">%1$s</xliff:g>\' at #droidconuk <xliff:g id="hashtag">%2$s</xliff:g></string>
+    <string name="share_template">Checking out \'<xliff:g id="title">%1$s</xliff:g>\' at #droidcon <xliff:g id="hashtag">%2$s</xliff:g></string>
     <string name="share_notes">Exported notes from droidcon London 2010</string>
 
     <string name="moderator_header">Moderator</string>
