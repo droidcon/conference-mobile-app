@@ -15,10 +15,8 @@
     limitations under the License.
 -->
 <rooms>
-    
     <room><id>1</id><name>Room 1</name><floor>2</floor></room>
     <room><id>2</id><name>Room 2</name><floor>2</floor></room>
     <room><id>3</id><name>Room 3</name><floor>2</floor></room>
     <room><id>4</id><name>Room 4</name><floor>2</floor></room>
-    
 </rooms>
