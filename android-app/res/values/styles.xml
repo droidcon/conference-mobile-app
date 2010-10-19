@@ -363,5 +363,14 @@
     	<item name="android:layout_below">@id/title_container</item>    	
     	<item name="android:src">@drawable/fourofour</item>
     </style>
+    <style name="about_licence" parent="txt_paragraph">
+    	<item name="android:id">@id/about_licence</item>
+    	<item name="android:layout_below">@id/about_bottom_div</item>
+    	<item name="android:textSize">12dip</item>    	
+    	<item name="android:text">@string/about_licence</item>
+    	<item name="android:layout_width">186dip</item>
+     	<item name="android:paddingLeft">14dip</item>
+     	<item name="android:paddingBottom">14dip</item>
+    </style>
 
 </resources>

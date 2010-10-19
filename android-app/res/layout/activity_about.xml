@@ -80,6 +80,9 @@
 			    </RelativeLayout>
 			    
 		 	</RelativeLayout>
+		 	
+		 	<TextView style="@style/about_licence" />
+		 	
 		</LinearLayout>		 	
 	 </ScrollView>
 </LinearLayout>

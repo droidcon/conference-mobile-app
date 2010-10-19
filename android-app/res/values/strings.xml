@@ -150,5 +150,6 @@
 	<string name="about_conference_link">www.droidcon.co.uk</string>
 	<string name="about_sponsors_title_orange">Platinum Sponsor</string>
 	<string name="about_sponsors_title_sonyericsson">Silver Sponsor</string>
+	<string name="about_licence">This App is based on Google Inc.\'s IO Conference App vc12 and is licenced under Apache2.0</string>
 
 </resources>
