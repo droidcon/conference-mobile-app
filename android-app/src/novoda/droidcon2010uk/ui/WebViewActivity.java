@@ -18,6 +18,9 @@ package novoda.droidcon2010uk.ui;
 
 import novoda.droidcon2010uk.util.UIUtils;
 import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -44,26 +47,46 @@ public abstract class WebViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_webview);
+        
+        if(haveInternet()){
+        	setContentView(R.layout.activity_webview);
+        	((TextView) findViewById(R.id.title_text)).setText(getTitle());
+        	
+        	showLoading(true);
+        	mWebView = (WebView) findViewById(R.id.webview);
+        	mWebView.post(new Runnable() {
+        		public void run() {
+        			// Initialize web view
+        			if (CLEAR_CACHE_ON_LOAD) {
+        				mWebView.clearCache(true);
+        			}
+        			
+        			mWebView.getSettings().setJavaScriptEnabled(true);
+        			mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
+        			mWebView.setWebChromeClient(new MapWebChromeClient());
+        			mWebView.setWebViewClient(new MapWebViewClient());
+        			loadData(mWebView);
+        		}
+        	});
+        }else{
+        	setContentView(R.layout.fourofour);        	
+        }
 
-        ((TextView) findViewById(R.id.title_text)).setText(getTitle());
+    }
+    
+    protected boolean haveInternet(){ 
 
-        showLoading(true);
-        mWebView = (WebView) findViewById(R.id.webview);
-        mWebView.post(new Runnable() {
-            public void run() {
-                // Initialize web view
-                if (CLEAR_CACHE_ON_LOAD) {
-                    mWebView.clearCache(true);
-                }
+    	NetworkInfo info=(NetworkInfo)( (ConnectivityManager)this.getSystemService( Context.CONNECTIVITY_SERVICE)).getActiveNetworkInfo();
 
-                mWebView.getSettings().setJavaScriptEnabled(true);
-                mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
-                mWebView.setWebChromeClient(new MapWebChromeClient());
-                mWebView.setWebViewClient(new MapWebViewClient());
-                loadData(mWebView);
-            }
-        });
+    	if(info==null || !info.isConnected()){
+    		return false; 
+    	} 
+    	
+    	if(info.isRoaming()){ 
+    		//here is the roaming option you can change it if you want to disable internet while roaming, just return false 
+    		return true; 
+    	} 
+    	return true; 
     }
 
     protected abstract void loadData(WebView webView) ;

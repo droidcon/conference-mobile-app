@@ -30,6 +30,7 @@ import novoda.droidcon2010uk.io.RemoteSpeakersHandler;
 import novoda.droidcon2010uk.io.RemoteVendorsHandler;
 import novoda.droidcon2010uk.io.RemoteWorksheetsHandler;
 import novoda.droidcon2010uk.provider.ScheduleProvider;
+import novoda.droidcon2010uk.util.DebugLogConfig;
 
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
@@ -106,7 +107,6 @@ public class SyncService extends IntentService {
     @Override
     public void onCreate() {
         super.onCreate();
-
         final HttpClient httpClient = getHttpClient(this);
         final ContentResolver resolver = getContentResolver();
 
@@ -144,8 +144,8 @@ public class SyncService extends IntentService {
 
                 // Parse values from local cache first, since spreadsheet copy
                 // or network might be down.
-                // mLocalExecutor.execute(context, "cache-sessions.xml", new RemoteSessionsHandler());
-                // mLocalExecutor.execute(context, "cache-speakers.xml", new RemoteSpeakersHandler());
+                 mLocalExecutor.execute(context, "cache-sessions.xml", new RemoteSessionsHandler());
+                 mLocalExecutor.execute(context, "cache-speakers.xml", new RemoteSpeakersHandler());
                 //  mLocalExecutor.execute(context, "cache-vendors.xml", new RemoteVendorsHandler());
 
                 // Save local parsed version

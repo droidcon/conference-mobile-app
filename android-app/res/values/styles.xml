@@ -358,5 +358,10 @@
     	<item name="android:src">@drawable/about_sponsor_se</item>
     	<item name="android:paddingBottom">28dip</item>
     </style>
+    <style name="fourofour" parent="base_fill">
+    	<item name="android:id">@id/fourofour</item>
+    	<item name="android:layout_below">@id/title_container</item>    	
+    	<item name="android:src">@drawable/fourofour</item>
+    </style>
 
 </resources>

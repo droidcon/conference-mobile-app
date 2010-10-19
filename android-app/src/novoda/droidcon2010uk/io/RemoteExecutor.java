@@ -16,7 +16,6 @@
 
 package novoda.droidcon2010uk.io;
 
-
 import novoda.droidcon2010uk.io.XmlHandler.HandlerException;
 import novoda.droidcon2010uk.util.ParserUtils;
 
@@ -38,50 +37,55 @@ import java.io.InputStream;
  * {@link XmlPullParser} to the given {@link XmlHandler}.
  */
 public class RemoteExecutor {
-    private final HttpClient mHttpClient;
-    private final ContentResolver mResolver;
+	private final HttpClient mHttpClient;
+	private final ContentResolver mResolver;
 
-    public RemoteExecutor(HttpClient httpClient, ContentResolver resolver) {
-        mHttpClient = httpClient;
-        mResolver = resolver;
-    }
+	public RemoteExecutor(HttpClient httpClient, ContentResolver resolver) {
+		mHttpClient = httpClient;
+		mResolver = resolver;
+	}
 
-    /**
-     * Execute a {@link HttpGet} request, passing a valid response through
-     * {@link XmlHandler#parseAndApply(XmlPullParser, ContentResolver)}.
-     */
-    public void executeGet(String url, XmlHandler handler) throws HandlerException {
-        final HttpUriRequest request = new HttpGet(url);
-        execute(request, handler);
-    }
+	/**
+	 * Execute a {@link HttpGet} request, passing a valid response through
+	 * {@link XmlHandler#parseAndApply(XmlPullParser, ContentResolver)}.
+	 */
+	public void executeGet(String url, XmlHandler handler)
+			throws HandlerException {
+		final HttpUriRequest request = new HttpGet(url);
+		execute(request, handler);
+	}
 
-    /**
-     * Execute this {@link HttpUriRequest}, passing a valid response through
-     * {@link XmlHandler#parseAndApply(XmlPullParser, ContentResolver)}.
-     */
-    public void execute(HttpUriRequest request, XmlHandler handler) throws HandlerException {
-        try {
-            final HttpResponse resp = mHttpClient.execute(request);
-            final int status = resp.getStatusLine().getStatusCode();
-            if (status != HttpStatus.SC_OK) {
-                throw new HandlerException("Unexpected server response " + resp.getStatusLine()
-                        + " for " + request.getRequestLine());
-            }
+	/**
+	 * Execute this {@link HttpUriRequest}, passing a valid response through
+	 * {@link XmlHandler#parseAndApply(XmlPullParser, ContentResolver)}.
+	 */
+	public void execute(HttpUriRequest request, XmlHandler handler)
+			throws HandlerException {
+		try {
+			final HttpResponse resp = mHttpClient.execute(request);
+			final int status = resp.getStatusLine().getStatusCode();
+			if (status != HttpStatus.SC_OK) {
+				throw new HandlerException("Unexpected server response "
+						+ resp.getStatusLine() + " for "
+						+ request.getRequestLine());
+			}
 
-            final InputStream input = resp.getEntity().getContent();
-            try {
-                final XmlPullParser parser = ParserUtils.newPullParser(input);
-                handler.parseAndApply(parser, mResolver);
-            } catch (XmlPullParserException e) {
-                throw new HandlerException("Malformed response for " + request.getRequestLine(), e);
-            } finally {
-                if (input != null) input.close();
-            }
-        } catch (HandlerException e) {
-            throw e;
-        } catch (IOException e) {
-            throw new HandlerException("Problem reading remote response for "
-                    + request.getRequestLine(), e);
-        }
-    }
+			final InputStream input = resp.getEntity().getContent();
+			try {
+				final XmlPullParser parser = ParserUtils.newPullParser(input);
+				handler.parseAndApply(parser, mResolver);
+			} catch (XmlPullParserException e) {
+				throw new HandlerException("Malformed response for "
+						+ request.getRequestLine(), e);
+			} finally {
+				if (input != null)
+					input.close();
+			}
+		} catch (HandlerException e) {
+			throw e;
+		} catch (IOException e) {
+			throw new HandlerException("Problem reading remote response for "
+					+ request.getRequestLine(), e);
+		}
+	}
 }
