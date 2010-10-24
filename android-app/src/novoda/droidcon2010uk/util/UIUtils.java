@@ -59,10 +59,8 @@ public class UIUtils {
      */
     public static TimeZone CONFERENCE_TIME_ZONE = TimeZone.getTimeZone("Europe/London");
 
-    public static final long CONFERENCE_START_MILLIS = ParserUtils.parseTime(
-            "2010-10-28T09:00:00.000+01:00");
-    public static final long CONFERENCE_END_MILLIS = ParserUtils.parseTime(
-            "2010-10-29T20:00:00.000+01:00");
+    public static final long CONFERENCE_START_MILLIS = ParserUtils.parseTime("2010-10-28T09:00:00.000+01:00");
+    public static final long CONFERENCE_END_MILLIS = ParserUtils.parseTime("2010-10-29T20:00:00.000+01:00");
 
     public static final Uri CONFERENCE_URL = Uri.parse("http://www.droidcon.co.uk/");
 

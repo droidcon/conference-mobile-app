@@ -85,5 +85,11 @@ public class AboutActivity extends Activity {
 	public void onSearchClick(View v) {
 		UIUtils.goSearch(this);
 	}
+	
+
+    /** Handle "home" title-bar action. */
+    public void onHomeClick(View v) {
+        UIUtils.goHome(this);
+    }
 
 }

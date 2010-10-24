@@ -361,7 +361,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
                 updateRefreshStatus();
 //TODO: I've quieted this because it was confusing to users to be seeing
                 final String errorText = getString(R.string.toast_sync_error, resultData.getString(Intent.EXTRA_TEXT));
-                Toast.makeText(HomeActivity.this, "Network connection failed while refreshing content.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "No online content refreshed.", Toast.LENGTH_SHORT).show();
                 break;
             }
         }

@@ -136,7 +136,13 @@
     
     <string name="sponsored_by">Sponsored by</string>
 
+    <string name="widget_title_text_during_conf">Right Now!</string>
+    <string name="widget_subtitle_text_during_conf">See you there!</string>
+    <string name="widget_title_text_after_conf">All done</string>
+    <string name="widget_subtitle_text_after_conf">See you next Year!</string>
     <string name="widget_subtitle_text">until droidcon London</string>
+    
+    
     
     
     <!-- _About -->
