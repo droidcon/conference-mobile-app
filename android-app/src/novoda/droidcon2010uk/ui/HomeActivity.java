@@ -38,6 +38,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
 import android.text.format.DateUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.View.OnClickListener;
@@ -77,7 +78,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
             // Start listening for SyncService updates again
             mState.mReceiver.setReceiver(this);
             updateRefreshStatus();
-            reloadNowPlaying(true);
+            reloadCountDown(true);
 
         } else {
             mState = new State();
@@ -103,7 +104,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
 
         // If 'tap here to enable Wifi' was shown, check if the user has enabled Wifi
         if (mState.mNowPlayingUri != null || mState.mNowPlayingGotoWifi) {
-            reloadNowPlaying(false);
+            reloadCountDown(false);
         } else if (mState.mNoResults) {
             showNowPlayingNoResults();
         }        
@@ -116,7 +117,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
         intent.putExtra(SyncService.EXTRA_STATUS_RECEIVER, mState.mReceiver);
         startService(intent);
 
-        reloadNowPlaying(true);
+        reloadCountDown(true);
     }
 
     /** Handle "search" title-bar action. */
@@ -192,10 +193,8 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
         startActivity(new Intent(Intent.ACTION_VIEW, UIUtils.CONFERENCE_URL));
     }
 
-    private void reloadNowPlaying(boolean forceRelocate) {
+    private void reloadCountDown(boolean forceRelocate) {
         mMessageHandler.removeCallbacks(mCountdownRunnable);
-
-        final long currentTimeMillis = System.currentTimeMillis();
 
         if (mNowPlayingLoadingView == null) // Landscape orientation
             return;
@@ -211,22 +210,38 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
         mNowPlayingLoadingView.setVisibility(View.VISIBLE);
         mState.mNoResults = false;
         mState.mNowPlayingGotoWifi = false;
-        if (currentTimeMillis < UIUtils.CONFERENCE_START_MILLIS) {
+        
+		final long nowTime = System.currentTimeMillis();
+		final boolean eventYetToStart = ((int) Math.max(0, (UIUtils.CONFERENCE_START_MILLIS - nowTime) / 1000)) > 0;
+		
+		
+		if(eventYetToStart){
             nowPlaying = createNowPlayingBeforeView();
-        } else if (currentTimeMillis > UIUtils.CONFERENCE_END_MILLIS) {
-            nowPlaying = createNowPlayingAfterView();
-        } else {
-            nowPlaying = createNowPlayingDuringView(forceRelocate);
-        }
+		}else{
+			
+			final boolean eventStarted = ((int) Math.max(0, (UIUtils.CONFERENCE_START_MILLIS - nowTime) / 1000)) == 0;
+			final boolean eventYetToEnd = ((int) Math.max(0, (UIUtils.CONFERENCE_END_MILLIS - nowTime) / 1000)) > 0;
+			final boolean eventEnded = ((int) Math.max(0, (UIUtils.CONFERENCE_END_MILLIS - nowTime) / 1000)) == 0;
 
-        homeRoot.addView(nowPlaying, new LayoutParams(
-                LayoutParams.FILL_PARENT,
-                (int) getResources().getDimension(R.dimen.now_playing_height)));
+			if(eventStarted && eventYetToEnd){
+				nowPlaying = createNowDuringView();
+			}
+			
+			if(eventEnded){
+				nowPlaying = createNowPlayingAfterView();
+			}
+		}
+		
+
+		homeRoot.addView(nowPlaying, new LayoutParams(
+				LayoutParams.FILL_PARENT,
+				(int) getResources().getDimension(R.dimen.now_playing_height)));
+
     }
 
     private View createNowPlayingBeforeView() {
         // Before conference, show countdown.
-        final View nowPlaying = getLayoutInflater().inflate(R.layout.now_playing_before, null);
+        final View nowPlaying = getLayoutInflater().inflate(R.layout.dashboard_footer_before, null);
         final TextView nowPlayingTitle = (TextView) nowPlaying.findViewById(
                 R.id.now_playing_title);
 
@@ -241,20 +256,18 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
 
     private View createNowPlayingAfterView() {
         // After conference, show canned text.
-        final View nowPlaying = getLayoutInflater().inflate(R.layout.now_playing_after, null);
+        final View nowPlaying = getLayoutInflater().inflate(R.layout.dashboard_footer_after, null);
         mNowPlayingLoadingView.setVisibility(View.GONE);
         nowPlaying.setVisibility(View.VISIBLE);
         return nowPlaying;
     }
-
-    private View createNowPlayingDuringView(boolean forceRelocate) {
-        // Conference in progress, show now playing.
-        final View nowPlaying = getLayoutInflater().inflate(R.layout.now_playing_during, null);
-        nowPlaying.setVisibility(View.GONE);
-        if (!forceRelocate && mState.mNowPlayingUri != null) {
-            mQueryHandler.startQuery(mState.mNowPlayingUri, SessionsQuery.PROJECTION);
-        }
-        return nowPlaying;
+    
+    private View createNowDuringView() {
+    	// After conference, show canned text.
+    	final View nowPlaying = getLayoutInflater().inflate(R.layout.dashboard_footer_during, null);
+    	mNowPlayingLoadingView.setVisibility(View.GONE);
+    	nowPlaying.setVisibility(View.VISIBLE);
+    	return nowPlaying;
     }
 
     /**
@@ -272,7 +285,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
                 // bail on future countdown updates.
                 mMessageHandler.postDelayed(new Runnable() {
                     public void run() {
-                        reloadNowPlaying(true);
+                        reloadCountDown(true);
                     }
                 }, 100);
                 return;
@@ -309,7 +322,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
     public void onQueryComplete(int token, Object cookie, Cursor cursor) {
         try {
             if (!cursor.moveToFirst()) {
-                showNowPlayingNoResults();
+//                showNowPlayingNoResults();
                 return;
             }
 
@@ -352,7 +365,7 @@ public class HomeActivity extends Activity implements AsyncQueryListener,
             case SyncService.STATUS_FINISHED: {
                 mState.mSyncing = false;
                 updateRefreshStatus();
-                reloadNowPlaying(true);
+                reloadCountDown(true);
                 break;
             }
             case SyncService.STATUS_ERROR: {

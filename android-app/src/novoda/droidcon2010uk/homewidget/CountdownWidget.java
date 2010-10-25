@@ -58,25 +58,20 @@ public class CountdownWidget extends AppWidgetProvider {
 				.max(0, (UIUtils.CONFERENCE_START_MILLIS - System
 						.currentTimeMillis()) / 1000);
 
-		if(remainingSec ==0){
-			countDownRequired = false;
-		}else{
-			
-			final int secs = remainingSec % 86400;
-			final int days = remainingSec / 86400;
-			final String str = context.getResources().getQuantityString(
-					R.plurals.now_playing_countdown, days, days,
-					formatRemainingTime(secs));
-			views.setTextViewText(R.id.widget_title, str);
-			
-			final Intent appIntent = new Intent(context, HomeActivity.class);
-			PendingIntent appStartPI = PendingIntent.getActivity( context, 0, appIntent, 0 );
-			views.setOnClickPendingIntent(R.id.countdown_widget, appStartPI);
-			
-			final ComponentName widget = new ComponentName(context,
-					CountdownWidget.class);
-			AppWidgetManager.getInstance(context).updateAppWidget(widget, views);
-		}
+		final int secs = remainingSec % 86400;
+		final int days = remainingSec / 86400;
+		final String str = context.getResources().getQuantityString(
+				R.plurals.now_playing_countdown, days, days,
+				formatRemainingTime(secs));
+		views.setTextViewText(R.id.widget_title, str);
+		
+		final Intent appIntent = new Intent(context, HomeActivity.class);
+		PendingIntent appStartPI = PendingIntent.getActivity( context, 0, appIntent, 0 );
+		views.setOnClickPendingIntent(R.id.countdown_widget, appStartPI);
+		
+		final ComponentName widget = new ComponentName(context,
+				CountdownWidget.class);
+		AppWidgetManager.getInstance(context).updateAppWidget(widget, views);
 		
 	}
 
@@ -116,19 +111,28 @@ public class CountdownWidget extends AppWidgetProvider {
 
 		@Override
 		public void onStart(final Intent intent, final int startId) {
-			updateScore(this);
 			
-			if(!countDownRequired){
-				final long nowTime = System.currentTimeMillis();
-				final int timeSinceConfEnd = (int) Math.max(0, (UIUtils.CONFERENCE_END_MILLIS - nowTime) / 1000);
-
-				if(timeSinceConfEnd > 0){
+			final long nowTime = System.currentTimeMillis();
+			final boolean eventYetToStart = ((int) Math.max(0, (UIUtils.CONFERENCE_START_MILLIS - nowTime) / 1000)) > 0;
+			
+			if(eventYetToStart){
+				updateScore(this);
+			}else{
+				
+				final boolean eventStarted = ((int) Math.max(0, (UIUtils.CONFERENCE_START_MILLIS - nowTime) / 1000)) == 0;
+				final boolean eventYetToEnd = ((int) Math.max(0, (UIUtils.CONFERENCE_END_MILLIS - nowTime) / 1000)) > 0;
+				final boolean eventEnded = ((int) Math.max(0, (UIUtils.CONFERENCE_END_MILLIS - nowTime) / 1000)) == 0;
+				
+				if(eventStarted && eventYetToEnd){
 					setWidgetTxt(this, getResources().getString(R.string.widget_title_text_during_conf), getResources().getString(R.string.widget_subtitle_text_during_conf));
 					setAlarmDaily(this);
-				}else{
+				}
+				
+				if(eventEnded){
 					setWidgetTxt(this, getResources().getString(R.string.widget_title_text_after_conf), getResources().getString(R.string.widget_subtitle_text_after_conf));
 				}
 			}
+			
 			
 			stopSelf();
 		}
