@@ -49,6 +49,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name="novoda.droidcon2010uk.ui.RummbleActivity"
+            android:theme="@style/Theme.IOSched"
+            android:label="@string/app_name"
+            android:icon="@drawable/ic_launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="novoda.droidcon2010uk.ui.MoreActivity"
+            android:theme="@style/Theme.IOSched"
+            android:label="@string/title_more"
+            android:configChanges="orientation|keyboardHidden" />
 
         <activity
             android:name="novoda.droidcon2010uk.ui.ScheduleActivity"

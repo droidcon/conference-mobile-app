@@ -372,5 +372,50 @@
      	<item name="android:paddingLeft">14dip</item>
      	<item name="android:paddingBottom">14dip</item>
     </style>
+    
+    <!-- _RUMMBLE -->
+    <style name="rummble_title" parent="base_wrap">
+	    <item name="android:id">@id/rummble_title</item>
+        <item name="android:background">@drawable/rummble_h1</item>
+	</style>
+	<style name="rummble_maintxt_txt" parent="about_maintxt_txt">
+	    <item name="android:id">@id/rummble_maintxt_txt</item>
+    	<item name="android:text">@string/rummble_maintxt_txt</item>
+    	<item name="android:layout_marginTop">18dip</item>
+    	<item name="android:layout_below">@id/rummble_title</item>
+    	<item name="android:layout_width">186dip</item>
+    </style>
+	<style name="rummble_btn_open" parent="about_btn_buynow">
+		<item name="android:id">@id/rummble_btn_open</item>
+    	<item name="android:src">@drawable/rummble_btn_open</item>
+   	</style>
+	<style name="rummble_img1" parent="about_mainImgs_img1">
+		<item name="android:id">@id/rummble_img1</item>		
+    	<item name="android:src">@drawable/rummble_img1</item>
+   	</style>
+	<style name="rummble_img2" parent="about_mainImgs_img2">
+		<item name="android:id">@id/rummble_img2</item>
+    	<item name="android:src">@drawable/rummble_img2</item>
+		<item name="android:layout_below">@id/rummble_img1</item>		
+   	</style>
+	<style name="rummble_img3" parent="about_mainImgs_img3">
+		<item name="android:id">@id/rummble_img3</item>
+		<item name="android:layout_below">@id/rummble_img2</item>		
+   	</style>
+	<style name="rummble_link_explanation" parent="about_maintxt_txt">
+		<item name="android:layout_below">@id/rummble_maintxt_txt</item>
+		<item name="android:text">@string/rummble_link_explanation</item>
+		<item name="android:textSize">12dip</item>
+   	</style>
+	<style name="rummble_link" parent="about_conference_link">
+		<item name="android:text">@string/rummble_link</item>
+   	</style>
+
+	<style name="rummble_bottom_img" parent="base_wrap">
+		<item name="android:id">@id/rummble_bottom_img</item>
+    	<item name="android:src">@drawable/rummble_ic_world</item>
+     	<item name="android:layout_alignParentRight">true</item>	
+     	<item name="android:layout_alignParentBottom">true</item>	
+   	</style>
 
 </resources>

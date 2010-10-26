@@ -37,6 +37,7 @@
     <string name="title_notes">Notes</string>
     <string name="title_note_edit">Edit note</string>
     <string name="title_map">Map</string>
+    <string name="title_more">More</string>
 
     <string name="title_session_tracks">Session tracks</string>
     <string name="title_vendor_tracks">Vendor Displays</string>
@@ -47,6 +48,8 @@
     <string name="title_search_query">Search for \'<xliff:g id="query">%1$s</xliff:g>\'</string>
 
     <string name="btn_schedule">Schedule</string>
+    <string name="btn_more">More</string>
+    <string name="btn_rummbles">Rummbles</string>
     <string name="btn_about">About</string>
     <string name="btn_sessions">Sessions</string>
     <string name="btn_starred">Starred</string>
@@ -158,5 +161,12 @@
 	<string name="about_sponsors_title_orange">Platinum Sponsor</string>
 	<string name="about_sponsors_title_sonyericsson">Silver Sponsor</string>
 	<string name="about_licence">This App is based on Google Inc.\'s IO Conference App vc12 and is licenced under Apache2.0</string>
+
+
+	<!-- RUMMBLE -->
+    <string name="rummble_maintxt_txt">Rummble develops a trust network unique to your likes and dislikes. Rummble is the best way find new local places waiting for people just like you to discover!</string>
+    <string name="rummble_link_explanation">Click the below button to open the Android App or use the link below for the HTML5 App.</string>
+    <string name="rummble_link">www.rummble.com</string>
+	
 
 </resources>

@@ -58,5 +58,15 @@
     <item type="id" name="about_sponsors_div" />
     <item type="id" name="about_licence" />
     <item type="id" name="fourofour" />
+    
+    <!-- _RUMMBLE -->
+    <item type="id" name="rummble_title" />
+    <item type="id" name="rummble_maintxt_txt" />
+    <item type="id" name="rummble_btn_open" />
+    <item type="id" name="rummble_img1" />
+    <item type="id" name="rummble_img2" />
+    <item type="id" name="rummble_img3" />
+    <item type="id" name="rummble_bottom_div" />
+    <item type="id" name="rummble_bottom_img" />
 
 </resources>
