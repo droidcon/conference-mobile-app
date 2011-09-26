@@ -1,421 +1,218 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
-    Copyright 2010 Google Inc.
+  Copyright 2011 Google Inc.
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-         http://www.apache.org/licenses/LICENSE-2.0
+       http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
--->
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
 <resources>
     <!-- Base application theme is the default theme. -->
-    <style name="Theme" parent="android:Theme"></style>
+    <style name="Theme" parent="android:style/Theme" />
 
     <!-- Variation on the Light theme that turns off the title -->
     <style name="Theme.IOSched" parent="android:style/Theme.Light">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowContentOverlay">@null</item>
+
+        <!-- custom attributes -->
+        <item name="textHeaderMaxLines">@integer/text_header_max_lines</item>
+        <item name="trackAbstractMaxLines">@integer/track_abstract_max_lines</item>
+
+        <!-- for programmatic instantiation -->
+        <item name="actionbarCompatButtonStyle">@style/ActionBarCompatButton</item>
+        <item name="actionbarCompatProgressIndicatorStyle">@style/ActionBarCompatProgressIndicator</item>
+        <item name="actionbarCompatSeparatorStyle">@style/ActionBarCompatSeparator</item>
+        <item name="actionbarCompatLogoStyle">@style/ActionBarCompatLogo</item>
+        <item name="actionbarCompatTextStyle">@style/ActionBarCompatText</item>
     </style>
 
-    <style name="HomeButton">
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:gravity">center_horizontal</item>
-        <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/foreground1</item>
-        <item name="android:background">@null</item>
+    <!-- Start with the Holographic Light theme -->
+    <style name="Theme.IOSched.Home" parent="style/Theme.IOSched">
+        <item name="android:windowBackground">@drawable/background_noise</item>
     </style>
 
-    <style name="TitleBar">
-        <item name="android:id">@id/title_container</item>
+    <style name="ActionBarCompat">
+        <item name="android:id">@id/actionbar_compat</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">@dimen/title_height</item>
+        <item name="android:layout_height">@dimen/actionbar_compat_height</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:background">@color/title_background</item>
+        <item name="android:background">@drawable/actionbar_compat_background</item>
     </style>
 
-    <style name="TitleBarAction">
-        <item name="android:layout_width">@dimen/title_height</item>
+    <style name="ActionBarCompatButton">
+        <item name="android:layout_width">@dimen/actionbar_compat_height</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:background">@drawable/title_button</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:background">@drawable/actionbar_compat_button</item>
     </style>
 
-    <style name="TitleBarProgressIndicator" parent="@android:style/Widget.ProgressBar.Small">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginLeft">14dip</item>
-        <item name="android:layout_marginRight">15dip</item>
-        <item name="android:layout_marginTop">14dip</item>
-        <item name="android:indeterminate">true</item> 
+    <style name="ActionBarCompatProgressIndicator" parent="android:style/Widget.ProgressBar.Small">
+        <item name="android:indeterminate">true</item>
     </style>
 
-    <style name="TitleBarSeparator">
-        <item name="android:layout_width">1px</item>
+    <style name="ActionBarCompatSeparator">
+        <item name="android:layout_width">2px</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:background">@color/title_separator</item>
+        <item name="android:background">@drawable/actionbar_compat_separator</item>
     </style>
 
-    <style name="TitleBarLogo">
-        <item name="android:id">@id/title_logo</item>
+    <style name="ActionBarCompatLogo">
+        <item name="android:id">@id/actionbar_compat_logo</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">fill_parent</item>
-        <item name="android:clickable">true</item>
+        <item name="android:clickable">false</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:contentDescription">@string/description_logo</item>
+        <item name="android:src">@drawable/actionbar_compat_logo</item>
     </style>
 
-    <style name="TitleBarSpring">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_weight">1</item>
-    </style>
-
-    <style name="TitleBarText">
-        <item name="android:id">@id/title_text</item>
+    <style name="ActionBarCompatText">
+        <item name="android:id">@id/actionbar_compat_text</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_weight">1</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:paddingLeft">12dip</item>
-        <item name="android:paddingRight">12dip</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/title_text</item>
+        <item name="android:textColor">@color/actionbar_text</item>
+        <item name="android:shadowColor">#fff</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">0.00001</item>
         <item name="android:singleLine">true</item>
         <item name="android:ellipsize">end</item>
     </style>
 
-    <style name="SessionTitle">
+    <style name="DashboardButton">
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:drawablePadding">2dp</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="ListItemTitle">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_size_medium</item>
-        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:textColor">@color/body_text_1</item>
     </style>
 
-    <style name="SessionSubtitle">
+    <style name="ListItemSubtitle">
         <item name="android:textSize">@dimen/text_size_small</item>
-        <item name="android:textColor">@android:color/secondary_text_light</item>
+        <item name="android:textColor">@color/body_text_2</item>
     </style>
 
-    <style name="NoteCreate">
-        <item name="android:textSize">18sp</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/primary_text_light</item>
-    </style>
-
-    <style name="NoteContent">
-        <item name="android:textSize">15sp</item>
-        <item name="android:lineSpacingMultiplier">1.1</item>
-        <item name="android:textColor">@android:color/primary_text_light</item>
-    </style>
-
-    <style name="NoteTime">
-        <item name="android:textSize">13sp</item>
-        <item name="android:textColor">@android:color/secondary_text_light</item>
-    </style>
-
-    <style name="ListItem">
+    <style name="ListItemContainerBase">
         <item name="android:minHeight">?android:attr/listPreferredItemHeight</item>
-        <item name="android:paddingLeft">10dip</item>
-        <item name="android:paddingRight">10dip</item>
-        <item name="android:paddingTop">8dip</item>
-        <item name="android:paddingBottom">8dip</item>
     </style>
+
+    <!-- a simple list item is one whose container and content are the same view -->
+    <style name="SimpleListItem" parent="style/ListItemContainerBase">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!-- used for more complex list items, e.g. those with stars aligned to the top-right -->
+
+    <style name="ListItemContainer" parent="style/ListItemContainerBase" />
+
+    <style name="ListItemContent">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <!-- What's On section in Home activity -->
+
+    <style name="WhatsOnItemBase">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:paddingLeft">@dimen/whats_on_item_padding</item>
+        <item name="android:paddingRight">@dimen/whats_on_item_padding</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="WhatsOnStaticItem" parent="style/WhatsOnItemBase">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="WhatsOnButtonItem" parent="style/WhatsOnStaticItem">
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:background">@drawable/whats_on_button</item>
+        <item name="android:paddingRight">@dimen/whats_on_button_right_padding</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- body content -->
 
     <style name="TextHeader">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:maxLines">?attr/textHeaderMaxLines</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textIsSelectable">true</item>
     </style>
 
-    <style name="TextHeaderTwo">
-        <item name="android:textSize">15sp</item>
+    <style name="TextHeaderSub">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/body_text_2</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="TextHeader2">
+        <item name="android:textSize">@dimen/text_size_medium</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/primary_text_light</item>
+        <item name="android:textColor">@color/accent_1</item>
+        <item name="android:textIsSelectable">true</item>
+    </style>
+
+    <style name="TextHeader3">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:textIsSelectable">true</item>
     </style>
 
     <style name="TextBody">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
         <item name="android:lineSpacingMultiplier">1.1</item>
-        <item name="android:textColor">@android:color/secondary_text_light</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:textIsSelectable">true</item>
     </style>
-    
-    <style name="TextTimer">
-        <item name="android:duplicateParentState">true</item>
-        <item name="android:layout_width">120dip</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:gravity">right</item>
-        <item name="android:textStyle">bold</item>
-		<item name="android:textSize">@dimen/text_size_timer</item>
-        <item name="android:textColor">@color/foreground1</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:ellipsize">end</item>
-        <item name="android:paddingTop">6dip</item>
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-        
-    <style name="TextTimerSubtitle">
-        <item name="android:duplicateParentState">true</item>
-        <item name="android:layout_width">120dip</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">1dip</item>
-        <item name="android:paddingBottom">1dip</item>
-        <item name="android:gravity">right</item>
-        <item name="android:textColor">@color/foreground2</item>
-        <item name="android:textSize">@dimen/text_size_timer_subtitle</item>
-        <item name="android:text">@string/now_playing_before_subtitle</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:background">@android:color/transparent</item>
-    </style>   
 
-	<!-- About -->
-	<style name="base_wrap">
-		<item name="android:layout_width">wrap_content</item>
-	    <item name="android:layout_height">wrap_content</item>
-	   	<item name="android:orientation">vertical</item>
-	</style>
-	
-	<style name="base_fill">
-		<item name="android:layout_width">fill_parent</item>
-	    <item name="android:layout_height">fill_parent</item>
-	   	<item name="android:orientation">vertical</item>
-	</style>
-	
-	<style name="txt_title">
-        <item name="android:textSize">15dip</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-	    <item name="android:layout_height">wrap_content</item>
-	</style>
-	
-	<style name="txt_paragraph">
-        <item name="android:textSize">15dip</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-	    <item name="android:layout_height">wrap_content</item>
-	</style>
-	
-	<style name="txt_sponsor">
-        <item name="android:textSize">10dip</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:layout_width">wrap_content</item>
-	    <item name="android:layout_height">wrap_content</item>
-	</style>
-	
-	<style name="about_top_div" parent="base_wrap">
-		<item name="android:id">@id/about_top_div</item>
-		<item name="android:layout_width">fill_parent</item>
-		<item name="android:layout_marginTop">14dip</item>
-		<item name="android:paddingLeft">14dip</item>
-		<item name="android:paddingRight">14dip</item>
-	</style>
-	<style name="about_bottom_div" parent="base_wrap">
-		<item name="android:id">@id/about_bottom_div</item>
-	</style>
-	
-    <style name="about_maintxt_div" parent="base_wrap">
-		<item name="android:id">@id/about_maintxt_div</item>
+    <style name="PushButton">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:background">@drawable/btn</item>
     </style>
-    
-    <style name="about_mainImgs_div" parent="base_wrap">
-    	<item name="android:id">@id/about_mainImgs_div</item>
-		<item name="android:orientation">vertical</item>
-		<item name="android:gravity">center</item>
-    	<item name="android:layout_alignParentRight">true</item>
-    </style>
-    
-    <style name="about_maintxt_title" parent="txt_title">
-    	<item name="android:id">@id/about_maintxt_title</item>
-    	<item name="android:text">@string/about_maintxt_title</item>
-    </style>
-    <style name="about_maintxt_subtitle" parent="base_wrap">
-        <item name="android:id">@id/about_maintxt_subtitle</item>
-        <item name="android:layout_below">@id/about_maintxt_title</item>
-    	<item name="android:text">@string/about_maintxt_subtitle</item>
-    </style>
-    <style name="about_maintxt_txt" parent="txt_paragraph">
-    	<item name="android:text">@string/about_maintxt_txt</item>
-    	<item name="android:layout_marginTop">14dip</item>
-    	<item name="android:layout_below">@id/about_maintxt_subtitle</item>
-    	<item name="android:layout_width">186dip</item>
-    </style>
-    
-    <style name="about_mainImgs_img1" parent="base_wrap">
-		<item name="android:id">@id/about_mainImgs_img1</item>    
-    	<item name="android:src">@drawable/about_img1</item>
-    </style>
-    <style name="about_mainImgs_img2" parent="base_wrap">
-		<item name="android:id">@id/about_mainImgs_img2</item>    
-    	<item name="android:src">@drawable/about_img2</item>
-    	<item name="android:layout_marginTop">14dip</item>
-    	<item name="android:layout_below">@id/about_mainImgs_img1</item>
-    </style>
-    <style name="about_mainImgs_img3" parent="base_wrap">
-		<item name="android:id">@id/about_mainImgs_img3</item>    
-    	<item name="android:layout_below">@id/about_mainImgs_img2</item>
-    	<item name="android:layout_marginTop">14dip</item>
-    	<item name="android:src">@drawable/about_img3</item>
-    </style>
-    
-    <style name="about_btn_buynow" parent="base_wrap">
-		<item name="android:id">@id/about_btn_buynow</item>
-    	<item name="android:src">@drawable/btn_about_buytickets</item>
-    	<item name="android:layout_marginTop">8dip</item>
-    	<item name="android:paddingLeft">14dip</item>
-    	<item name="android:background">@null</item>  
-    </style>
-    
-    <style name="about_details_div" parent="base_wrap">
-    	<item name="android:id">@id/about_details_div</item>
-    	<item name="android:layout_marginTop">14dip</item>
-    	<item name="android:paddingLeft">14dip</item>
-    	<item name="android:layout_width">206dip</item>
-    </style>
-    
-    <style name="about_address_title" parent="txt_title">
-    	<item name="android:id">@id/about_address_title</item>
-    	<item name="android:text">@string/about_address_title</item>    	
-    </style>
-    
-    <style name="about_address" parent="base_wrap">
-    	<item name="android:id">@id/about_address</item>
-    	<item name="android:layout_below">@id/about_address_title</item>
-    </style>    
-    
-    <style name="about_address_icon" parent="base_wrap">
-    	<item name="android:id">@id/about_address_icon</item>
-    	<item name="android:src">@drawable/btn_about_maps</item>
-    	<item name="android:layout_width">48dip</item>
-    	<item name="android:background">@null</item> 
-    </style>
-    
-    <style name="about_address_txt" parent="base_wrap">
-    	<item name="android:id">@id/about_address_txt</item>
-    	<item name="android:text">@string/about_address_txt</item>
-    	<item name="android:layout_toRightOf">@id/about_address_icon</item>
-    </style>
-    
-   	<style name="about_conference_link" parent="base_wrap">
-    	<item name="android:id">@id/about_conference_link</item>
-        <item name="android:layout_below">@id/about_address</item>
-	   	<item name="android:text">@string/about_conference_link</item>
-        <item name="android:textStyle">bold</item>
-        <item name="android:autoLink">web</item>
-        <item name="android:textColor">#3a8ca7</item>
-	   	<item name="android:layout_marginTop">8dip</item>	 
-    </style>
-    
-    <style name="about_twitter" parent="txt_title">
-    	<item name="android:id">@id/about_twitter</item>
-    	<item name="android:layout_below">@id/about_conference_link</item>
-    	<item name="android:layout_marginTop">14dip</item>
-	   	<item name="android:text">@string/about_twitter</item>
-    </style>
-    <style name="about_twitter_hashtag" parent="base_wrap">
-    	<item name="android:id">@id/about_twitter_hashtag</item>
-        <item name="android:layout_below">@id/about_twitter</item>
-	   	<item name="android:text">@string/about_twitter_hashtag</item>
-    </style>
-        	
-    <style name="about_sponsors_div" parent="base_wrap">
-    	<item name="android:id">@id/about_sponsors_div</item>
-     	<item name="android:layout_alignParentRight">true</item>
-     	<item name="android:layout_marginTop">24dip</item>
-     	<item name="android:paddingRight">14dip</item>
-    </style>
-    <style name="about_sponsors_orange_title" parent="txt_sponsor">
-    	<item name="android:id">@id/about_sponsors_orange_title</item>
-        <item name="android:background">#d6d6d6</item>
-        <item name="android:layout_width">88.5dip</item>
-        <item name="android:layout_marginBottom">4dip</item>
-        <item name="android:gravity">center</item>        
-    </style>
-   	<style name="about_sponsors_orange" parent="base_wrap">
-    	<item name="android:id">@id/about_sponsors_orange</item>
-    	<item name="android:layout_below">@id/about_sponsors_orange_title</item>    	
-    	<item name="android:src">@drawable/about_sponsor_orange</item>    	
-   	</style>
-   	<style name="about_sponsors_sonyericsson_title" parent="txt_sponsor">
-    	<item name="android:id">@id/about_sponsors_sonyericsson_title</item>
-    	<item name="android:layout_below">@id/about_sponsors_orange</item>
-     	<item name="android:layout_marginTop">14dip</item>    	
-        <item name="android:background">#d6d6d6</item>
-    	<item name="android:layout_width">88.5dip</item>
-    	<item name="android:layout_marginBottom">4dip</item>
-    	<item name="android:gravity">center</item>
-    </style>
-    <style name="about_sponsors_sonyericsson" parent="base_wrap">
-    	<item name="android:id">@id/about_sponsors_sonyericsson</item>
-    	<item name="android:layout_below">@id/about_sponsors_sonyericsson_title</item>    	
-    	<item name="android:src">@drawable/about_sponsor_se</item>
-    	<item name="android:paddingBottom">28dip</item>
-    </style>
-    <style name="fourofour" parent="base_fill">
-    	<item name="android:id">@id/fourofour</item>
-    	<item name="android:layout_below">@id/title_container</item>    	
-    	<item name="android:src">@drawable/fourofour</item>
-    </style>
-    <style name="about_licence" parent="txt_paragraph">
-    	<item name="android:id">@id/about_licence</item>
-    	<item name="android:layout_below">@id/about_bottom_div</item>
-    	<item name="android:textSize">12dip</item>    	
-    	<item name="android:text">@string/about_licence</item>
-    	<item name="android:layout_width">186dip</item>
-     	<item name="android:paddingLeft">14dip</item>
-     	<item name="android:paddingBottom">14dip</item>
-    </style>
-    
-    <!-- _RUMMBLE -->
-    <style name="rummble_title" parent="base_wrap">
-	    <item name="android:id">@id/rummble_title</item>
-        <item name="android:background">@drawable/rummble_h1</item>
-	</style>
-	<style name="rummble_maintxt_txt" parent="about_maintxt_txt">
-	    <item name="android:id">@id/rummble_maintxt_txt</item>
-    	<item name="android:text">@string/rummble_maintxt_txt</item>
-    	<item name="android:layout_marginTop">18dip</item>
-    	<item name="android:layout_below">@id/rummble_title</item>
-    	<item name="android:layout_width">186dip</item>
-    </style>
-	<style name="rummble_btn_open" parent="about_btn_buynow">
-		<item name="android:id">@id/rummble_btn_open</item>
-    	<item name="android:src">@drawable/rummble_btn_open</item>
-   	</style>
-	<style name="rummble_img1" parent="about_mainImgs_img1">
-		<item name="android:id">@id/rummble_img1</item>		
-    	<item name="android:src">@drawable/rummble_img1</item>
-   	</style>
-	<style name="rummble_img2" parent="about_mainImgs_img2">
-		<item name="android:id">@id/rummble_img2</item>
-    	<item name="android:src">@drawable/rummble_img2</item>
-		<item name="android:layout_below">@id/rummble_img1</item>		
-   	</style>
-	<style name="rummble_img3" parent="about_mainImgs_img3">
-		<item name="android:id">@id/rummble_img3</item>
-		<item name="android:layout_below">@id/rummble_img2</item>		
-   	</style>
-	<style name="rummble_link_explanation" parent="about_maintxt_txt">
-		<item name="android:layout_below">@id/rummble_maintxt_txt</item>
-		<item name="android:text">@string/rummble_link_explanation</item>
-		<item name="android:textSize">12dip</item>
-   	</style>
-	<style name="rummble_link" parent="about_conference_link">
-		<item name="android:text">@string/rummble_link</item>
-   	</style>
 
-	<style name="rummble_bottom_img" parent="base_wrap">
-		<item name="android:id">@id/rummble_bottom_img</item>
-    	<item name="android:src">@drawable/rummble_ic_world</item>
-     	<item name="android:layout_alignParentRight">true</item>	
-     	<item name="android:layout_alignParentBottom">true</item>	
-   	</style>
 
 </resources>
