@@ -34,4 +34,11 @@
     <color name="block_column_1">#ff0fabff</color>
     <color name="block_column_2">#ffdf1831</color>
     <color name="block_column_3">#ff009939</color>
+
+	<!-- Colours to support the widget -->
+    <color name="foreground1">#ff355689</color>
+    <color name="widgetforeground">#ff92a3c5</color>
+
 </resources>
+
+
