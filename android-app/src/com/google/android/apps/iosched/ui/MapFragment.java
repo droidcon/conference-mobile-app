@@ -51,7 +51,7 @@ public class MapFragment extends Fragment {
     public static final String EXTRA_ROOM = "com.google.android.iosched.extra.ROOM";
 
     private static final String MAP_JSI_NAME = "MAP_CONTAINER";
-    private static final String MAP_URL = "http://www.google.com/events/io/2011/embed.html";
+    private static final String MAP_URL = "http://maps.google.co.uk/maps/ms?ie=UTF8&hl=en&num=10&msa=0&msid=111268683924396905734.000490c793a5b883cd911&ll=51.533516,-0.105298&spn=0.001949,0.004817&output=embed";
     private static boolean CLEAR_CACHE_ON_LOAD = false;
 
     private WebView mWebView;
