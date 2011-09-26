@@ -142,4 +142,9 @@
     <string name="widget_subtitle_text_after_conf">See you next Year!</string>
     <string name="widget_subtitle_text">until droidcon London</string>
 
+    <plurals name="widget_countdown_title">
+        <item quantity="zero"><xliff:g id="remaining_time">%2$s</xliff:g></item>
+        <item quantity="one"><xliff:g id="number_of_days">%1$s</xliff:g> day, <xliff:g id="remaining_time">%2$s</xliff:g></item>
+        <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g></item>
+    </plurals>
 </resources>

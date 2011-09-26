@@ -18,9 +18,7 @@ import android.widget.RemoteViews;
 
 public class CountdownWidget extends AppWidgetProvider {
 
-	private static boolean countDownRequired = true;
 	private static PendingIntent refreshIntent;
-	private static final String TAG = CountdownWidget.class.getSimpleName();
 
 	@Override
 	public void onUpdate(final Context context, final AppWidgetManager manager,
@@ -60,7 +58,7 @@ public class CountdownWidget extends AppWidgetProvider {
 		final int secs = remainingSec % 86400;
 		final int days = remainingSec / 86400;
 		final String str = context.getResources().getQuantityString(
-				R.plurals.whats_on_countdown_title, days, days,
+				R.plurals.widget_countdown_title, days, days,
 				formatRemainingTime(secs));
 		views.setTextViewText(R.id.widget_title, str);
 		
