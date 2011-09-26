@@ -42,7 +42,7 @@ public class BulletinFragment extends Fragment {
 
     private static final Pattern sSiteUrlPattern = Pattern.compile("google\\.com\\/events\\/io");
     private static final String BULLETIN_URL =
-            "http://www.google.com/events/io/2011/mobile_announcements.html";
+            "http://m.uk.droidcon.com/blog";
 
     private WebView mWebView;
     private View mLoadingSpinner;
