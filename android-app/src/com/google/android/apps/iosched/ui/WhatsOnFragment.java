@@ -24,6 +24,7 @@ import com.google.android.apps.iosched.util.UIUtils;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -40,6 +41,11 @@ import android.widget.TextView;
  * {@link TagStreamFragment} that is visible on tablets on the home screen.
  */
 public class WhatsOnFragment extends Fragment {
+    /**
+     * The URI for reigstrations
+     */
+    
+    private Uri REGISTER_URI = Uri.parse("http://m.uk.droidcon.com/register");
 
     private Handler mMessageHandler = new Handler();
 
@@ -93,7 +99,8 @@ public class WhatsOnFragment extends Fragment {
                 public void onClick(View view) {
                     AnalyticsUtils.getInstance(getActivity()).trackEvent(
                             "Home Screen Dashboard", "Click", "Realtime Stream", 0);
-                    Intent intent = new Intent(getActivity(), TagStreamActivity.class);
+                	Intent intent = new Intent(Intent.ACTION_VIEW);
+                	intent.setData(REGISTER_URI);
                     startActivity(intent);
                 }
             });

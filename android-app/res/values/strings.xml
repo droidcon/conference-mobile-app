@@ -111,7 +111,7 @@
         <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g>\nuntil Droidcon</item>
     </plurals>
 
-    <string name="whats_on_stream_title">Realtime\nStream</string>
+    <string name="whats_on_stream_title">Register\nNow</string>
     <string name="whats_on_now_playing_title">Now Playing</string>
     <string name="whats_on_thank_you_title">See you next year!</string>
 
