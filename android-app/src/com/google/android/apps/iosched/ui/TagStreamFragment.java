@@ -45,7 +45,7 @@ public class TagStreamFragment extends Fragment {
 
     public static final String EXTRA_QUERY = "com.google.android.iosched.extra.QUERY";
 
-    public static final String CONFERENCE_HASHTAG = "#droidconLondon2011";
+    public static final String CONFERENCE_HASHTAG = "#droidcon";
 
     private String mSearchString;
     private WebView mWebView;
@@ -86,10 +86,9 @@ public class TagStreamFragment extends Fragment {
                 mWebView.getSettings().setJavaScriptCanOpenWindowsAutomatically(false);
                 try {
                     mWebView.loadUrl(
-                            "http://www.google.com/search?tbs="
-                            + "mbl%3A1&hl=en&source=hp&biw=1170&bih=668&q="
-                            + URLEncoder.encode(mSearchString, "UTF-8")
-                            + "&btnG=Search");
+                            "http://plus.google.com/s/"
+                            + URLEncoder.encode(mSearchString.substring(1), "UTF-8")
+                            + "/posts");
                 } catch (UnsupportedEncodingException e) {
                     Log.e(TAG, "Could not construct the realtime search URL", e);
                 }
