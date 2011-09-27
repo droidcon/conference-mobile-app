@@ -52,7 +52,7 @@ public class AboutFragment extends Fragment {
 		public void onClick(View v) {
 			Log.i(TAG, "ID is: " +  v.getId() );
 			switch(v.getId()){
-				case R.id.about_btn_buynow:
+				case R.id.about_buynow:
                 	Intent intent = new Intent(Intent.ACTION_VIEW);
                 	intent.setData(REGISTER_URI);
     				v.getContext().startActivity(intent);
