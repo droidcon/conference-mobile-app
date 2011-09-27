@@ -22,6 +22,7 @@ import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
 import com.google.android.apps.iosched.ui.phone.MapActivity;
 import com.google.android.apps.iosched.ui.tablet.MapMultiPaneActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -44,10 +45,10 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.StyleSpan;
 import android.widget.TextView;
 
-import java.util.Formatter;
 import java.util.List;
-import java.util.Locale;
 import java.util.TimeZone;
+
+import novoda.droidcon.ui.AboutActivity;
 
 /**
  * An assortment of UI helpers.
@@ -69,11 +70,6 @@ public class UIUtils {
     /** Flags used with {@link DateUtils#formatDateRange}. */
     private static final int TIME_FLAGS = DateUtils.FORMAT_SHOW_TIME
             | DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_ABBREV_WEEKDAY;
-
-    /** {@link StringBuilder} used for formatting time block. */
-    private static StringBuilder sBuilder = new StringBuilder(50);
-    /** {@link Formatter} used for formatting time block. */
-    private static Formatter sFormatter = new Formatter(sBuilder, Locale.getDefault());
 
     private static StyleSpan sBoldSpan = new StyleSpan(Typeface.BOLD);
 
@@ -209,11 +205,19 @@ public class UIUtils {
         return null;
     }
 
-    public static Class getMapActivityClass(Context context) {
+    public static Class<? extends Activity> getMapActivityClass(Context context) {
         if (UIUtils.isHoneycombTablet(context)) {
             return MapMultiPaneActivity.class;
         }
 
         return MapActivity.class;
+    }
+
+    public static Class<? extends Activity> getAboutActivityClass(Context context) {
+/*        if (UIUtils.isHoneycombTablet(context)) {
+            return MapMultiPaneActivity.class;
+        }
+*/
+        return AboutActivity.class;
     }
 }

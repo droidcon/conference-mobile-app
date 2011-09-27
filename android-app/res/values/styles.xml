@@ -214,5 +214,203 @@
         <item name="android:background">@drawable/btn</item>
     </style>
 
+	<!-- Droidcon About Activity -->
+	<style name="base_wrap">
+		<item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	   	<item name="android:orientation">vertical</item>
+	</style>
+	
+	<style name="base_fill">
+		<item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">fill_parent</item>
+	   	<item name="android:orientation">vertical</item>
+	   	<item name="android:gravity">center</item>
+	</style>
+	
+	<style name="txt_title">
+        <item name="android:textSize">15dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	<style name="txt_paragraph">
+        <item name="android:textSize">15dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	<style name="txt_sponsor">
+        <item name="android:textSize">10dip</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	</style>
+	
+	<style name="about_top_div" parent="base_wrap">
+		<item name="android:id">@id/about_top_div</item>
+		<item name="android:layout_width">wrap_content</item>
+		<item name="android:layout_marginTop">14dip</item>
+		<item name="android:paddingLeft">14dip</item>
+		<item name="android:paddingRight">14dip</item>
+	   	<item name="android:orientation">horizontal</item>
+	</style>
+	
+	<style name="about_bottom_div" parent="base_wrap">
+		<item name="android:id">@id/about_bottom_div</item>
+		<item name="android:layout_width">wrap_content</item>
+	   	<item name="android:orientation">horizontal</item>
+	</style>
+	
+    <style name="about_maintxt_div" parent="base_wrap">
+		<item name="android:id">@id/about_maintxt_div</item>
+    </style>
+    
+    <style name="about_mainImgs_div" parent="base_wrap">
+    	<item name="android:id">@id/about_mainImgs_div</item>
+		<item name="android:orientation">vertical</item>
+		<item name="android:gravity">center</item>
+    </style>
+    
+    <style name="about_maintxt_title" parent="txt_title">
+    	<item name="android:id">@id/about_maintxt_title</item>
+    	<item name="android:text">@string/about_maintxt_title</item>
+    </style>
+    <style name="about_maintxt_subtitle" parent="base_wrap">
+        <item name="android:id">@id/about_maintxt_subtitle</item>
+        <item name="android:layout_below">@id/about_maintxt_title</item>
+    	<item name="android:text">@string/about_maintxt_subtitle</item>
+    </style>
+    <style name="about_maintxt_txt" parent="txt_paragraph">
+    	<item name="android:text">@string/about_maintxt_txt</item>
+    	<item name="android:layout_marginTop">14dip</item>
+    	<item name="android:layout_below">@id/about_maintxt_subtitle</item>
+    	<item name="android:layout_width">186dip</item>
+    </style>
+    
+    <style name="about_mainImgs_img1" parent="base_wrap">
+		<item name="android:id">@id/about_mainImgs_img1</item>    
+    	<item name="android:src">@drawable/about_img1</item>
+    </style>
+    <style name="about_mainImgs_img2" parent="base_wrap">
+		<item name="android:id">@id/about_mainImgs_img2</item>    
+    	<item name="android:src">@drawable/about_img2</item>
+    	<item name="android:layout_marginTop">14dip</item>
+    	<item name="android:layout_below">@id/about_mainImgs_img1</item>
+    </style>
+    <style name="about_mainImgs_img3" parent="base_wrap">
+		<item name="android:id">@id/about_mainImgs_img3</item>    
+    	<item name="android:layout_below">@id/about_mainImgs_img2</item>
+    	<item name="android:layout_marginTop">14dip</item>
+    	<item name="android:src">@drawable/about_img3</item>
+    </style>
+    
+    <style name="about_btn_buynow" parent="base_wrap">
+		<item name="android:id">@id/about_btn_buynow</item>
+    	<item name="android:src">@drawable/btn_about_buytickets</item>
+    	<item name="android:layout_marginTop">8dip</item>
+    	<item name="android:paddingLeft">14dip</item>
+    	<item name="android:background">@null</item>  
+    </style>
+    
+    <style name="about_details_div" parent="base_wrap">
+    	<item name="android:id">@id/about_details_div</item>
+    	<item name="android:layout_marginTop">14dip</item>
+    	<item name="android:paddingLeft">14dip</item>
+    	<item name="android:layout_width">206dip</item>
+    </style>
+    
+    <style name="about_address_title" parent="txt_title">
+    	<item name="android:id">@id/about_address_title</item>
+    	<item name="android:text">@string/about_address_title</item>    	
+    </style>
+    
+    <style name="about_address" parent="base_wrap">
+    	<item name="android:id">@id/about_address</item>
+    	<item name="android:layout_below">@id/about_address_title</item>
+    </style>    
+    
+    <style name="about_address_icon" parent="base_wrap">
+    	<item name="android:id">@id/about_address_icon</item>
+    	<item name="android:src">@drawable/btn_about_maps</item>
+    	<item name="android:layout_width">48dip</item>
+    	<item name="android:background">@null</item> 
+    </style>
+    
+    <style name="about_address_txt" parent="base_wrap">
+    	<item name="android:id">@id/about_address_txt</item>
+    	<item name="android:text">@string/about_address_txt</item>
+    	<item name="android:layout_toRightOf">@id/about_address_icon</item>
+    </style>
+    
+   	<style name="about_conference_link" parent="base_wrap">
+    	<item name="android:id">@id/about_conference_link</item>
+        <item name="android:layout_below">@id/about_address</item>
+	   	<item name="android:text">@string/about_conference_link</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:textColor">#3a8ca7</item>
+	   	<item name="android:layout_marginTop">8dip</item>	 
+    </style>
+    
+    <style name="about_twitter" parent="txt_title">
+    	<item name="android:id">@id/about_twitter</item>
+    	<item name="android:layout_below">@id/about_conference_link</item>
+    	<item name="android:layout_marginTop">5dip</item>
+	   	<item name="android:text">@string/about_twitter</item>
+    </style>
+    <style name="about_twitter_hashtag" parent="base_wrap">
+    	<item name="android:id">@id/about_twitter_hashtag</item>
+        <item name="android:layout_below">@id/about_twitter</item>
+	   	<item name="android:text">@string/about_twitter_hashtag</item>
+    </style>
+        	
+    <style name="about_sponsors_div" parent="base_wrap">
+    	<item name="android:id">@id/about_sponsors_div</item>
+     	<item name="android:layout_alignParentRight">true</item>
+     	<item name="android:layout_marginTop">24dip</item>
+     	<item name="android:paddingRight">14dip</item>
+    </style>
+    <style name="about_sponsors_orange_title" parent="txt_sponsor">
+    	<item name="android:id">@id/about_sponsors_orange_title</item>
+        <item name="android:background">#d6d6d6</item>
+        <item name="android:layout_width">88.5dip</item>
+        <item name="android:layout_marginBottom">4dip</item>
+        <item name="android:gravity">center</item>        
+    </style>
+   	<style name="about_sponsors_orange" parent="base_wrap">
+    	<item name="android:id">@id/about_sponsors_orange</item>
+    	<item name="android:layout_below">@id/about_sponsors_orange_title</item>    	
+    	<item name="android:src">@drawable/about_sponsor_orange</item>    	
+   	</style>
+   	<style name="about_sponsors_sonyericsson_title" parent="txt_sponsor">
+    	<item name="android:id">@id/about_sponsors_sonyericsson_title</item>
+    	<item name="android:layout_below">@id/about_sponsors_orange</item>
+     	<item name="android:layout_marginTop">14dip</item>    	
+        <item name="android:background">#d6d6d6</item>
+    	<item name="android:layout_width">88.5dip</item>
+    	<item name="android:layout_marginBottom">4dip</item>
+    	<item name="android:gravity">center</item>
+    </style>
+    <style name="about_sponsors_sonyericsson" parent="base_wrap">
+    	<item name="android:id">@id/about_sponsors_sonyericsson</item>
+    	<item name="android:layout_below">@id/about_sponsors_sonyericsson_title</item>    	
+    	<item name="android:src">@drawable/about_sponsor_se</item>
+    	<item name="android:paddingBottom">28dip</item>
+    </style>
+    <style name="about_licence" parent="txt_paragraph">
+    	<item name="android:id">@id/about_licence</item>
+    	<item name="android:layout_below">@id/about_bottom_div</item>
+    	<item name="android:textSize">12dip</item>    	
+    	<item name="android:text">@string/about_licence</item>
+    	<item name="android:layout_width">match_parent</item>
+    	<item name="android:gravity">center</item>
+    	<item name="android:paddingTop">14dip</item>
+     	<item name="android:paddingLeft">14dip</item>
+     	<item name="android:paddingBottom">14dip</item>
+    </style>
 
 </resources>

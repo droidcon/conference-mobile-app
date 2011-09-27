@@ -179,6 +179,11 @@
  		        <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info" />
 		</receiver>
 
+		<!-- Droidcon About Activity -->
+        <activity
+            android:name="novoda.droidcon.ui.AboutActivity"
+            android:label="@string/title_about" />
+
         <!-- Other manifest items -->
 
         <meta-data

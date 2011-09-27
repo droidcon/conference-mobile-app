@@ -101,12 +101,12 @@ public class DashboardFragment extends Fragment {
             }
         });
 
-        root.findViewById(R.id.home_btn_map).setOnClickListener(new View.OnClickListener() {
+        root.findViewById(R.id.home_btn_about).setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 // Launch map of conference venue
                 fireTrackerEvent("Map");
                 startActivity(new Intent(getActivity(),
-                        UIUtils.getMapActivityClass(getActivity())));
+                        UIUtils.getAboutActivityClass(getActivity())));
             }
         });
 

@@ -32,4 +32,35 @@
 
     <item type="id" name="blocks_ruler" />
     <item type="id" name="blocks_now" />
+    
+    <!-- About screen -->
+    <item type="id" name="about_top_div" />
+    <item type="id" name="about_bottom_div" />
+    <item type="id" name="about_btn_buynow" />
+    <item type="id" name="about_maintxt_div" />
+    <item type="id" name="about_mainImgs_div" />
+    <item type="id" name="about_details_div" />
+
+    <item type="id" name="about_mainImgs_img1" />
+    <item type="id" name="about_mainImgs_img2" />
+    <item type="id" name="about_mainImgs_img3" />
+
+    <item type="id" name="about_maintxt_title" />
+    <item type="id" name="about_maintxt_subtitle" />
+
+    <item type="id" name="about_address" />
+    <item type="id" name="about_conference_link" />
+    <item type="id" name="about_address_icon" />
+    <item type="id" name="about_address_title" />
+    <item type="id" name="about_address_txt" />
+    <item type="id" name="about_twitter" />
+    <item type="id" name="about_twitter_hashtag" />
+    
+    <item type="id" name="about_sponsors_orange_title" />
+    <item type="id" name="about_sponsors_sonyericsson_title" />
+    <item type="id" name="about_sponsors_orange" />
+    <item type="id" name="about_sponsors_sonyericsson" />
+    <item type="id" name="about_sponsors_div" />
+    <item type="id" name="about_licence" />
+    <item type="id" name="fourofour" />
 </resources>
