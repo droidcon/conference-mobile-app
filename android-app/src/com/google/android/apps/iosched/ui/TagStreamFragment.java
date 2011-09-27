@@ -45,7 +45,7 @@ public class TagStreamFragment extends Fragment {
 
     public static final String EXTRA_QUERY = "com.google.android.iosched.extra.QUERY";
 
-    public static final String CONFERENCE_HASHTAG = "#droidconuk";
+    public static final String CONFERENCE_HASHTAG = "#droidcon";
 
     private String mSearchString;
     private WebView mWebView;
