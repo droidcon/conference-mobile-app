@@ -130,8 +130,8 @@
     <string name="note_template">Session: <xliff:g id="title">%1$s</xliff:g>\n\n\n\n__________\nTags: <xliff:g id="hashtags">%2$s</xliff:g></string>
 
     <!-- EULA -->
-    <string name="eula_title">EULA title.</string>
-    <string name="eula_text">EULA goes here.</string>
+    <string name="eula_title">EULA.</string>
+    <string name="eula_text">This software is provided without any warentees or guarentees, and the developer and publisher will not accept any liability for anything resulting from the use of this application.</string>
     <string name="accept">Accept</string>
     <string name="decline">Decline</string>
 	
