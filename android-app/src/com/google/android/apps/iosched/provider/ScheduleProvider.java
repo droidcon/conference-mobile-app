@@ -280,7 +280,7 @@ public class ScheduleProvider extends ContentProvider {
                 getContext().getContentResolver().notifyChange(uri, null);
                 return Tracks.buildTrackUri(values.getAsString(SessionsTracks.TRACK_ID));
             }
-            case SPEAKERS: {
+            case SPEAKERS: {            	
                 db.insertOrThrow(Tables.SPEAKERS, null, values);
                 getContext().getContentResolver().notifyChange(uri, null);
                 return Speakers.buildSpeakerUri(values.getAsString(Speakers.SPEAKER_ID));

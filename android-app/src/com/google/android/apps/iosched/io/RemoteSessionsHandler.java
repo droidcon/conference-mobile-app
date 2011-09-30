@@ -60,7 +60,7 @@ public class RemoteSessionsHandler extends XmlHandler {
      * {@link Columns#SESSION_DATE} and {@link Columns#SESSION_TIME}.
      */
     private static final SimpleDateFormat sTimeFormat = new SimpleDateFormat(
-            "EEEE MMM d yyyy h:mma Z", Locale.US);
+            "EEEE MMM d yyyy h:mma Z", Locale.UK);
 
     public RemoteSessionsHandler() {
         super(ScheduleContract.CONTENT_AUTHORITY);
@@ -189,7 +189,7 @@ public class RemoteSessionsHandler extends XmlHandler {
      *            {@link Columns#SESSION_TIME}.
      */
     private static long parseTime(String date, String time) throws HandlerException {
-        final String composed = String.format("%s 2011 %s -0000", date, time);
+        final String composed = String.format("%s 2011 %s +0100", date, time);
         try {
             return sTimeFormat.parse(composed).getTime();
         } catch (java.text.ParseException e) {

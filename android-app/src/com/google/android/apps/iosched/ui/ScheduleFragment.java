@@ -78,8 +78,8 @@ public class ScheduleFragment extends Fragment implements
     private static final int TIME_FLAGS = DateUtils.FORMAT_SHOW_DATE
             | DateUtils.FORMAT_SHOW_WEEKDAY | DateUtils.FORMAT_ABBREV_WEEKDAY;
 
-    private static final long TUE_START = ParserUtils.parseTime("2011-10-06T00:00:00.000-00:00");
-    private static final long WED_START = ParserUtils.parseTime("2011-10-07T00:00:00.000-00:00");
+    private static final long TUE_START = ParserUtils.parseTime("2011-10-06T00:00:00.000+01:00");
+    private static final long WED_START = ParserUtils.parseTime("2011-10-07T00:00:00.000+01:00");
 
     private static final int DISABLED_BLOCK_ALPHA = 100;
 
