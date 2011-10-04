@@ -49,7 +49,7 @@ public class ParserUtils {
 
     public static final String BLOCK_TYPE_FOOD = "food";
     public static final String BLOCK_TYPE_SESSION = "session";
-    public static final String BLOCK_TYPE_OFFICE_HOURS = "officehours";
+    public static final String BLOCK_TYPE_OFFICE_HOURS = "Displays";
 
     // TODO: factor this out into a separate data file.
     public static final Set<String> LOCAL_TRACK_IDS = Sets.newHashSet(
