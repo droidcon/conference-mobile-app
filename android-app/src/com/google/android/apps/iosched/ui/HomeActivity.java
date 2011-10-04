@@ -16,12 +16,6 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.service.SyncService;
-import com.google.android.apps.iosched.util.AnalyticsUtils;
-import com.google.android.apps.iosched.util.DetachableResultReceiver;
-import com.google.android.apps.iosched.util.EulaHelper;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,6 +25,12 @@ import android.support.v4.app.FragmentManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import com.google.android.apps.iosched.service.SyncService;
+import com.google.android.apps.iosched.util.AnalyticsUtils;
+import com.google.android.apps.iosched.util.DetachableResultReceiver;
+import com.google.android.apps.iosched.util.EulaHelper;
+import com.novoda.droidcon2011.R;
 
 /**
  * Front-door {@link Activity} that displays high-level features the schedule application offers to

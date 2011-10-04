@@ -16,14 +16,14 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.funkyandroid.droidcon2011.R;
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.net.Uri;
+
+import com.novoda.droidcon2011.R;
 
 /**
  * Helper class for the Catch Notes integration, based on example code at

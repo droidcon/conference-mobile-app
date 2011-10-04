@@ -16,7 +16,11 @@
 
 package com.google.android.apps.iosched.ui.tablet;
 
-import com.funkyandroid.droidcon2011.R;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.view.ViewGroup;
+
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.BaseMultiPaneActivity;
 import com.google.android.apps.iosched.ui.TracksFragment;
@@ -24,11 +28,7 @@ import com.google.android.apps.iosched.ui.VendorDetailFragment;
 import com.google.android.apps.iosched.ui.VendorsFragment;
 import com.google.android.apps.iosched.ui.phone.VendorDetailActivity;
 import com.google.android.apps.iosched.ui.phone.VendorsActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.view.ViewGroup;
+import com.novoda.droidcon2011.R;
 
 /**
  * A multi-pane activity, consisting of a {@link TracksDropdownFragment}, a

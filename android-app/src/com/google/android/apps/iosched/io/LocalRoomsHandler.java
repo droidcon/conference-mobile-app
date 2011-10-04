@@ -16,10 +16,13 @@
 
 package com.google.android.apps.iosched.io;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
-import com.google.android.apps.iosched.util.Lists;
+import static org.xmlpull.v1.XmlPullParser.END_DOCUMENT;
+import static org.xmlpull.v1.XmlPullParser.END_TAG;
+import static org.xmlpull.v1.XmlPullParser.START_TAG;
+import static org.xmlpull.v1.XmlPullParser.TEXT;
+
+import java.io.IOException;
+import java.util.ArrayList;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -27,13 +30,10 @@ import org.xmlpull.v1.XmlPullParserException;
 import android.content.ContentProviderOperation;
 import android.content.ContentResolver;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
-import static org.xmlpull.v1.XmlPullParser.END_DOCUMENT;
-import static org.xmlpull.v1.XmlPullParser.END_TAG;
-import static org.xmlpull.v1.XmlPullParser.START_TAG;
-import static org.xmlpull.v1.XmlPullParser.TEXT;
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
+import com.google.android.apps.iosched.util.Lists;
+import com.novoda.droidcon2011.R;
 
 /**
  * Handle a local {@link XmlPullParser} that defines a set of {@link Rooms}

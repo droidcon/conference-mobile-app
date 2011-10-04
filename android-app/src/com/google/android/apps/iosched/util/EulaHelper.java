@@ -16,8 +16,6 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.funkyandroid.droidcon2011.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -25,6 +23,8 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.preference.PreferenceManager;
+
+import com.novoda.droidcon2011.R;
 
 /**
  * A helper for showing EULAs and storing a {@link SharedPreferences} bit indicating whether the

@@ -16,12 +16,10 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
-import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
-import com.google.android.apps.iosched.ui.phone.MapActivity;
-import com.google.android.apps.iosched.ui.tablet.MapMultiPaneActivity;
+import java.util.List;
+import java.util.TimeZone;
 
+import novoda.droidcon.ui.AboutActivity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -45,10 +43,11 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.StyleSpan;
 import android.widget.TextView;
 
-import java.util.List;
-import java.util.TimeZone;
-
-import novoda.droidcon.ui.AboutActivity;
+import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
+import com.google.android.apps.iosched.provider.ScheduleContract.Rooms;
+import com.google.android.apps.iosched.ui.phone.MapActivity;
+import com.google.android.apps.iosched.ui.tablet.MapMultiPaneActivity;
+import com.novoda.droidcon2011.R;
 
 /**
  * An assortment of UI helpers.

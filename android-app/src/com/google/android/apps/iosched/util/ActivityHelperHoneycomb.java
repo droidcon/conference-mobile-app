@@ -16,13 +16,13 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.funkyandroid.droidcon2011.R;
-
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.novoda.droidcon2011.R;
 
 /**
  * An extension of {@link ActivityHelper} that provides Android 3.0-specific functionality for

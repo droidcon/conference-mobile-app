@@ -17,9 +17,9 @@
 <!--  Note; Version code/name is IOSched version (16), Droidcon Version (01) -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="2011100601"
-    android:versionName="DCUK-2011.01"
-    android:installLocation="auto" package="com.funkyandroid.droidcon2011">
+    android:versionCode="2011100704"
+    android:versionName="DCUK-2011.04"
+    android:installLocation="auto" package="com.novoda.droidcon2011">
 
     <uses-sdk
         android:minSdkVersion="7"
@@ -194,7 +194,7 @@
 
         <provider
             android:name="com.google.android.apps.iosched.provider.ScheduleProvider"
-            android:authorities="com.funkyandroid.droidcon2011.iosched"
+            android:authorities="com.novoda.droidcon2011.iosched"
             android:writePermission="com.google.android.apps.iosched.permission.WRITE_SCHEDULE" />
 
     </application>

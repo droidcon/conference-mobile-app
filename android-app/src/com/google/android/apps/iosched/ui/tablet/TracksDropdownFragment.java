@@ -16,15 +16,6 @@
 
 package com.google.android.apps.iosched.ui.tablet;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.ui.BaseActivity;
-import com.google.android.apps.iosched.ui.SessionDetailFragment;
-import com.google.android.apps.iosched.ui.TracksAdapter;
-import com.google.android.apps.iosched.ui.TracksFragment;
-import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
-import com.google.android.apps.iosched.util.UIUtils;
-
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -38,6 +29,15 @@ import android.widget.AdapterView;
 import android.widget.ListPopupWindow;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.ui.BaseActivity;
+import com.google.android.apps.iosched.ui.SessionDetailFragment;
+import com.google.android.apps.iosched.ui.TracksAdapter;
+import com.google.android.apps.iosched.ui.TracksFragment;
+import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * A tablet-specific fragment that is a giant {@link android.widget.Spinner}-like widget. It shows

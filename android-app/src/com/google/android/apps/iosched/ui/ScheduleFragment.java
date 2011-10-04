@@ -16,18 +16,10 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.ui.widget.BlockView;
-import com.google.android.apps.iosched.ui.widget.BlocksLayout;
-import com.google.android.apps.iosched.ui.widget.ObservableScrollView;
-import com.google.android.apps.iosched.ui.widget.Workspace;
-import com.google.android.apps.iosched.util.AnalyticsUtils;
-import com.google.android.apps.iosched.util.Maps;
-import com.google.android.apps.iosched.util.MotionEventUtils;
-import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
-import com.google.android.apps.iosched.util.ParserUtils;
-import com.google.android.apps.iosched.util.UIUtils;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.TimeZone;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -54,10 +46,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.TimeZone;
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.ui.widget.BlockView;
+import com.google.android.apps.iosched.ui.widget.BlocksLayout;
+import com.google.android.apps.iosched.ui.widget.ObservableScrollView;
+import com.google.android.apps.iosched.ui.widget.Workspace;
+import com.google.android.apps.iosched.util.AnalyticsUtils;
+import com.google.android.apps.iosched.util.Maps;
+import com.google.android.apps.iosched.util.MotionEventUtils;
+import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
+import com.google.android.apps.iosched.util.ParserUtils;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * Shows a horizontally-pageable calendar of conference days. Horizontaly paging is achieved using

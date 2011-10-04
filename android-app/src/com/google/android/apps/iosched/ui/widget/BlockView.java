@@ -16,9 +16,7 @@
 
 package com.google.android.apps.iosched.ui.widget;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
-import com.google.android.apps.iosched.util.UIUtils;
+import java.util.TimeZone;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -27,7 +25,9 @@ import android.graphics.drawable.LayerDrawable;
 import android.text.format.DateUtils;
 import android.widget.Button;
 
-import java.util.TimeZone;
+import com.google.android.apps.iosched.provider.ScheduleContract.Blocks;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * Custom view that represents a {@link Blocks#BLOCK_ID} instance, including its

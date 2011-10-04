@@ -34,10 +34,6 @@
         style="@style/DashboardButton"
         android:text="@string/btn_starred"
         android:drawableTop="@drawable/home_btn_starred" />
-    <Button android:id="@+id/home_btn_vendors"
-        style="@style/DashboardButton"
-        android:text="@string/btn_vendors"
-        android:drawableTop="@drawable/home_btn_vendors" />
     <Button android:id="@+id/home_btn_announcements"
         style="@style/DashboardButton"
         android:text="@string/btn_announcements"

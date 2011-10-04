@@ -16,16 +16,6 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.util.ActivityHelper;
-import com.google.android.apps.iosched.util.AnalyticsUtils;
-import com.google.android.apps.iosched.util.BitmapUtils;
-import com.google.android.apps.iosched.util.CatchNotesHelper;
-import com.google.android.apps.iosched.util.FractionalTouchDelegate;
-import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
-import com.google.android.apps.iosched.util.UIUtils;
-
 import android.content.BroadcastReceiver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -43,7 +33,6 @@ import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.method.LinkMovementMethod;
 import android.text.style.StyleSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -54,6 +43,16 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
+
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.util.ActivityHelper;
+import com.google.android.apps.iosched.util.AnalyticsUtils;
+import com.google.android.apps.iosched.util.BitmapUtils;
+import com.google.android.apps.iosched.util.CatchNotesHelper;
+import com.google.android.apps.iosched.util.FractionalTouchDelegate;
+import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * A fragment that shows detail information for a session, including session title, abstract,

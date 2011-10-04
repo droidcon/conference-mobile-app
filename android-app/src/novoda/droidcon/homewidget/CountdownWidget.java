@@ -1,8 +1,5 @@
 package novoda.droidcon.homewidget;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.ui.HomeActivity;
-import com.google.android.apps.iosched.util.UIUtils;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -14,6 +11,10 @@ import android.content.Intent;
 import android.os.IBinder;
 import android.os.SystemClock;
 import android.widget.RemoteViews;
+
+import com.google.android.apps.iosched.ui.HomeActivity;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 
 public class CountdownWidget extends AppWidgetProvider {

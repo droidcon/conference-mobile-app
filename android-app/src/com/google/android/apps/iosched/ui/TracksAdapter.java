@@ -16,9 +16,6 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-
 import android.app.Activity;
 import android.content.Context;
 import android.database.Cursor;
@@ -29,6 +26,9 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.novoda.droidcon2011.R;
 
 /**
  * A {@link android.widget.CursorAdapter} that renders a {@link TracksQuery}.

@@ -16,9 +16,6 @@
 
 package com.google.android.apps.iosched.ui.widget;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.util.UIUtils;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -30,6 +27,9 @@ import android.graphics.Typeface;
 import android.text.format.Time;
 import android.util.AttributeSet;
 import android.view.View;
+
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * Custom view that draws a vertical time "ruler" representing the chronological
