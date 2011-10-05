@@ -16,8 +16,7 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.util.AnalyticsUtils;
+import java.util.regex.Pattern;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -33,7 +32,8 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import java.util.regex.Pattern;
+import com.google.android.apps.iosched.util.AnalyticsUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * A fragment containing a {@link WebView} pointing to the I/O announcements URL.

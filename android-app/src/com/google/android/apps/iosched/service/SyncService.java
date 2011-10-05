@@ -16,19 +16,9 @@
 
 package com.google.android.apps.iosched.service;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.io.LocalBlocksHandler;
-import com.google.android.apps.iosched.io.LocalExecutor;
-import com.google.android.apps.iosched.io.LocalRoomsHandler;
-import com.google.android.apps.iosched.io.LocalSearchSuggestHandler;
-import com.google.android.apps.iosched.io.LocalSessionsHandler;
-import com.google.android.apps.iosched.io.LocalTracksHandler;
-import com.google.android.apps.iosched.io.RemoteExecutor;
-import com.google.android.apps.iosched.io.RemoteSessionsHandler;
-import com.google.android.apps.iosched.io.RemoteSpeakersHandler;
-import com.google.android.apps.iosched.io.RemoteVendorsHandler;
-import com.google.android.apps.iosched.io.RemoteWorksheetsHandler;
-import com.google.android.apps.iosched.provider.ScheduleProvider;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.zip.GZIPInputStream;
 
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
@@ -61,9 +51,19 @@ import android.os.ResultReceiver;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.zip.GZIPInputStream;
+import com.google.android.apps.iosched.io.LocalBlocksHandler;
+import com.google.android.apps.iosched.io.LocalExecutor;
+import com.google.android.apps.iosched.io.LocalRoomsHandler;
+import com.google.android.apps.iosched.io.LocalSearchSuggestHandler;
+import com.google.android.apps.iosched.io.LocalSessionsHandler;
+import com.google.android.apps.iosched.io.LocalTracksHandler;
+import com.google.android.apps.iosched.io.RemoteExecutor;
+import com.google.android.apps.iosched.io.RemoteSessionsHandler;
+import com.google.android.apps.iosched.io.RemoteSpeakersHandler;
+import com.google.android.apps.iosched.io.RemoteVendorsHandler;
+import com.google.android.apps.iosched.io.RemoteWorksheetsHandler;
+import com.google.android.apps.iosched.provider.ScheduleProvider;
+import com.novoda.droidcon2011.R;
 
 /**
  * Background {@link Service} that synchronizes data living in

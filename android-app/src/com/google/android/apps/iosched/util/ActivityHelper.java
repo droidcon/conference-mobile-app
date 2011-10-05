@@ -16,9 +16,6 @@
 
 package com.google.android.apps.iosched.util;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.ui.HomeActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,6 +30,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.google.android.apps.iosched.ui.HomeActivity;
+import com.novoda.droidcon2011.R;
 
 /**
  * A class that handles some common activity-related functionality in the app, such as setting up

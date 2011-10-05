@@ -16,7 +16,8 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -31,8 +32,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
+import com.novoda.droidcon2011.R;
 
 /**
  * A {@link WebView}-based fragment that shows Google Realtime Search results for a given query,
@@ -45,7 +45,7 @@ public class TagStreamFragment extends Fragment {
 
     public static final String EXTRA_QUERY = "com.google.android.iosched.extra.QUERY";
 
-    public static final String CONFERENCE_HASHTAG = "#droidcon";
+    public static final String CONFERENCE_HASHTAG = "#droidconUK";
 
     private String mSearchString;
     private WebView mWebView;

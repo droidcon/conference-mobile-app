@@ -16,7 +16,11 @@
 
 package com.google.android.apps.iosched.ui.tablet;
 
-import com.funkyandroid.droidcon2011.R;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.view.ViewGroup;
+
 import com.google.android.apps.iosched.provider.ScheduleContract;
 import com.google.android.apps.iosched.ui.BaseMultiPaneActivity;
 import com.google.android.apps.iosched.ui.SessionDetailFragment;
@@ -24,15 +28,11 @@ import com.google.android.apps.iosched.ui.SessionsFragment;
 import com.google.android.apps.iosched.ui.TracksFragment;
 import com.google.android.apps.iosched.ui.phone.SessionDetailActivity;
 import com.google.android.apps.iosched.ui.phone.SessionsActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.FragmentManager;
-import android.view.ViewGroup;
+import com.novoda.droidcon2011.R;
 
 /**
  * A multi-pane activity, consisting of a {@link TracksDropdownFragment}, a
- * {@link SessionsFragment}, and {@link SessionDetailFragment}.
+ * {@link SessionsFragment}, and {@link S
  *
  * This activity requires API level 11 or greater because {@link TracksDropdownFragment} requires
  * API level 11.

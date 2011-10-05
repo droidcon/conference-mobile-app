@@ -16,11 +16,11 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+
+import com.novoda.droidcon2011.R;
 
 /**
  * A {@link BaseActivity} that simply contains a single fragment. The intent used to invoke this

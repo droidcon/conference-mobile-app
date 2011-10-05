@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.funkyandroid.droidcon2011.R;
 import com.google.android.apps.iosched.util.ActivityHelper;
 import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 public class AboutFragment extends Fragment {
 
@@ -65,7 +65,7 @@ public class AboutFragment extends Fragment {
 					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://mobile.twitter.com/droidconuk" )));
 					break;
 				case R.id.about_twitter_hashtag: 
-					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://mobile.twitter.com/searches?q=%23droidcon" )));
+					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://mobile.twitter.com/searches?q=%23droidconuk" )));
 					break;
 				case R.id.about_sponsors_orange: 
 					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://www.orangepartner.com/site/enuk/home/p_home.jsp" )));

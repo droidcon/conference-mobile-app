@@ -16,8 +16,6 @@
 
 package com.google.android.apps.iosched.ui.widget;
 
-import com.funkyandroid.droidcon2011.R;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -29,6 +27,8 @@ import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
+
+import com.novoda.droidcon2011.R;
 
 /**
  * An {@link ImageView} that draws its contents inside a mask and draws a border drawable on top.

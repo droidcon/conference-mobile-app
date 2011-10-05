@@ -154,7 +154,7 @@ public class ScheduleContract {
         String VENDOR_STARRED = "vendor_starred";
     }
 
-    public static final String CONTENT_AUTHORITY = "com.funkyandroid.droidcon2011.iosched";
+    public static final String CONTENT_AUTHORITY = "com.novoda.droidcon2011.iosched";
 
     private static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
 

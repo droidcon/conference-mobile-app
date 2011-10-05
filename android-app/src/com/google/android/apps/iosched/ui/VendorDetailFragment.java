@@ -16,16 +16,6 @@
 
 package com.google.android.apps.iosched.ui;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.util.ActivityHelper;
-import com.google.android.apps.iosched.util.AnalyticsUtils;
-import com.google.android.apps.iosched.util.BitmapUtils;
-import com.google.android.apps.iosched.util.FractionalTouchDelegate;
-import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
-import com.google.android.apps.iosched.util.ParserUtils;
-import com.google.android.apps.iosched.util.UIUtils;
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -44,6 +34,16 @@ import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.util.ActivityHelper;
+import com.google.android.apps.iosched.util.AnalyticsUtils;
+import com.google.android.apps.iosched.util.BitmapUtils;
+import com.google.android.apps.iosched.util.FractionalTouchDelegate;
+import com.google.android.apps.iosched.util.NotifyingAsyncQueryHandler;
+import com.google.android.apps.iosched.util.ParserUtils;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 /**
  * A fragment that shows detail information for a sandbox company, including company name,

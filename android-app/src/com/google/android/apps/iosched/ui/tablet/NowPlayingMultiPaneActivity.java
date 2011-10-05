@@ -16,18 +16,18 @@
 
 package com.google.android.apps.iosched.ui.tablet;
 
-import com.funkyandroid.droidcon2011.R;
-import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
-import com.google.android.apps.iosched.ui.BaseMultiPaneActivity;
-import com.google.android.apps.iosched.ui.SessionDetailFragment;
-import com.google.android.apps.iosched.ui.SessionsFragment;
-import com.google.android.apps.iosched.ui.phone.SessionDetailActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.apps.iosched.provider.ScheduleContract.Sessions;
+import com.google.android.apps.iosched.ui.BaseMultiPaneActivity;
+import com.google.android.apps.iosched.ui.SessionDetailFragment;
+import com.google.android.apps.iosched.ui.SessionsFragment;
+import com.google.android.apps.iosched.ui.phone.SessionDetailActivity;
+import com.novoda.droidcon2011.R;
 
 /**
  * An activity that shows currently playing sessions in a two-pane view.

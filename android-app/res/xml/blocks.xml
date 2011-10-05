@@ -16,52 +16,10 @@
   -->
 <blocks>
 
-    <!-- Thursday, October 6th 2011 -->
-    <block>
-        <start>2011-10-06T09:00:00.000+01:00</start>
-          <end>2011-10-06T17:00:00.000+01:00</end>
-        <title>On-site check-in</title>
-    </block>
-    <block>
-        <start>2011-10-06T09:00:00.000+01:00</start>
-          <end>2011-10-06T17:30:00.000+01:00</end>
-        <title>BarCamp</title>
-        <type>session</type>
-    </block>
-    <block>
-        <start>2011-10-06T17:30:00.000+01:00</start>
-          <end>2011-10-06T19:30:00.000+01:00</end>
-        <title>Demo Camp</title>
-        <type>session</type>
-    </block>
-    <block>
-        <start>2011-10-06T19:30:00.000+01:00</start>
-          <end>2011-10-06T22:30:00.000+01:00</end>
-        <title>After Hours Party</title>
-        <type>food</type>
-    </block>
-
     <!-- Friday, October 7th 2011 -->
     <block>
         <start>2011-10-07T08:30:00.000+01:00</start>
           <end>2011-10-07T09:00:00.000+01:00</end>
-        <title>Coffee break</title>
-        <type>food</type>
-    </block>
-    <block>
-        <start>2011-10-07T08:30:00.000+01:00</start>
-          <end>2011-10-07T17:00:00.000+01:00</end>
-        <title>On-site check-in</title>
-    </block>
-    <block>
-        <start>2011-10-07T11:25:00.000+01:00</start>
-          <end>2011-10-07T11:50:00.000+01:00</end>
-        <title>Coffee break</title>
-        <type>food</type>
-    </block>
-    <block>
-        <start>2011-10-07T16:00:00.000+01:00</start>
-          <end>2011-10-07T16:25:00.000+01:00</end>
         <title>Coffee break</title>
         <type>food</type>
     </block>
