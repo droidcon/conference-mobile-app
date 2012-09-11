@@ -11,178 +11,388 @@
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
-  limitations under the License.
-  -->
+  limitations under the License.
+-->
 
-<!--  Note; Version code/name is IOSched version (16), Droidcon Version (01) -->
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:versionCode="2011100704"
-    android:versionName="DCUK-2011.04"
-    android:installLocation="auto" package="com.novoda.droidcon2011">
+<!-- Note; Version code/name is IOSched version (16), Droidcon Version (01) -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.droidcon.uk"
+    android:installLocation="auto"
+    android:versionCode="20120909"
+    android:versionName="DCUK-2012.01" >
 
     <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="11" />
+        android:minSdkVersion="8"
+        android:targetSdkVersion="16" />
 
     <permission
-        android:name="com.google.android.apps.iosched.permission.WRITE_SCHEDULE"
-        android:protectionLevel="normal"
+        android:name="com.droidcon.uk.permission.WRITE_SCHEDULE"
+        android:description="@string/permission_write"
         android:label="@string/permission_write"
-        android:description="@string/permission_write" />
+        android:protectionLevel="normal" />
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- required for YouTube -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- required for Calendar API in Android 4.0 or above -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <!-- required for setIsSyncable -->
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <!-- required for GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <permission
+        android:name="com.droidcon.uk.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.droidcon.uk.permission.C2D_MESSAGE" />
+
+    <!-- required for Google TV - to support proper filtering in Google Play -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
 
     <application
-        android:label="@string/app_name"
+        android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
-        android:logo="@drawable/title_logo"
-        android:theme="@style/Theme.IOSched"
-        android:hardwareAccelerated="true">
+        android:label="@string/app_name"
+        android:logo="@drawable/actionbar_logo"
+        android:theme="@style/Theme.Iosched" >
 
         <!-- Activities for both phones and tablets -->
 
         <activity
+            android:name="com.google.android.apps.iosched.ui.AccountActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Iosched.Accounts" />
+        <activity
             android:name="com.google.android.apps.iosched.ui.HomeActivity"
-            android:theme="@style/Theme.IOSched.Home"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Iosched.Home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.google.android.apps.iosched.ui.BulletinActivity"
-            android:label="@string/title_bulletin" />
-
-        <activity
-            android:name="com.google.android.apps.iosched.ui.TagStreamActivity"
-            android:label="@string/title_tagstream" />
-
-        <activity
-            android:name="com.google.android.apps.iosched.ui.StarredActivity"
-            android:label="@string/title_starred" />
-
+            android:name="com.google.android.apps.iosched.ui.SocialStreamActivity"
+            android:label="@string/title_tagstream" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
         <activity
             android:name="com.google.android.apps.iosched.ui.SearchActivity"
             android:label="@string/title_search"
-            android:launchMode="singleTop">
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.Iosched.GreyBackground" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-            <meta-data android:name="android.app.searchable" android:resource="@xml/searchable" />
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
+        <activity
+            android:name="com.google.android.apps.iosched.ui.SessionLivestreamActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/session_livestream_title"
+            android:theme="@style/Theme.Iosched.Livestream" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
+        <activity
+            android:name="com.google.android.apps.iosched.ui.BeamActivity"
+            android:label="@string/title_beam"
+            android:theme="@style/Theme.Iosched.GreyBackground" >
+
+            <!-- Default Beam handling activity -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="application/vnd.google.iosched.default" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
         </activity>
 
         <!-- Phone-only activities -->
 
         <activity
-            android:name="com.google.android.apps.iosched.ui.phone.ScheduleActivity"
-            android:label="@string/title_schedule" />
-
-        <activity
-            android:name="com.google.android.apps.iosched.ui.phone.TracksActivity"
-            android:label="@string/title_tracks">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.track" />
-            </intent-filter>
-        </activity>
-
-        <activity
             android:name="com.google.android.apps.iosched.ui.phone.SessionsActivity"
-            android:label="@string/title_sessions">
+            android:label="@string/title_sessions" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.TAB" />
+
                 <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.session" />
             </intent-filter>
+            <!--
+                 HomeActivity is the parent (as opposed to TrackDetailActivity) because
+                 SessionsActivity is not used to show sessions for a given track.
+            -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
         </activity>
-
-        <activity android:name="com.google.android.apps.iosched.ui.phone.SessionDetailActivity">
+        <activity
+            android:name="com.google.android.apps.iosched.ui.phone.TrackDetailActivity"
+            android:label="@string/title_tracks"
+            android:theme="@style/Theme.Iosched.GreyBackground" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.track" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
+        <activity
+            android:name="com.google.android.apps.iosched.ui.phone.SessionDetailActivity"
+            android:label="@string/title_session_detail"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name="com.google.android.apps.iosched.ui.phone.VendorsActivity"
-            android:label="@string/title_vendors">
+            <!-- Android Beam for session details -->
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.TAB" />
-                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.vendor" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
             </intent-filter>
+            <!-- PARENT_ACTIVITY alone is insufficient for Up navigation for this activity -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.phone.SessionsActivity" />
         </activity>
-
-        <activity android:name="com.google.android.apps.iosched.ui.phone.VendorDetailActivity">
+        <activity
+            android:name="com.google.android.apps.iosched.ui.phone.VendorDetailActivity"
+            android:label="@string/title_vendor_detail" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="vnd.android.cursor.item/vnd.iosched.vendor" />
             </intent-filter>
+            <!-- PARENT_ACTIVITY alone is insufficient for Up navigation for this activity -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.phone.TrackDetailActivity" />
         </activity>
-
         <activity
             android:name="com.google.android.apps.iosched.ui.phone.MapActivity"
-            android:label="@string/title_map"
-            android:configChanges="orientation|keyboardHidden" />
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_map" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
 
         <!-- Tablet-only activities -->
 
         <activity
-            android:name="com.google.android.apps.iosched.ui.tablet.SessionsMultiPaneActivity"
-            android:label="@string/title_sessions" />
-        <activity
-            android:name="com.google.android.apps.iosched.ui.tablet.VendorsMultiPaneActivity"
-            android:label="@string/title_vendors" />
-        <activity
-            android:name="com.google.android.apps.iosched.ui.tablet.ScheduleMultiPaneActivity"
-            android:label="@string/title_schedule" />
+            android:name="com.google.android.apps.iosched.ui.tablet.SessionsVendorsMultiPaneActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Iosched.GreyBackground" >
+
+            <!-- can show track details -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.track" />
+            </intent-filter>
+            <!-- can show session and vendor lists -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.session" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.vendor" />
+            </intent-filter>
+            <!-- can show session and vendor details -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.vendor" />
+            </intent-filter>
+            <!-- Android Beam for session details -->
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
         <activity
             android:name="com.google.android.apps.iosched.ui.tablet.MapMultiPaneActivity"
-            android:label="@string/title_map"
-            android:configChanges="orientation|keyboardHidden" />
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_map" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
+
+        <!-- GTV Activities -->
+
         <activity
-            android:name="com.google.android.apps.iosched.ui.tablet.NowPlayingMultiPaneActivity"
-            android:label="@string/title_now_playing" />
+            android:name="com.google.android.apps.iosched.ui.gtv.GoogleTVSessionLivestreamActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Iosched.GoogleTV" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Session alarm/calendar integrating components. -->
+        <receiver android:name="com.google.android.apps.iosched.calendar.SessionAlarmReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="com.google.android.apps.iosched.action.UPDATE_CALENDAR_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.google.android.apps.iosched.calendar.SessionAlarmService" />
+        <service
+            android:name="com.google.android.apps.iosched.calendar.SessionCalendarService"
+            android:enabled="@bool/has_ics" />
 
         <!-- Used for install referrer tracking -->
-        <receiver
-            android:name="com.google.android.apps.analytics.AnalyticsReceiver"
+        <!--
+        <receiver android:name="com.google.analytics.tracking.android.AnalyticsReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.android.vending.INSTALL_REFERRER" />
             </intent-filter>
-        </receiver>
-        
-        
-        <!-- Countdown widget -->
-		<service	android:name="novoda.droidcon.homewidget.CountdownWidget$Updater"/>
-		<receiver	android:name="novoda.droidcon.homewidget.CountdownWidget"
-					android:process=":otherPrivateProcess"
-					android:label="@string/app_name"
-					android:icon="@drawable/ic_launcher">
-		        <intent-filter>
-		                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-		        </intent-filter>
- 		        <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info" />
-		</receiver>
+        </receiver>
+        -->
 
-		<!-- Droidcon About Activity -->
-        <activity
-            android:name="novoda.droidcon.ui.AboutActivity"
-            android:label="@string/title_about" />
+
+        <!--
+          BroadcastReceiver that will receive the C2DM messages from GCM
+          services and handle them to the custom IntentService.
+
+          The com.google.android.c2dm.permission.SEND permission is necessary
+          so only GCM services can send data messages for the app.
+        -->
+        <receiver
+            android:name="com.google.android.apps.iosched.gcm.GCMRedirectedBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <!-- Receives the registration id. -->
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.google.android.apps.iosched" />
+            </intent-filter>
+        </receiver>
+
+        <!--
+          Application-specific subclass of GCMBaseIntentService that will
+          handle received messages.
+
+          By default, it must be named .GCMIntentService, unless the
+          application uses a custom BroadcastReceiver that redefines its name.
+        -->
+        <service android:name="com.google.android.apps.iosched.gcm.GCMIntentService" />
+
+        <!-- Data, sync and schedule editing components -->
+
+        <provider
+            android:name="com.google.android.apps.iosched.provider.ScheduleProvider"
+            android:authorities="com.droidcon.uk"
+            android:label="@string/app_name"
+            android:syncable="true"
+            android:writePermission="com.google.android.apps.iosched.permission.WRITE_SCHEDULE" />
+
+        <service android:name="com.google.android.apps.iosched.sync.ScheduleUpdaterService" />
+        <service
+            android:name="com.google.android.apps.iosched.sync.SyncService"
+            android:exported="true"
+            tools:ignore="ExportedService" >
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/syncadapter" />
+        </service>
+
+        <!--
+             a simple receiver that triggers a sync for any message it receives. used by our
+             GCM implementation
+        -->
+        <receiver android:name="com.google.android.apps.iosched.sync.TriggerSyncReceiver" />
 
         <!-- Other manifest items -->
 
@@ -190,12 +400,27 @@
             android:name="android.app.default_searchable"
             android:value="com.google.android.apps.iosched.ui.SearchActivity" />
 
-        <service android:name="com.google.android.apps.iosched.service.SyncService" />
+        <!-- App widget components -->
 
-        <provider
-            android:name="com.google.android.apps.iosched.provider.ScheduleProvider"
-            android:authorities="com.novoda.droidcon2011.iosched"
-            android:writePermission="com.google.android.apps.iosched.permission.WRITE_SCHEDULE" />
+        <receiver
+            android:name="com.google.android.apps.iosched.appwidget.MyScheduleWidgetProvider"
+            android:enabled="@bool/has_honeycomb" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <!-- This specifies the widget provider info -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetinfo" />
+        </receiver>
 
+        <!-- The service serving the RemoteViews to the collection widget -->
+
+        <service
+            android:name="com.google.android.apps.iosched.appwidget.MyScheduleWidgetService"
+            android:enabled="@bool/has_honeycomb"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
+
 </manifest>

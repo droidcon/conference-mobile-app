@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="01f342b3-a43e-455d-a28d-7cd8f74a2a2e" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\assets\cache-sessions.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\assets\cache-speakers.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\assets\cache-vendors.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\default.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim-large-v11\home_enter.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim-large-v11\home_exit.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim\home_enter.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim\home_exit.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim\slide_left_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim\slide_left_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim\slide_right_in.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\anim\slide_right_out.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_block_border_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_block_border_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_block_border_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_block_mask.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\btn_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\ic_title_export.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\ic_title_map.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\ic_title_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\ic_title_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\ic_title_share.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\ic_title_today.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_off_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_selected_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_selected_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_unselected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_unselected_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi-v11\tab_unselected_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_btn_buynow.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_btn_buynow_over.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_ic_maps.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_ic_maps_over.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_img1.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_img2.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_img3.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_sponsor_orange.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\about_sponsor_se.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\actionbar_compat_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\actionbar_compat_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\actionbar_compat_separator.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\bezel_border.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\bezel_mask.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_bg_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_bg_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_block_border_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_block_border_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_block_border_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_block_mask.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_block_star.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_star_off_focused.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_star_off_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_star_off_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_star_on_focused.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_star_on_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\btn_star_on_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\colorstrip.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\colorstrip_shadow.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_about_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_about_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_about_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_announcements_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_announcements_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_announcements_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_map_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_map_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_map_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_notes_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_notes_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_notes_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_schedule_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_schedule_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_schedule_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_sessions_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_sessions_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_sessions_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_starred_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_starred_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_starred_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_vendors_default.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_vendors_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\home_btn_vendors_selected.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_export.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_home.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_map.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_share.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\ic_title_today.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\indicator_starred.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\now_bar.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\now_playing_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\schedule_indicator_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\schedule_indicator_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_off_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_selected_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_selected_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_unselected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_unselected_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\tab_unselected_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\whats_on_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\whats_on_button_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\whats_on_button_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-hdpi\whats_on_separator.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-land-mdpi-v11\home_topleft_strip_raw.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-land-mdpi-v11\thickbar_left_background_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-land-mdpi-v11\thickbar_left_background_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-land-v11\home_topleft_strip.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\empty_sandbox_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\empty_sessions_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\home_streambox.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\home_topleft_strip_raw.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\ic_close_holo_light.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\logo_home.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\pane_under_thickbar_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\panel_button_focused_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\panel_button_pressed_holo.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\thickbar_left_background_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\thickbar_left_background_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\thickbar_right_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\thickbar_shadow.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\track_dropdown_arrow_dark.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\track_dropdown_arrow_light.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\whats_on_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\whats_on_button_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\whats_on_button_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-mdpi-v11\whats_on_separator.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-nodpi-v11\background_effects.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-v11\home_topleft_strip.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-v11\panel_button_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-v11\thickbar_left_background_interactive.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-v11\window_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-large-v11\window_background_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\bezel_border.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\bezel_mask.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_block_border_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_block_border_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_block_border_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_block_mask.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_block_star.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_default.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_star_off_focused.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_star_off_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_star_off_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_star_on_focused.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_star_on_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\btn_star_on_pressed.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\colorstrip.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\ic_title_export.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\ic_title_map.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\ic_title_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\ic_title_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\ic_title_share.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\ic_title_today.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\indicator_starred.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\schedule_indicator_left.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\schedule_indicator_right.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_off_background.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_selected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_selected_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_selected_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_unselected.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_unselected_focused.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\tab_unselected_pressed.9.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi-v11\title_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\actionbar_compat_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_title_home.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_title_map.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_title_refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_title_search.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_title_share.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-mdpi\ic_title_today.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-nodpi\background_noise_tile.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-nodpi\sandbox_logo_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable-nodpi\speaker_image_empty.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\actionbar_compat_button.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\background_noise.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\btn.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\btn_about_buytickets.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\btn_about_maps.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\btn_block.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\btn_block_border.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\btn_star.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_about.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_announcements.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_map.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_notes.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_sessions.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_starred.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\home_btn_vendors.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\tab_indicator.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\whats_on_button.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\widget_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\widget_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\window_background.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\drawable\window_background_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-land\activity_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-land-v11\activity_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_map.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_now_playing.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_search.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_sessions.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_starred.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\activity_vendors.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\colorstrip.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\fragment_session_detail.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\fragment_tracks_dropdown.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-large-v11\tab_indicator.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-v11\actionbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-v11\actionbar_indeterminate_progress.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout-v11\tab_indicator.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\actionbar.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\activity_home.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\activity_search.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\activity_singlepane_empty.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\activity_starred.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\activity_tracks.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\blocks_content.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\colorstrip.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_about.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_dashboard.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_list_with_spinner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_schedule.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_session_detail.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_vendor_detail.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_webview_with_spinner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\fragment_whats_on.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\list_item_session.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\list_item_session_link.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\list_item_track.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\list_item_vendor.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\list_item_vendor_oneline.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\speaker_detail.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\tab_indicator.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\tab_session_links.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\tab_session_notes.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\tab_session_summary.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\tabs_container.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\whats_on_countdown.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\whats_on_now_playing.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\whats_on_stream.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\whats_on_thank_you.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\layout\widget_countdown.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu-v11\default_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu\default_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu\export_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu\map_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu\refresh_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu\schedule_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\menu\session_detail_menu_items.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-large-land-v11\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-large-land-v11\integers.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-large-v11\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-large-v11\integers.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-large-v11\strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-large-v11\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-v11\colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-v11\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values-v11\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\config.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\ids.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\integers.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\values\styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\blocks.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\rooms.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\search_suggest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\searchable.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\sessions.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\tracks.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\res\xml\widget_info.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\LocalBlocksHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\LocalExecutor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\LocalRoomsHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\LocalSearchSuggestHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\LocalSessionsHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\LocalTracksHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\RemoteExecutor.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\RemoteSessionsHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\RemoteSpeakersHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\RemoteVendorsHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\RemoteWorksheetsHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\io\XmlHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\provider\ScheduleContract.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\provider\ScheduleDatabase.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\provider\ScheduleProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\service\SyncService.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\BaseActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\BaseMultiPaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\BaseSinglePaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\BulletinActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\BulletinFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\DashboardFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\HomeActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\MapFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\ScheduleFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\SearchActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\SessionDetailFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\SessionsFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\StarredActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\TagStreamActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\TagStreamFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\TracksAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\TracksFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\VendorDetailFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\VendorsFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\WhatsOnFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\MapActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\ScheduleActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\SessionDetailActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\SessionsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\TracksActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\VendorDetailActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\phone\VendorsActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\tablet\MapMultiPaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\tablet\NowPlayingMultiPaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\tablet\ScheduleMultiPaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\tablet\SessionsMultiPaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\tablet\TracksDropdownFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\tablet\VendorsMultiPaneActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\BezelImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\BlockView.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\BlocksLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\DashboardLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\ObservableScrollView.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\TimeRulerView.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\ui\widget\Workspace.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\ActivityHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\ActivityHelperHoneycomb.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\AnalyticsUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\BitmapUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\CatchNotesHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\DetachableResultReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\EulaHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\FractionalTouchDelegate.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\Lists.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\Maps.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\MotionEventUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\NotifyingAsyncQueryHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\ParserUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\ReflectionUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\SelectionBuilder.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\Sets.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\SimpleMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\SimpleMenuItem.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\SpreadsheetEntry.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\UIUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\com\google\android\apps\iosched\util\WorksheetEntry.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\novoda\droidcon\homewidget\CountdownWidget.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\novoda\droidcon\ui\AboutActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\src\novoda\droidcon\ui\AboutFragment.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\local-blocks.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\local-rooms.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\local-sessions.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\local-tracks.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\remote-sessions1.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\remote-sessions2.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\spreadsheet-empty.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\spreadsheet-emptyfield.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\spreadsheet-normal.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\assets\spreadsheet-single.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\build.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\build.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\default.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\local.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\src\com\google\android\apps\iosched\io\SessionsHandlerTest.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\src\com\google\android\apps\iosched\io\StubHttpClient.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\_Dev\Repos\github\droidcon\conference-mobile-app\android-app\tests\src\com\google\android\apps\iosched\util\SpreadsheetEntryTest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android-app/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/../android-app/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android-app/libs/android-support-v4.jar" afterPath="$PROJECT_DIR$/../android-app/libs/android-support-v4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android-app/.classpath" afterPath="$PROJECT_DIR$/../android-app/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android-app/.project" afterPath="$PROJECT_DIR$/../android-app/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android-app/AndroidManifest.xml" afterPath="$PROJECT_DIR$/../android-app/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../android-app/res/values/strings.xml" afterPath="$PROJECT_DIR$/../android-app/res/values/strings.xml" />
+    </list>
+    <ignored path="iosched-template.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="iosched-template" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="7" />
+    <option name="y" value="169" />
+    <option name="width" value="1152" />
+    <option name="height" value="700" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="iosched-template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+  </component>
+  <component name="RunManager" selected="Android Application.Iosched-template">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="false" name="Iosched-template" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="Iosched-template" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Android Application.Iosched-template" />
+    </list>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <created>1347297997343</created>
+      <updated>1347297997343</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="7" y="169" width="1152" height="700" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24954462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+</project>
+

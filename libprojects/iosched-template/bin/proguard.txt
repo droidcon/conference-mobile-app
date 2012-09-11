@@ -1,0 +1,187 @@
+# view large-v11\res/layout-large-v11/activity_map.xml #generated:55
+-keep class android.app.FragmentBreadCrumbs { <init>(...); }
+
+# view land\res/layout-land/activity_home.xml #generated:18
+# view large-v11\res/layout-large-v11/activity_session_livestream.xml #generated:96
+# view res/layout/activity_home.xml #generated:21
+# view res/layout/activity_session_livestream.xml #generated:69
+# view res/layout/activity_track_detail.xml #generated:16
+# view res/layout/whats_on_announcements.xml #generated:21
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:43
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:26
+# view res/layout/abs__screen_simple.xml #generated:32
+# view res/layout/abs__screen_simple_overlay_action_mode.xml #generated:27
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:43
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:24
+-keep class com.actionbarsherlock.internal.nineoldandroids.widget.NineFrameLayout { <init>(...); }
+
+# view large\res/layout-large/abs__action_mode_close_item.xml #generated:17
+# view res/layout/abs__action_mode_close_item.xml #generated:17
+-keep class com.actionbarsherlock.internal.nineoldandroids.widget.NineLinearLayout { <init>(...); }
+
+# view res/layout/abs__action_menu_item_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ActionMenuItemView { <init>(...); }
+
+# view res/layout/abs__action_menu_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ActionMenuView { <init>(...); }
+
+# view res/layout/abs__list_menu_item_layout.xml #generated:17
+# view res/layout/abs__popup_menu_item_layout.xml #generated:17
+-keep class com.actionbarsherlock.internal.view.menu.ListMenuItemView { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:26
+# view res/layout/abs__screen_action_bar.xml #generated:50
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:29
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:52
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:26
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:27
+-keep class com.actionbarsherlock.internal.widget.ActionBarContainer { <init>(...); }
+
+# view res/layout/abs__action_mode_bar.xml #generated:19
+# view res/layout/abs__screen_action_bar.xml #generated:36
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:40
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:36
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:37
+-keep class com.actionbarsherlock.internal.widget.ActionBarContextView { <init>(...); }
+
+# view res/layout/abs__screen_action_bar.xml #generated:31
+# view res/layout/abs__screen_action_bar_overlay.xml #generated:35
+# view xlarge\res/layout-xlarge/abs__screen_action_bar.xml #generated:31
+# view xlarge\res/layout-xlarge/abs__screen_action_bar_overlay.xml #generated:32
+-keep class com.actionbarsherlock.internal.widget.ActionBarView { <init>(...); }
+
+# view res/layout/abs__action_bar_home.xml #generated:17
+-keep class com.actionbarsherlock.internal.widget.ActionBarView$HomeView { <init>(...); }
+
+# view res/layout/abs__action_menu_item_layout.xml #generated:40
+-keep class com.actionbarsherlock.internal.widget.CapitalizingButton { <init>(...); }
+
+# view res/layout/abs__dialog_title_holo.xml #generated:23
+-keep class com.actionbarsherlock.internal.widget.FakeDialogPhoneWindow { <init>(...); }
+
+# view res/layout/abs__action_bar_tab_bar_view.xml #generated:3
+# view res/layout/abs__activity_chooser_view.xml #generated:19
+-keep class com.actionbarsherlock.internal.widget.IcsLinearLayout { <init>(...); }
+
+# view res/layout/abs__action_bar_tab.xml #generated:3
+-keep class com.actionbarsherlock.internal.widget.ScrollingTabContainerView$TabView { <init>(...); }
+
+# view AndroidManifest.xml #generated:353
+-keep class com.google.android.apps.iosched.appwidget.MyScheduleWidgetProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:365
+-keep class com.google.android.apps.iosched.appwidget.MyScheduleWidgetService { <init>(...); }
+
+# view AndroidManifest.xml #generated:271
+-keep class com.google.android.apps.iosched.calendar.SessionAlarmReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:278
+-keep class com.google.android.apps.iosched.calendar.SessionAlarmService { <init>(...); }
+
+# view AndroidManifest.xml #generated:280
+-keep class com.google.android.apps.iosched.calendar.SessionCalendarService { <init>(...); }
+
+# view AndroidManifest.xml #generated:318
+-keep class com.google.android.apps.iosched.gcm.GCMIntentService { <init>(...); }
+
+# view AndroidManifest.xml #generated:300
+-keep class com.google.android.apps.iosched.gcm.GCMRedirectedBroadcastReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:322
+-keep class com.google.android.apps.iosched.provider.ScheduleProvider { <init>(...); }
+
+# view AndroidManifest.xml #generated:329
+-keep class com.google.android.apps.iosched.sync.ScheduleUpdaterService { <init>(...); }
+
+# view AndroidManifest.xml #generated:331
+-keep class com.google.android.apps.iosched.sync.SyncService { <init>(...); }
+
+# view AndroidManifest.xml #generated:343
+-keep class com.google.android.apps.iosched.sync.TriggerSyncReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:75
+-keep class com.google.android.apps.iosched.ui.AccountActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:124
+-keep class com.google.android.apps.iosched.ui.BeamActivity { <init>(...); }
+
+# view large-land-v11\res/layout-large-land-v11/activity_home.xml #generated:75
+# view large-v11\res/layout-large-v11/activity_home.xml #generated:75
+-keep class com.google.android.apps.iosched.ui.ExploreFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:81
+-keep class com.google.android.apps.iosched.ui.HomeActivity { <init>(...); }
+
+# view large-land-v11\res/layout-large-land-v11/activity_home.xml #generated:44
+# view large-v11\res/layout-large-v11/activity_home.xml #generated:44
+-keep class com.google.android.apps.iosched.ui.MyScheduleFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class com.google.android.apps.iosched.ui.SearchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:112
+-keep class com.google.android.apps.iosched.ui.SessionLivestreamActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:91
+-keep class com.google.android.apps.iosched.ui.SocialStreamActivity { <init>(...); }
+
+# view large-land-v11\res/layout-large-land-v11/activity_home.xml #generated:100
+# view large-v11\res/layout-large-v11/activity_home.xml #generated:94
+-keep class com.google.android.apps.iosched.ui.SocialStreamFragment { <init>(...); }
+
+# view land\res/layout-land/activity_home.xml #generated:29
+# view large-land-v11\res/layout-large-land-v11/activity_home.xml #generated:50
+# view large-v11\res/layout-large-v11/activity_home.xml #generated:50
+# view res/layout/activity_home.xml #generated:27
+-keep class com.google.android.apps.iosched.ui.WhatsOnFragment { <init>(...); }
+
+# view AndroidManifest.xml #generated:260
+-keep class com.google.android.apps.iosched.ui.gtv.GoogleTVSessionLivestreamActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:198
+-keep class com.google.android.apps.iosched.ui.phone.MapActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:167
+-keep class com.google.android.apps.iosched.ui.phone.SessionDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:140
+-keep class com.google.android.apps.iosched.ui.phone.SessionsActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:154
+-keep class com.google.android.apps.iosched.ui.phone.TrackDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:186
+-keep class com.google.android.apps.iosched.ui.phone.VendorDetailActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:250
+-keep class com.google.android.apps.iosched.ui.tablet.MapMultiPaneActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:208
+-keep class com.google.android.apps.iosched.ui.tablet.SessionsVendorsMultiPaneActivity { <init>(...); }
+
+# view large-land-v11\res/layout-large-land-v11/activity_sessions_vendors.xml #generated:31
+# view large-v11\res/layout-large-v11/activity_sessions_vendors.xml #generated:31
+-keep class com.google.android.apps.iosched.ui.tablet.TracksDropdownFragment { <init>(...); }
+
+# view res/layout/fragment_vendor_detail.xml #generated:40
+# view res/layout/list_item_track.xml #generated:31
+# view res/layout/speaker_detail.xml #generated:23
+-keep class com.google.android.apps.iosched.ui.widget.BezelImageView { <init>(...); }
+
+# view res/layout/list_item_session.xml #generated:16
+-keep class com.google.android.apps.iosched.ui.widget.CheckableFrameLayout { <init>(...); }
+
+# view large-v11\res/layout-large-v11/activity_sessions_vendors.xml #generated:17
+-keep class com.google.android.apps.iosched.ui.widget.ShowHideMasterLayout { <init>(...); }
+
+# view large-long-land-television\res/layout-large-long-land-television/activity_session_livestream.xml #generated:59
+# view large-v11\res/layout-large-v11/activity_session_livestream.xml #generated:48
+# view res/layout/activity_session_livestream.xml #generated:36
+-keep class com.google.android.youtube.api.YouTubePlayerSupportFragment { <init>(...); }
+
+# view large-v11\res/layout-large-v11/fragment_session_detail.xml #generated:30
+# view res/layout/fragment_session_detail.xml #generated:30
+-keep class com.google.api.android.plus.PlusOneButton { <init>(...); }
+

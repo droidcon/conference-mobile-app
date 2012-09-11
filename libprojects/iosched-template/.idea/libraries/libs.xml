@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/google-api-client-1.8.0-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/guava-11.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/google-http-client-android2-1.8.3-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/google-api-client-android2-1.8.0-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/google-oauth-client-1.8.0-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/gson-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/google-http-client-1.8.3-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/gcm.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/google-api-plus-v1-rev4-java-1.5.0-beta.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/protobuf-java-2.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/libs/jackson-core-asl-1.9.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
