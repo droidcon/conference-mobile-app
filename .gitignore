@@ -2,3 +2,10 @@
 *.DS_Store
 android-app/gen
 android-app/gen/*
+android-app/bin
+android-app/bin/*
+libprojects/*/gen
+libprojects/*/gen/*
+libprojects/*/bin
+libprojects/*/bin/*
+
