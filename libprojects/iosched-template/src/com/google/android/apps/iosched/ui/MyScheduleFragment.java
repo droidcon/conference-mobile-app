@@ -163,7 +163,7 @@ public class MyScheduleFragment extends SherlockListFragment implements
 
     @Override
     public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
-        if (getActivity() == null) {
+        if (getActivity() == null || cursor == null) {
             return;
         }
 
