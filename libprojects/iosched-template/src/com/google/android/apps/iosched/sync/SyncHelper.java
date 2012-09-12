@@ -264,7 +264,7 @@ public class SyncHelper {
     }
 
     public void addOrRemoveSessionFromSchedule(Context context, String sessionId,
-            boolean inSchedule) throws IOException {
+            boolean inSchedule) throws IOException {        
         mAuthToken = AccountUtils.getAuthToken(mContext);
         JsonObject starredSession = new JsonObject();
         starredSession.addProperty("sessionid", sessionId);

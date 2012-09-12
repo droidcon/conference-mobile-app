@@ -406,6 +406,14 @@ public class ScheduleContract {
         public static String getRoomId(Uri uri) {
             return uri.getPathSegments().get(1);
         }
+        
+        /**
+         * Generate a {@link #ROOM_ID} that will always match the requested
+         * {@link Rooms} details.
+         */
+        public static String generateRoomId(String room) {
+            return ParserUtils.sanitizeId(room);
+        }
     }
 
     /**
@@ -515,6 +523,14 @@ public class ScheduleContract {
 
         public static String getSearchQuery(Uri uri) {
             return uri.getPathSegments().get(2);
+        }
+        
+        /**
+         * Generate a {@link #SESSION_ID} that will always match the requested
+         * {@link Sessions} details.
+         */
+        public static String generateSessionId(String title) {
+            return ParserUtils.sanitizeId(title);
         }
     }
 
