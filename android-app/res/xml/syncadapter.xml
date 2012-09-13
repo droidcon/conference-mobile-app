@@ -13,11 +13,10 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-<TextView android:text="Buy Ticket" 
-    style="@style/WhatsOnStaticItem" />
-<TextView style="@style/WhatsOnStaticItem" />
-</LinearLayout>
+
+<!-- The attributes in this XML file provide configuration information for the SyncAdapter. -->
+<sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
+    android:contentAuthority="com.droidcon.uk"
+    android:accountType="com.google"
+    android:supportsUploading="false"
+    android:userVisible="true" />

@@ -158,7 +158,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.session" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.droidconuk.session" />
             </intent-filter>
             <!--
                  HomeActivity is the parent (as opposed to TrackDetailActivity) because
@@ -177,7 +177,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.track" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.track" />
             </intent-filter>
 
             <meta-data
@@ -193,7 +193,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.session" />
             </intent-filter>
             <!-- Android Beam for session details -->
             <intent-filter>
@@ -201,7 +201,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.session" />
             </intent-filter>
             <!-- PARENT_ACTIVITY alone is insufficient for Up navigation for this activity -->
             <meta-data
@@ -216,7 +216,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.vendor" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.vendor" />
             </intent-filter>
             <!-- PARENT_ACTIVITY alone is insufficient for Up navigation for this activity -->
             <meta-data
@@ -245,7 +245,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.track" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.track" />
             </intent-filter>
             <!-- can show session and vendor lists -->
             <intent-filter>
@@ -253,14 +253,14 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.session" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.droidconuk.session" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.dir/vnd.iosched.vendor" />
+                <data android:mimeType="vnd.android.cursor.dir/vnd.droidconuk.vendor" />
             </intent-filter>
             <!-- can show session and vendor details -->
             <intent-filter>
@@ -268,14 +268,14 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.session" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.vendor" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.vendor" />
             </intent-filter>
             <!-- Android Beam for session details -->
             <intent-filter>
@@ -283,7 +283,7 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:mimeType="vnd.android.cursor.item/vnd.iosched.session" />
+                <data android:mimeType="vnd.android.cursor.item/vnd.droidconuk.session" />
             </intent-filter>
 
             <meta-data
