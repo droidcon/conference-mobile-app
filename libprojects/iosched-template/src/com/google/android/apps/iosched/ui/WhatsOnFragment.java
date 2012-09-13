@@ -61,6 +61,8 @@ public class WhatsOnFragment extends Fragment implements
 
     private static final int ANNOUNCEMENTS_LOADER_ID = 0;
 
+	protected static final Uri REGISTER_URI = Uri.parse("http://m.skillsmatter.co.uk/droidcon2012");
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
@@ -92,12 +94,36 @@ public class WhatsOnFragment extends Fragment implements
         } else {
             setupDuring();
         }
+        
+        if (!UIUtils.isHoneycombTablet(getActivity())) {
+            View separator = new View(getActivity());
+            separator.setLayoutParams(
+                    new ViewGroup.LayoutParams(1, ViewGroup.LayoutParams.FILL_PARENT));
+            separator.setBackgroundResource(R.drawable.whats_on_separator);
+            mRootView.addView(separator);
+
+            View view = getActivity().getLayoutInflater().inflate(
+                    R.layout.whats_on_register, mRootView, false);
+            view.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View view) {                   
+                	Intent intent = new Intent(Intent.ACTION_VIEW);
+                	intent.setData(REGISTER_URI);
+                    startActivity(intent);
+                }
+            });
+            mRootView.addView(view);
+        }
     }
 
     private void setupBefore() {
         // Before conference, show countdown.
-        mCountdownTextView = (TextView) mInflater
-                .inflate(R.layout.whats_on_countdown, mRootView, false);
+    	 View v = mInflater
+         .inflate(R.layout.whats_on_countdown, mRootView, false);
+    	 if (v instanceof TextView){
+    		 mCountdownTextView = (TextView) v;
+    	 } else {
+    		 v.findViewById(R.id.whats_on_countdown);
+    	 }
         mRootView.addView(mCountdownTextView);
         mHandler.post(mCountdownRunnable);
     }

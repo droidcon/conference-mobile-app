@@ -93,23 +93,24 @@
 
     <string name="vendor_exhibitors_prefix">Exhibitors: </string>
 
-    <string name="search_label">Google I/O Sessions</string>
+    <string name="search_label">Droidcon Sessions</string>
     <string name="search_hint">Search sessions</string>
 
     <string name="share_template">Checking out \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
-    <string name="share_livestream_template">Watching I/O Live: \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
+    <string name="share_livestream_template">Watching Droidcon Live: \'<xliff:g id="title">%1$s</xliff:g>\' at <xliff:g id="hashtags">%2$s</xliff:g> <xliff:g id="url">%3$s</xliff:g></string>
 
     <!-- Announcements -->
-    <string name="whats_on_countdown_title_0"><xliff:g id="remaining_time">%1$s</xliff:g>\nuntil Google I/O</string>
+    <string name="whats_on_countdown_title_0"><xliff:g id="remaining_time">%1$s</xliff:g>\nuntil Droidcon</string>
     <plurals name="whats_on_countdown_title">
-        <item quantity="one"><xliff:g id="number_of_days">%1$s</xliff:g> day, <xliff:g id="remaining_time">%2$s</xliff:g>\nuntil Google I/O</item>
-        <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g>\nuntil Google I/O</item>
+        <item quantity="one"><xliff:g id="number_of_days">%1$s</xliff:g> day, <xliff:g id="remaining_time">%2$s</xliff:g>\nuntil Droidcon</item>
+        <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g>\nuntil Droidcon</item>
     </plurals>
+    <string name="whats_on_register_title">Register\nNow</string>
     <string name="whats_on_thank_you_title">See you next year!</string>
     <string name="news_will_appear_here">News will appear here</string>
-    <string name="welcome_to_google_i_o">Welcome to Google I/O!</string>
+    <string name="welcome_to_google_i_o">Welcome to Droidcon!</string>
 
-    <string name="permission_write">Modify Google I/O schedule data</string>
+    <string name="permission_write">Modify Droidcon schedule data</string>
 
     <plurals name="toast_added_to_schedule">
         <item quantity="one">Session added to your agenda</item>
@@ -131,37 +132,27 @@
 
     <!-- EULA, login, and about -->
     <string name="description_choose_account"><![CDATA[
-        Welcome to the Google I/O 2012 app, your official companion to the Google I/O conference
-        taking place in San Francisco from June 27th to June 29th, 2012.<br>
+        Welcome to the Droidcon 2012 app, your official companion to the Google I/O conference
+        taking place in London from October 25th to October 26th, 2012.<br>
         <br>
-        <font color="#4683ec"><b>Sign in with the Google account you registered with to
-        get started</b></font>.
+        <font color="#4683ec"><b>Sign in with your Google account.</b></font>.
     ]]></string>
     <string name="title_accounts_list">Select a Google account</string>
     <string name="empty_accounts">No Google accounts are available. Add an account to continue.</string>
     <string name="no_connection_cant_login">Can\'t sign in. Check your network connection.</string>
     <string name="taking_a_while">This is taking a while&#8230;</string>
-    <string name="eula_title">Google I/O 2012 Android App End User License Agreement</string>
+    <string name="eula_title">Droidcon 2012 Android App End User License Agreement</string>
     <string name="about_eula">End User License Agreement</string>
     <string name="about_licenses">Open Source Licenses</string>
     <string name="about_body"><![CDATA[
-        <b>Google I/O 2012</b><br>
+        <b>Droidcon 2012</b><br>
         Version %s<br><br>
-        <a href="http://m.google.com/utos">Terms of Service</a><br><br>
-        <a href="http://www.google.com/policies/privacy/">Privacy Policy</a>
     ]]></string>
 
     <!--suppress AndroidLintTypographyOther -->
     <string name="eula_text"><![CDATA[
         By downloading, installing or using this application or any portion thereof
         (\"Application\"), you agree to these terms and conditions.<br>
-        <br>
-        Your use of this Application is governed by: (a) the Google Terms of Service
-        (<a href="http://m.google.com/utos">m.google.com/utos</a>); (b) Google\'s Privacy Policy
-        (<a href="http://www.google.com/policies/privacy">http://www.google.com/policies/privacy</a>);
-        and (c) any applicable Google Service-specific terms of service or privacy policies.
-        Google\'s terms of service and privacy policies may be updated from time to time and without
-        notice.<br>
         <br>
         This Application collects certain information as you use it, including via Google Analytics.
         Google\'s Privacy Policy explains how Google treats your information and protects your
@@ -188,8 +179,8 @@
     </plurals>
     <string name="snooze_x_min">Snooze <xliff:g id="remaining_time">%1$d</xliff:g> min.</string>
 
-    <string name="session_calendar_suffix">- added by Google I/O 2012 Android app</string>
-    <string name="toast_deleting_sessions_from_calendar">Removing your Google I/O 2012 sessions from Google Calendar&#8230;</string>
+    <string name="session_calendar_suffix">- added by Droidcon 2012 Android app</string>
+    <string name="toast_deleting_sessions_from_calendar">Removing your Droidcon 2012 sessions from Google Calendar&#8230;</string>
 
     <!-- Contextual help text -->
     <string name="help_add_to_schedule"><![CDATA[
@@ -209,16 +200,16 @@
     <string name="stream_error">Couldn\'t load the Google+ stream.</string>
     <string name="stream_originally_shared"><xliff:g id="name">%s</xliff:g> originally shared this post</string>
     <string name="empty_widget_text">No more upcoming sessions.\nSee you next year!</string>
-    <string name="empty_widget_text_signed_out">Touch the Google I/O 2012 logo above to sign in and begin using the app.</string>
+    <string name="empty_widget_text_signed_out">Touch the Droidcon 2012 logo above to sign in and begin using the app.</string>
 
     <string name="now_playing_badge"><![CDATA[<font color="#4683ec"><small><b>NOW</b></small></font>]]></string>
     <string name="live_available_badge"><![CDATA[<font color="#999999"><small><b>LIVE</b></small></font>]]></string>
     <string name="live_now_badge"><![CDATA[<font color="#ff4444"><small><b>LIVE</b></small></font>]]></string>
 
     <!-- Google TV  -->
-    <string name="missed_io_title">No Google I/O sessions are currently playing.</string>
-    <string name="missed_io_subtitle">Check out https://developers.google.com/io for the latest on Google I/O.</string>
-    <string name="error_tv_no_url">No I/O Live stream was available for the selected session.</string>
+    <string name="missed_io_title">No Droidcon sessions are currently playing.</string>
+    <string name="missed_io_subtitle">Check out https://uk.droidcon.com for the latest on Droidcon UK.</string>
+    <string name="error_tv_no_url">No Droidcon Live stream was available for the selected session.</string>
     <string name="next_live_stream_session_template">Next Live Session: <xliff:g id="title">%1$s</xliff:g></string>
     <string name="starts_in_template_0_days">Starts in <xliff:g id="remaining_time">%1$s</xliff:g>.</string>
     <plurals name="starts_in_template">
