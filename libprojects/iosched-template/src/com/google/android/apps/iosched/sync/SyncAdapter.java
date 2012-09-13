@@ -16,8 +16,30 @@
 
 package com.google.android.apps.iosched.sync;
 
-import com.google.android.apps.iosched.BuildConfig;
-import com.google.android.apps.iosched.util.AccountUtils;
+import static com.google.android.apps.iosched.util.LogUtils.LOGE;
+import static com.google.android.apps.iosched.util.LogUtils.LOGI;
+import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.regex.Pattern;
+import java.util.zip.GZIPInputStream;
+
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpRequest;
+import org.apache.http.HttpRequestInterceptor;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpResponseInterceptor;
+import org.apache.http.client.HttpClient;
+import org.apache.http.entity.HttpEntityWrapper;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.params.HttpProtocolParams;
+import org.apache.http.protocol.HttpContext;
 
 import android.accounts.Account;
 import android.content.AbstractThreadedSyncAdapter;
@@ -25,17 +47,16 @@ import android.content.ContentProviderClient;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.SyncResult;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.widget.Toast;
+import android.text.format.DateUtils;
 
-import java.io.IOException;
-import java.util.regex.Pattern;
-
-import static com.google.android.apps.iosched.util.LogUtils.LOGE;
-import static com.google.android.apps.iosched.util.LogUtils.LOGI;
-import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
+import com.google.android.apps.iosched.BuildConfig;
+import com.google.android.apps.iosched.io.gdocs.LocalExecutor;
+import com.google.android.apps.iosched.io.gdocs.RemoteExecutor;
+import com.google.android.apps.iosched.util.AccountUtils;
 
 /**
  * Sync adapter for Google I/O data. Note that this sync adapter makes heavy use of a
@@ -49,6 +70,8 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
 
     private final Context mContext;
     private SyncHelper mSyncHelper;
+    
+
 
     public SyncAdapter(Context context, boolean autoInitialize) {
         super(context, autoInitialize);
@@ -64,6 +87,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
                 }
             });
         }
+        
     }
 
     @Override
@@ -110,4 +134,7 @@ public class SyncAdapter extends AbstractThreadedSyncAdapter {
             LOGE(TAG, "Error syncing data for I/O 2012.", e);
         }
     }
+    
+    
+        
 }

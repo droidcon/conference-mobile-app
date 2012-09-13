@@ -16,29 +16,35 @@
 
 package com.google.android.apps.iosched.sync;
 
-import com.google.analytics.tracking.android.EasyTracker;
-import com.google.android.apps.iosched.Config;
-import com.google.android.apps.iosched.R;
-import com.google.android.apps.iosched.io.AnnouncementsHandler;
-import com.google.android.apps.iosched.io.BlocksHandler;
-import com.google.android.apps.iosched.io.HandlerException;
-import com.google.android.apps.iosched.io.JSONHandler;
-import com.google.android.apps.iosched.io.RoomsHandler;
-import com.google.android.apps.iosched.io.SandboxHandler;
-import com.google.android.apps.iosched.io.SearchSuggestHandler;
-import com.google.android.apps.iosched.io.SessionsHandler;
-import com.google.android.apps.iosched.io.SpeakersHandler;
-import com.google.android.apps.iosched.io.TracksHandler;
-import com.google.android.apps.iosched.io.model.EditMyScheduleResponse;
-import com.google.android.apps.iosched.io.model.ErrorResponse;
-import com.google.android.apps.iosched.provider.ScheduleContract;
-import com.google.android.apps.iosched.calendar.SessionCalendarService;
-import com.google.android.apps.iosched.util.AccountUtils;
-import com.google.android.apps.iosched.util.UIUtils;
-import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonSyntaxException;
+import static com.google.android.apps.iosched.util.LogUtils.LOGD;
+import static com.google.android.apps.iosched.util.LogUtils.LOGI;
+import static com.google.android.apps.iosched.util.LogUtils.LOGV;
+import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.zip.GZIPInputStream;
+
+import org.apache.http.Header;
+import org.apache.http.HeaderElement;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpRequest;
+import org.apache.http.HttpRequestInterceptor;
+import org.apache.http.HttpResponse;
+import org.apache.http.HttpResponseInterceptor;
+import org.apache.http.client.HttpClient;
+import org.apache.http.entity.HttpEntityWrapper;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.apache.http.params.HttpProtocolParams;
+import org.apache.http.protocol.HttpContext;
 
 import android.accounts.Account;
 import android.content.ContentProviderOperation;
@@ -50,25 +56,45 @@ import android.content.SharedPreferences;
 import android.content.SyncResult;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.os.RemoteException;
 import android.preference.PreferenceManager;
+import android.text.format.DateUtils;
 
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.ArrayList;
-
-import static com.google.android.apps.iosched.util.LogUtils.LOGD;
-import static com.google.android.apps.iosched.util.LogUtils.LOGI;
-import static com.google.android.apps.iosched.util.LogUtils.LOGV;
-import static com.google.android.apps.iosched.util.LogUtils.makeLogTag;
+import com.google.analytics.tracking.android.EasyTracker;
+import com.google.android.apps.iosched.Config;
+import com.google.android.apps.iosched.R;
+import com.google.android.apps.iosched.calendar.SessionCalendarService;
+import com.google.android.apps.iosched.io.AnnouncementsHandler;
+import com.google.android.apps.iosched.io.BlocksHandler;
+import com.google.android.apps.iosched.io.HandlerException;
+import com.google.android.apps.iosched.io.JSONHandler;
+import com.google.android.apps.iosched.io.RoomsHandler;
+import com.google.android.apps.iosched.io.SandboxHandler;
+import com.google.android.apps.iosched.io.SearchSuggestHandler;
+import com.google.android.apps.iosched.io.SessionsHandler;
+import com.google.android.apps.iosched.io.SpeakersHandler;
+import com.google.android.apps.iosched.io.TracksHandler;
+import com.google.android.apps.iosched.io.gdocs.LocalBlocksHandler;
+import com.google.android.apps.iosched.io.gdocs.LocalExecutor;
+import com.google.android.apps.iosched.io.gdocs.LocalRoomsHandler;
+import com.google.android.apps.iosched.io.gdocs.LocalSearchSuggestHandler;
+import com.google.android.apps.iosched.io.gdocs.LocalSessionsHandler;
+import com.google.android.apps.iosched.io.gdocs.LocalTracksHandler;
+import com.google.android.apps.iosched.io.gdocs.RemoteExecutor;
+import com.google.android.apps.iosched.io.gdocs.RemoteSessionsHandler;
+import com.google.android.apps.iosched.io.gdocs.RemoteSpeakersHandler;
+import com.google.android.apps.iosched.io.gdocs.RemoteVendorsHandler;
+import com.google.android.apps.iosched.io.gdocs.RemoteWorksheetsHandler;
+import com.google.android.apps.iosched.io.model.ErrorResponse;
+import com.google.android.apps.iosched.provider.ScheduleContract;
+import com.google.android.apps.iosched.util.AccountUtils;
+import com.google.android.apps.iosched.util.UIUtils;
+import com.google.api.client.googleapis.extensions.android2.auth.GoogleAccountManager;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 /**
  * A helper class for dealing with sync and other remote persistence operations.
@@ -92,13 +118,29 @@ public class SyncHelper {
 
     private static final int LOCAL_VERSION_CURRENT = 19;
 
+    private static final String WORKSHEETS_URL = "https://spreadsheets.google.com/feeds/worksheets/0AlPB-AKNQC8udEVxaGVTQ19vaG9SOFFGc080WkdHMkE/public/basic";
+
+    private static final String HEADER_ACCEPT_ENCODING = "Accept-Encoding";
+    private static final String ENCODING_GZIP = "gzip";
+    private static final int SECOND_IN_MILLIS = (int) DateUtils.SECOND_IN_MILLIS;
+
+
     private Context mContext;
     private String mAuthToken;
     private String mUserAgent;
+    private LocalExecutor mLocalExecutor;
+    private RemoteExecutor mRemoteExecutor;
 
     public SyncHelper(Context context) {
         mContext = context;
         mUserAgent = buildUserAgent(context);
+        
+        final HttpClient httpClient = getHttpClient(mContext);
+        final ContentResolver resolver = mContext.getContentResolver();
+
+        mLocalExecutor = new LocalExecutor(mContext.getResources(), resolver);
+        mRemoteExecutor = new RemoteExecutor(httpClient, resolver);
+
     }
 
     /**
@@ -110,7 +152,54 @@ public class SyncHelper {
      * @throws IOException
      */
     public void performSync(SyncResult syncResult, int flags) throws IOException {
-        mAuthToken = AccountUtils.getAuthToken(mContext);
+        performSync2011(syncResult, flags);
+    }
+
+    private void performSync2011(SyncResult syncResult, int flags) throws IOException {    	
+    	
+    	final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+        final int localVersion = prefs.getInt("local_data_version", 0);
+        
+    	final long startLocal = System.currentTimeMillis();
+        final boolean localParse = localVersion < LOCAL_VERSION_CURRENT;
+
+        LOGD(TAG, "found localVersion=" + localVersion + " and LOCAL_VERSION_CURRENT="
+                + LOCAL_VERSION_CURRENT);
+        
+            // Bulk of sync work, performed by executing several fetches from
+            // local and online sources.
+
+        
+            if (localParse) {
+                // Load static local data
+                mLocalExecutor.execute(R.xml.blocks, new LocalBlocksHandler());
+                mLocalExecutor.execute(R.xml.rooms, new LocalRoomsHandler());
+                mLocalExecutor.execute(R.xml.tracks, new LocalTracksHandler());
+                mLocalExecutor.execute(R.xml.search_suggest, new LocalSearchSuggestHandler());
+                mLocalExecutor.execute(R.xml.sessions, new LocalSessionsHandler());
+
+                // Parse values from local cache first, since spreadsheet copy
+                // or network might be down.
+                mLocalExecutor.execute(mContext, "cache-sessions.xml", new RemoteSessionsHandler());
+                mLocalExecutor.execute(mContext, "cache-speakers.xml", new RemoteSpeakersHandler());
+                mLocalExecutor.execute(mContext, "cache-vendors.xml", new RemoteVendorsHandler());
+
+                // Save local parsed version
+                prefs.edit().putInt("local_data_version", LOCAL_VERSION_CURRENT).commit();
+            }
+            LOGD(TAG, "local sync took " + (System.currentTimeMillis() - startLocal) + "ms");
+
+            // Always hit remote spreadsheet for any updates
+            final long startRemote = System.currentTimeMillis();
+            mRemoteExecutor
+                    .executeGet(WORKSHEETS_URL, new RemoteWorksheetsHandler(mRemoteExecutor));
+            LOGD(TAG, "remote sync took " + (System.currentTimeMillis() - startRemote) + "ms");
+        	
+    }
+    
+	private void performSync2012(SyncResult syncResult, int flags)
+			throws IOException {
+		mAuthToken = AccountUtils.getAuthToken(mContext);
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
         final int localVersion = prefs.getInt("local_data_version", 0);
@@ -121,15 +210,21 @@ public class SyncHelper {
         ArrayList<ContentProviderOperation> batch = new ArrayList<ContentProviderOperation>();
 
         LOGI(TAG, "Performing sync");
-
+        
+        final boolean gdocs = true;
+                
         if ((flags & FLAG_SYNC_LOCAL) != 0) {
             final long startLocal = System.currentTimeMillis();
             final boolean localParse = localVersion < LOCAL_VERSION_CURRENT;
             LOGD(TAG, "found localVersion=" + localVersion + " and LOCAL_VERSION_CURRENT="
                     + LOCAL_VERSION_CURRENT);
+            
+            
             // Only run local sync if there's a newer version of data available
             // than what was last locally-sync'd.
             if (localParse) {
+            	
+            	
                 // Load static local data
                 batch.addAll(new RoomsHandler(mContext).parse(
                         JSONHandler.loadResourceJson(mContext, R.raw.rooms)));
@@ -149,7 +244,7 @@ public class SyncHelper {
                 if (syncResult != null) {
                     ++syncResult.stats.numUpdates;
                     ++syncResult.stats.numEntries;
-                }
+                }            	
             }
 
             LOGD(TAG, "Local sync took " + (System.currentTimeMillis() - startLocal) + "ms");
@@ -236,7 +331,7 @@ public class SyncHelper {
                     + "session with Calendar.");
             syncCalendar();
         }
-    }
+	}
 
     private void syncCalendar() {
         Intent intent = new Intent(SessionCalendarService.ACTION_UPDATE_ALL_SESSIONS_CALENDAR);
@@ -264,40 +359,43 @@ public class SyncHelper {
     }
 
     public void addOrRemoveSessionFromSchedule(Context context, String sessionId,
-            boolean inSchedule) throws IOException {        
-        mAuthToken = AccountUtils.getAuthToken(mContext);
-        JsonObject starredSession = new JsonObject();
-        starredSession.addProperty("sessionid", sessionId);
-
-        byte[] postJsonBytes = new Gson().toJson(starredSession).getBytes();
-
-        URL url = new URL(Config.EDIT_MY_SCHEDULE_URL + (inSchedule ? "add" : "remove"));
-        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
-        urlConnection.setRequestProperty("User-Agent", mUserAgent);
-        urlConnection.setRequestProperty("Content-Type", "application/json");
-        urlConnection.setRequestProperty("Authorization", "Bearer " + mAuthToken);
-        urlConnection.setDoOutput(true);
-        urlConnection.setFixedLengthStreamingMode(postJsonBytes.length);
-
-        LOGD(TAG, "Posting to URL: " + url);
-        OutputStream out = new BufferedOutputStream(urlConnection.getOutputStream());
-        out.write(postJsonBytes);
-        out.flush();
-
-        urlConnection.connect();
-        throwErrors(urlConnection);
-        String json = readInputStream(urlConnection.getInputStream());
-        EditMyScheduleResponse response = new Gson().fromJson(json,
-                EditMyScheduleResponse.class);
-        if (!response.success) {
-            String responseMessageLower = (response.message != null)
-                    ? response.message.toLowerCase()
-                    : "";
-
-            if (responseMessageLower.contains("no profile")) {
-                throw new HandlerException.NoDevsiteProfileException();
-            }
-        }
+            boolean inSchedule) throws IOException { 
+    	    	
+    	// TODO connect to MyScheduleServer (muef)
+    	
+//        mAuthToken = AccountUtils.getAuthToken(mContext);
+//        JsonObject starredSession = new JsonObject();
+//        starredSession.addProperty("sessionid", sessionId);
+//
+//        byte[] postJsonBytes = new Gson().toJson(starredSession).getBytes();
+//
+//        URL url = new URL(Config.EDIT_MY_SCHEDULE_URL + (inSchedule ? "add" : "remove"));
+//        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+//        urlConnection.setRequestProperty("User-Agent", mUserAgent);
+//        urlConnection.setRequestProperty("Content-Type", "application/json");
+//        urlConnection.setRequestProperty("Authorization", "Bearer " + mAuthToken);
+//        urlConnection.setDoOutput(true);
+//        urlConnection.setFixedLengthStreamingMode(postJsonBytes.length);
+//
+//        LOGD(TAG, "Posting to URL: " + url);
+//        OutputStream out = new BufferedOutputStream(urlConnection.getOutputStream());
+//        out.write(postJsonBytes);
+//        out.flush();
+//
+//        urlConnection.connect();
+//        throwErrors(urlConnection);
+//        String json = readInputStream(urlConnection.getInputStream());
+//        EditMyScheduleResponse response = new Gson().fromJson(json,
+//                EditMyScheduleResponse.class);
+//        if (!response.success) {
+//            String responseMessageLower = (response.message != null)
+//                    ? response.message.toLowerCase()
+//                    : "";
+//
+//            if (responseMessageLower.contains("no profile")) {
+//                throw new HandlerException.NoDevsiteProfileException();
+//            }
+//        }
     }
 
     private ArrayList<ContentProviderOperation> executeGet(String urlString, JSONHandler handler,
@@ -362,5 +460,72 @@ public class SyncHelper {
 
         return cm.getActiveNetworkInfo() != null &&
                 cm.getActiveNetworkInfo().isConnectedOrConnecting();
+    }
+    
+    
+
+    /**
+     * Generate and return a {@link HttpClient} configured for general use,
+     * including setting an application-specific user-agent string.
+     */
+    public static HttpClient getHttpClient(Context context) {
+        final HttpParams params = new BasicHttpParams();
+
+        // Use generous timeouts for slow mobile networks
+        HttpConnectionParams.setConnectionTimeout(params, 20 * SECOND_IN_MILLIS);
+        HttpConnectionParams.setSoTimeout(params, 20 * SECOND_IN_MILLIS);
+
+        HttpConnectionParams.setSocketBufferSize(params, 8192);
+        HttpProtocolParams.setUserAgent(params, buildUserAgent(context));
+
+        final DefaultHttpClient client = new DefaultHttpClient(params);
+
+        client.addRequestInterceptor(new HttpRequestInterceptor() {
+            public void process(HttpRequest request, HttpContext context) {
+                // Add header to accept gzip content
+                if (!request.containsHeader(HEADER_ACCEPT_ENCODING)) {
+                    request.addHeader(HEADER_ACCEPT_ENCODING, ENCODING_GZIP);
+                }
+            }
+        });
+
+        client.addResponseInterceptor(new HttpResponseInterceptor() {
+            public void process(HttpResponse response, HttpContext context) {
+                // Inflate any responses compressed with gzip
+                final HttpEntity entity = response.getEntity();
+                final Header encoding = entity.getContentEncoding();
+                if (encoding != null) {
+                    for (HeaderElement element : encoding.getElements()) {
+                        if (element.getName().equalsIgnoreCase(ENCODING_GZIP)) {
+                            response.setEntity(new InflatingEntity(response.getEntity()));
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+
+        return client;
+    }
+
+
+    /**
+     * Simple {@link HttpEntityWrapper} that inflates the wrapped
+     * {@link HttpEntity} by passing it through {@link GZIPInputStream}.
+     */
+    private static class InflatingEntity extends HttpEntityWrapper {
+        public InflatingEntity(HttpEntity wrapped) {
+            super(wrapped);
+        }
+
+        @Override
+        public InputStream getContent() throws IOException {
+            return new GZIPInputStream(wrappedEntity.getContent());
+        }
+
+        @Override
+        public long getContentLength() {
+            return -1;
+        }
     }
 }
