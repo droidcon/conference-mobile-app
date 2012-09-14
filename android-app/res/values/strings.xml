@@ -14,7 +14,22 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Droidcon London 2012</string>
     <string name="description_logo">Droidcon UK 2012</string>
+    
+    <!-- Widget strings -->
+    <string name="widget_title_text_during_conf">Right Now!</string>
+    <string name="widget_subtitle_text_during_conf">See you there!</string>
+    <string name="widget_title_text_after_conf">All done</string>
+    <string name="widget_subtitle_text_after_conf">See you next Year!</string>
+    <string name="widget_subtitle_text">until droidcon London</string>
+
+    <plurals name="widget_countdown_title">
+        <item quantity="zero"><xliff:g id="remaining_time">%2$s</xliff:g></item>
+        <item quantity="one"><xliff:g id="number_of_days">%1$s</xliff:g> day, <xliff:g id="remaining_time">%2$s</xliff:g></item>
+        <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g></item>
+    </plurals>
+    
+    
 </resources>

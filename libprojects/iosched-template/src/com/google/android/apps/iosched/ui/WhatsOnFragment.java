@@ -61,7 +61,7 @@ public class WhatsOnFragment extends Fragment implements
 
     private static final int ANNOUNCEMENTS_LOADER_ID = 0;
 
-	protected static final Uri REGISTER_URI = Uri.parse("http://m.skillsmatter.co.uk/droidcon2012");
+	protected static final Uri REGISTER_URI = Uri.parse("http://uk.droidcon.com/buyticket");
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
