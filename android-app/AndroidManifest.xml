@@ -19,8 +19,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.droidcon.uk"
     android:installLocation="auto"
-    android:versionCode="20120909"
-    android:versionName="DCUK-2012.01" >
+    android:versionCode="20120915"
+    android:versionName="DCUK-2012.02" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -307,7 +307,10 @@
                 <action android:name="SHOW_ABOUT"/>
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-         </activity>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.google.android.apps.iosched.ui.HomeActivity" />
+        </activity>
 
         
         <!-- GTV Activities -->

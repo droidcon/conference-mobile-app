@@ -61,7 +61,7 @@ public class AboutActivity extends BaseActivity {
     				break;
 				case R.id.about_address_txt: 
 				case R.id.about_address_icon: 
-	                startActivity(new Intent(v.getContext(), UIUtils.getMapActivityClass(v.getContext())));
+	                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://maps.google.co.uk/maps/ms?ie=UTF8&hl=en&num=10&msa=0&msid=211203309014490975967.000490c793a5b883cd911&t=m&ll=51.533423,-0.105776&spn=0.00267,0.006963&z=17&source=embed")));
 					break;
 				case R.id.about_twitter: 
 					startActivity( new Intent( Intent.ACTION_VIEW, Uri.parse( "http://mobile.twitter.com/droidconuk" )));
