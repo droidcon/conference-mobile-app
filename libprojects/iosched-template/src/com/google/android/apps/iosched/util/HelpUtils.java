@@ -22,6 +22,7 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -130,15 +131,8 @@ public class HelpUtils {
     }
 
     public static void showAbout(FragmentActivity activity) {
-        FragmentManager fm = activity.getSupportFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        Fragment prev = fm.findFragmentByTag("dialog_about");
-        if (prev != null) {
-            ft.remove(prev);
-        }
-        ft.addToBackStack(null);
-
-        new AboutDialog().show(ft, "dialog_about");
+    	Intent intent = new Intent("SHOW_ABOUT");
+    	activity.startActivity(intent);
     }
 
     public static class AboutDialog extends DialogFragment {

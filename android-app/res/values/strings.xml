@@ -31,5 +31,22 @@
         <item quantity="other"><xliff:g id="number_of_days">%1$s</xliff:g> days, <xliff:g id="remaining_time">%2$s</xliff:g></item>
     </plurals>
     
+    <!-- About strings -->
+    
+    <!-- _About -->
+    <string name="title_about">About</string>
+    <string name="btn_about">About</string>
+    <string name="about_register_now">Register Now &gt;</string>
+    <string name="about_maintxt_title">Droidcon London</string>
+    <string name="about_maintxt_subtitle">6th and 7th October 2011</string>
+    <string name="about_maintxt_txt">Join a collection of the mobile industries leading practitioners in discussing the future of design, development and business on the Android platform.</string>
+    <string name="about_address_title">Address:</string>
+    <string name="about_address_txt">52 Upper Street\nIslington, London\nN1 0QH</string>
+	<string name="about_twitter">\&#x40;droidconuk</string>
+	<string name="about_twitter_hashtag">#droidconUK</string>
+	<string name="about_conference_link">uk.droidcon.com</string>
+	<string name="about_sponsors_title_orange">Platinum Sponsor</string>
+	<string name="about_sponsors_title_sonyericsson">Silver Sponsor</string>
+	<string name="about_licence">This App is based on Google Inc.\'s IO Conference App vc12 and is licenced under Apache2.0</string>
     
 </resources>

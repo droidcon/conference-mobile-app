@@ -299,6 +299,17 @@
                 android:value="com.google.android.apps.iosched.ui.HomeActivity" />
         </activity>
 
+        <!-- Droidcon About Activity -->
+        <activity
+            android:name="novoda.droidcon.ui.AboutActivity"
+            android:label="@string/title_about" >
+            <intent-filter>
+                <action android:name="SHOW_ABOUT"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+         </activity>
+
+        
         <!-- GTV Activities -->
 
         <activity

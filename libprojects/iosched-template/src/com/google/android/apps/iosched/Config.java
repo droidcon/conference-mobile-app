@@ -18,9 +18,9 @@ package com.google.android.apps.iosched;
 
 public class Config {
     // OAuth 2.0 related config
-    public static final String APP_NAME = "Your-App-Name";
-    public static final String API_KEY = "API_KEY"; // from the APIs console
-    public static final String CLIENT_ID = "0000000000000.apps.googleusercontent.com"; // from the APIs console
+    public static final String APP_NAME = "GDG DevFest";
+    public static final String API_KEY = "AIzaSyA3NTBiTgKf1yh9EPnpAla0RGrTjnaEKx4"; // from the APIs console
+    public static final String CLIENT_ID = "62485595152.apps.googleusercontent.com"; // from the APIs console
 
     // Conference API-specific config
     // NOTE: the backend used for the Google I/O 2012 Android app is not currently open source, so
