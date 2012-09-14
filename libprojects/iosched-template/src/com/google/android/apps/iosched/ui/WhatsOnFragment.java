@@ -95,7 +95,6 @@ public class WhatsOnFragment extends Fragment implements
             setupDuring();
         }
         
-        if (!UIUtils.isHoneycombTablet(getActivity())) {
             View separator = new View(getActivity());
             separator.setLayoutParams(
                     new ViewGroup.LayoutParams(1, ViewGroup.LayoutParams.FILL_PARENT));
@@ -112,7 +111,6 @@ public class WhatsOnFragment extends Fragment implements
                 }
             });
             mRootView.addView(view);
-        }
     }
 
     private void setupBefore() {
