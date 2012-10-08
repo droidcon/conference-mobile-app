@@ -118,7 +118,7 @@ public class SyncHelper {
 
     private static final int LOCAL_VERSION_CURRENT = 19;
 
-    private static final String WORKSHEETS_URL = "https://spreadsheets.google.com/feeds/worksheets/0AlPB-AKNQC8udEVxaGVTQ19vaG9SOFFGc080WkdHMkE/public/basic";
+    private static final String WORKSHEETS_URL = "https://spreadsheets.google.com/feeds/worksheets/0ApAyOi3Zg85OdHkzclJSX0VuSXZVaG5QVlZwbF9fMVE/public/basic";
 
     private static final String HEADER_ACCEPT_ENCODING = "Accept-Encoding";
     private static final String ENCODING_GZIP = "gzip";

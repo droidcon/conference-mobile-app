@@ -1,6 +1,8 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="294dp"
     android:minHeight="72dp"
-    android:updatePeriodMillis="0"
-    android:initialLayout="@layout/widget_countdown" >
+    android:updatePeriodMillis="60000"
+    android:initialLayout="@layout/widget_countdown" 
+    android:resizeMode="none"
+    android:previewImage="@drawable/widget_preview">
 </appwidget-provider>

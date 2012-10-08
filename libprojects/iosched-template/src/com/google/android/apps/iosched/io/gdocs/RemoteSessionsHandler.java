@@ -60,7 +60,7 @@ public class RemoteSessionsHandler extends XmlHandler {
      * {@link Columns#SESSION_DATE} and {@link Columns#SESSION_TIME}.
      */
     private static final SimpleDateFormat sTimeFormat = new SimpleDateFormat(
-            "EEEE MMM d yyyy h:mma Z", Locale.UK);
+            "EEEE MMM d yyyy HH:mm Z", Locale.UK);
 
     public RemoteSessionsHandler() {
         super(ScheduleContract.CONTENT_AUTHORITY);
@@ -128,17 +128,17 @@ public class RemoteSessionsHandler extends XmlHandler {
 
                 // Parse time string from two columns, which is pretty ugly code
                 // since it assumes the column format is "Wednesday May 19" and
-                // "10:45am-11:45am". Future spreadsheets should use RFC 3339.
+                // "10:45am to 11:45am". Future spreadsheets should use RFC 3339.
                 final String date = entry.get(Columns.SESSION_DATE);
                 final String time = entry.get(Columns.SESSION_TIME);
-                final int timeSplit = time.indexOf("-");
+                final int timeSplit = time.indexOf("to");
                 if (timeSplit == -1) {
                     throw new HandlerException("Expecting " + Columns.SESSION_TIME
                             + " to express span");
                 }
 
-                final long startTime = parseTime(date, time.substring(0, timeSplit));
-                final long endTime = parseTime(date, time.substring(timeSplit + 1));
+                final long startTime = parseTime(date, time.substring(0, timeSplit).trim());
+                final long endTime = parseTime(date, time.substring(timeSplit + 2).trim());
 
                 final String blockId = ParserUtils.findOrCreateBlock(
                         ParserUtils.BLOCK_TITLE_BREAKOUT_SESSIONS,
@@ -189,7 +189,7 @@ public class RemoteSessionsHandler extends XmlHandler {
      *            {@link Columns#SESSION_TIME}.
      */
     private static long parseTime(String date, String time) throws HandlerException {
-        final String composed = String.format("%s 2011 %s +0100", date, time);
+        final String composed = String.format("%s 2012 %s +0100", date, time);
         try {
             return sTimeFormat.parse(composed).getTime();
         } catch (java.text.ParseException e) {
