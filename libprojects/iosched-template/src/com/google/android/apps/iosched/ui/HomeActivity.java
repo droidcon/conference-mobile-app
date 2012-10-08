@@ -374,7 +374,7 @@ public class HomeActivity extends BaseActivity implements
 	                        GoogleAccountManager.ACCOUNT_TYPE),
 	                ScheduleContract.CONTENT_AUTHORITY, extras);
         }
-
+        
         if (mSocialStreamFragment != null) {
             mSocialStreamFragment.refresh();
         }

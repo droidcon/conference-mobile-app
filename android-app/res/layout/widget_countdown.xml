@@ -35,7 +35,7 @@
             android:textColor="@color/widgetforeground"
             android:textSize="@dimen/text_size_small"
             android:text="@string/widget_subtitle_text"
-            android:singleLine="true"
+            android:singleLine="false"
             android:ellipsize="end" android:gravity="center_horizontal"/>
     </LinearLayout>
     <LinearLayout

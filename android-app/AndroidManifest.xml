@@ -17,10 +17,10 @@
 <!-- Note; Version code/name is IOSched version (16), Droidcon Version (01) -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.droidcon.uk"
+    package="com.novoda.droidcon2011"
     android:installLocation="auto"
-    android:versionCode="20120915"
-    android:versionName="DCUK-2012.02" >
+    android:versionCode="20121002"
+    android:versionName="DCUK-2012.03" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -65,7 +65,7 @@
         android:required="false" />
 
     <application
-        android:name=".DroidconApplication"
+        android:name="com.droidcon.uk.DroidconApplication"
         android:hardwareAccelerated="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"

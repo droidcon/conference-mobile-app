@@ -57,8 +57,8 @@
     <string name="all_tracks">All tracks</string>
     <string name="all_tracks_sessions">All sessions</string>
     <string name="all_tracks_vendors">All companies</string>
-    <string name="all_tracks_subtitle_sessions">All sessions at Google I/O 2012.</string>
-    <string name="all_tracks_subtitle_vendors">All developer sandbox companies at Google I/O 2012.</string>
+    <string name="all_tracks_subtitle_sessions">All sessions at Droidcon.</string>
+    <string name="all_tracks_subtitle_vendors">All developer sandbox companies at Droidcon.</string>
 
     <string name="empty_sessions">No sessions found.</string>
     <string name="empty_session_detail">No session details found.</string>
@@ -86,8 +86,8 @@
     <string name="session_livestream_info">Info</string>
     <string name="session_livestream_captions">Captions</string>
     <string name="session_livestream_error">Sorry, there was an error loading the live stream, please try again later</string>
-    <string name="session_livestream_keynote_title">Google I/O - %s</string>
-    <string name="session_livestream_keynote_desc">Google I/O\'s much-anticipated daily kickoff events will make you among the first developers to see what we\'ve been working on here at Google. Grab some popcorn, kick back and enjoy the show directly from your Android powered device.</string>
+    <string name="session_livestream_keynote_title">Droidcon - %s</string>
+    <string name="session_livestream_keynote_desc">Droidcon\'s much-anticipated daily kickoff events will make you among the first developers to see what we\'ve been working on here at Google. Grab some popcorn, kick back and enjoy the show directly from your Android powered device.</string>
 
     <string name="codelab_title_template">Code Lab: <xliff:g id="title">%1$s</xliff:g></string>
 
@@ -132,7 +132,7 @@
 
     <!-- EULA, login, and about -->
     <string name="description_choose_account"><![CDATA[
-        Welcome to the Droidcon 2012 app, your official companion to the Google I/O conference
+        Welcome to the Droidcon 2012 app, your official companion to the Droidcon conference
         taking place in London from October 25th to October 26th, 2012.<br>
         <br>
         <font color="#4683ec"><b>Sign in with your Google account.</b></font>.

@@ -4,6 +4,7 @@ import java.util.TimeZone;
 
 import com.google.android.apps.iosched.util.ParserUtils;
 import com.google.android.apps.iosched.util.UIUtils;
+import com.novoda.droidcon2011.R;
 
 import android.app.Application;
 

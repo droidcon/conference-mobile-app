@@ -23,7 +23,7 @@
     <string name="widget_subtitle_text_during_conf">See you there!</string>
     <string name="widget_title_text_after_conf">All done</string>
     <string name="widget_subtitle_text_after_conf">See you next Year!</string>
-    <string name="widget_subtitle_text">until droidcon London</string>
+    <string name="widget_subtitle_text">until droidcon London.\nRegister now!</string>
 
     <plurals name="widget_countdown_title">
         <item quantity="zero"><xliff:g id="remaining_time">%2$s</xliff:g></item>
