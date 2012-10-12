@@ -17,7 +17,7 @@
 <!-- Note; Version code/name is IOSched version (16), Droidcon Version (01) -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.novoda.droidcon2011"
+    package="com.droidcon.uk"
     android:installLocation="auto"
     android:versionCode="20121002"
     android:versionName="DCUK-2012.03" >

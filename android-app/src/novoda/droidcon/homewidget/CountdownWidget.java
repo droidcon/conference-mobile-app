@@ -12,7 +12,7 @@ import android.os.IBinder;
 import android.os.SystemClock;
 import android.widget.RemoteViews;
 
-import com.novoda.droidcon2011.R;
+import com.droidcon.uk.R;
 import com.google.android.apps.iosched.ui.HomeActivity;
 import com.google.android.apps.iosched.util.UIUtils;
 

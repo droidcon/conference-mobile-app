@@ -25,7 +25,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.novoda.droidcon2011.R;
+import com.droidcon.uk.R;
 import com.google.android.apps.iosched.ui.BaseActivity;
 import com.google.android.apps.iosched.util.UIUtils;
 

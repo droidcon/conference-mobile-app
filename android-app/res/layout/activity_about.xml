@@ -14,11 +14,8 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-	<ScrollView style="@style/base_fill">
+
+	<ScrollView style="@style/base_fill" xmlns:android="http://schemas.android.com/apk/res/android">
 		<LinearLayout style="@style/base_fill">
 			<LinearLayout style="@style/about_top_div">
 			
@@ -66,4 +63,3 @@
 		</LinearLayout>		 	
 		 	
 	 </ScrollView>
-</LinearLayout>
