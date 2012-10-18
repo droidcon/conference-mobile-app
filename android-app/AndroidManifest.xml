@@ -19,8 +19,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.droidcon.uk"
     android:installLocation="auto"
-    android:versionCode="20121017"
-    android:versionName="DCUK-2012.04" >
+    android:versionCode="20121018"
+    android:versionName="DCUK-2012.05" >
 
     <uses-sdk
         android:minSdkVersion="8"
