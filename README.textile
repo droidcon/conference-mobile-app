@@ -2,15 +2,13 @@ h1. THIS PROJECT IS DEPRECATED
 
 h1. The new application can be found here: https://github.com/touchlab/DroidconKotlin 
 
-h1. http://www.droidcon.co.uk
 
-Come and join the best Android conference in Europe at the London Business design centre 28th / 29th October 2010
 
-Conference Homepage: "http://www.droidcon.co.uk":http://www.droidcon.co.uk:
 
-"Visit the current issues to be done before we release!":https://novoda.lighthouseapp.com/projects/61492-droidcon-mobile-app/milestones/current
 
-Register for the event: "http://www.droidcon.co.uk/Register":http://www.droidcon.co.uk/Register
 
-Get the latest on the Android Market here:
-!http://github.com/downloads/droidcon/conference-mobile-app/market___search_q_pname_.png!
+
+
+
+
+
