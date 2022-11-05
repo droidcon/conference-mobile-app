@@ -1,3 +1,7 @@
+h1. THIS PROJECT IS DEPRECATED
+
+h1. The new application can be found here: https://github.com/touchlab/DroidconKotlin 
+
 h1. http://www.droidcon.co.uk
 
 Come and join the best Android conference in Europe at the London Business design centre 28th / 29th October 2010
